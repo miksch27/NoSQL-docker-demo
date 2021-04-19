@@ -1,7 +1,6 @@
 ## docker-compose.yml  for CouchBase File
 # Use root/example as user/password credentials
 version: "3.8"
-# network_mode: "overlay"
 
 networks:
   cb:
@@ -12,7 +11,7 @@ services:
     deploy:
       replicas: 1
     environment:
-      - TYPE=MASTER
+      TYPE: "MASTER"
     volumes:
       - db-data:/var/lib
     ports:
@@ -23,20 +22,21 @@ services:
       - "11210:11210" # Client-to-node, Node-to-node Unencrypted
       - "11211:11211" # Client-to-node Unencrypted
     networks:
-      - overlay    
+      - netw    
   worker:
     image: arungupta/couchbase:latest
     deploy:
       replicas: 2
     environment:
-      - TYPE=WORKER
-      - COUCHBASE=master.couchbase
-      - AUTO_REBALANCE=false
+      TYPE: "WORKER"
+      COUCHBASE: "master.couchbase"
+      AUTO_REBALANCE: "false"
     volumes:
-      - db-data:/var/lib
+      - ~/cb-data:/opt/couchbase/var
     networks:
-      - overlay
+      - netw
 networks:
-    overlay:
+    netw:
+      driver: overlay
 volumes:
     db-data:
