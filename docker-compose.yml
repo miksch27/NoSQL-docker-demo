@@ -16,17 +16,18 @@ services:
     volumes:
       - db-data:/var/lib
     ports:
-      - "8091:8091"
-  #   - "8092:8092"
-  #   - "8093:8093"
-  #   - "8094:8094"
-  #   - "11210:11210"
+      - "8091:8091"   # Cluster admin REST/HTTP traffic incl. Web Console, Unencrypted https://www.oreilly.com/library/view/couchbase-essentials/9781784394493/ch01s04.html
+      - "8092:8092"   # XDCR(cluster-to-cluster) Unencrypted
+      - "8093:8093"   # Query service REST/HTTP traffic Unencrypted
+      - "8094:8094"   # Search Service REST/HTTP traffic fts Unencrypted
+      - "11210:11210" # Client-to-node, Node-to-node Unencrypted
+      - "11211:11211" # Client-to-node Unencrypted
     networks:
       - overlay    
   worker:
     image: arungupta/couchbase:latest
     deploy:
-      replicas: 1
+      replicas: 2
     environment:
       - TYPE=WORKER
       - COUCHBASE=master.couchbase

@@ -39,3 +39,17 @@ Command to maintain and remove
 
 > docker network list
 > docker network ..
+
+Commandos for retrieving the IP addresses:
+
+First look for the appropriated CONTAINER ID
+
+> docker ps
+
+For each Couchbase WORKER and MASTER container notifing the internal IP address.
+One of these commands return an internal IP address:
+
+> docker inspect --format '{{ .NetworkSettings.IPAddress }}' e64928462521
+> or
+> docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' b1f90929b927
+> 10.0.5.310.0.0.12
