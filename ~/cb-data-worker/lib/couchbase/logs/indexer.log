@@ -1,0 +1,384 @@
+2021-04-19T19:46:03.949+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -vbuckets=1024 -cluster=127.0.0.1:8091 -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=dbb8bee8b38705437e7f5ebc78107bfa -storageMode=memory_optimized]
+2021-04-19T19:46:03.958+00:00 [Info] Indexer::Main Storage Mode Set memory_optimized
+2021-04-19T19:46:03.985+00:00 [Info] Indexer::NewIndexer Status Bootstrap
+2021-04-19T19:46:03.990+00:00 [Info] Setting buffer block size to 16384 bytes
+2021-04-19T19:46:03.990+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:46:03.990+00:00 [Info] Setting log level to Info
+2021-04-19T19:46:03.990+00:00 [Info] 127.0.0.1:8091 starting RESTful services
+2021-04-19T19:46:03.998+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T19:46:03.998+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:46:03.998+00:00 [Info] Setting log level to Info
+2021-04-19T19:46:04.022+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:46:04.022+00:00 [Info] Refreshed Indexer List: []
+2021-04-19T19:46:04.022+00:00 [Info] initialized currmeta 0
+2021-04-19T19:46:04.022+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
+2021-04-19T19:46:04.050+00:00 [Info] [Queryport ":9101"] started ...
+2021-04-19T19:46:04.067+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
+2021-04-19T19:46:04.089+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T19:46:04.090+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T19:46:04.103+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:46:04.103+00:00 [Info] Refreshed Indexer List: []
+2021-04-19T19:46:04.103+00:00 [Info] switched currmeta from 0 -> 0
+[FDB INFO] Forestdb blockcache size 1048576 initialized in 173 us
+
+[FDB INFO] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
+2021-04-19T19:46:04.123+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:46:04.123+00:00 [Info] Refreshed Indexer List: []
+2021-04-19T19:46:04.123+00:00 [Info] switched currmeta from 0 -> 0
+2021-04-19T19:46:04.136+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
+2021-04-19T19:46:04.148+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerId Value e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:46:04.153+00:00 [Info] Indexer Id e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:46:04.160+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:46:04.161+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:46:04.161+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:46:04.161+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:46:04.172+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:46:04.173+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:46:04.173+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:46:04.173+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:46:04.173+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
+2021-04-19T19:46:04.174+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
+2021-04-19T19:46:04.174+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
+	Message: MsgUpdateInstMap
+2021-04-19T19:46:04.174+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
+	Message: MsgUpdatePartnMap
+2021-04-19T19:46:04.174+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
+2021-04-19T19:46:04.175+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
+2021-04-19T19:46:04.209+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 33.7218ms
+2021-04-19T19:46:04.209+00:00 [Info] Indexer::ReadMemstats Time Taken 317.8Âµs
+2021-04-19T19:46:04.209+00:00 [Info] ClustMgr:handleIndexerReady &{52 [] {false false false false}  0}
+2021-04-19T19:46:04.210+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value dbb8bee8b38705437e7f5ebc78107bfa
+2021-04-19T19:46:04.221+00:00 [Info] Indexer::NewIndexer Status Active
+2021-04-19T19:46:04.221+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T19:46:04.221+00:00 [Info] Indexer::monitorMemUsage started...
+2021-04-19T19:46:04.259+00:00 [Info] memstats {"Alloc":49069984, "TotalAlloc":49903448, "Sys":56576248, "Lookups":23, "Mallocs":13793,"Frees":6769, "HeapAlloc":49069984, "HeapSys":50462720, "HeapIdle":352256, "HeapInuse":50110464,"HeapReleased":319488, "HeapObjects":7024,"GCSys":1724416, "LastGC":1618861564208913000,"PauseTotalNs":35658300, "PauseNs":[764500, 1578000, 33315800], "NumGC":3}
+2021-04-19T19:46:04.259+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 54968320 Idle 32768
+2021-04-19T19:46:04.259+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T19:46:04.259+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T19:46:04.291+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T19:46:04.303+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:46:04.303+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T19:46:04.303+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T19:46:04.307+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2021-04-19T19:46:04.307+00:00 [Info] switched currmeta from 0 -> 1
+2021-04-19T19:46:04.307+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T19:46:04.307+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T19:46:04.308+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T19:46:04.309+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:43884" doReceive() ...
+2021-04-19T19:46:14.260+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55046144 Idle 32768
+2021-04-19T19:46:24.261+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55046144 Idle 32768
+2021-04-19T19:46:34.262+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55046144 Idle 32768
+2021-04-19T19:46:44.263+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55103488 Idle 32768
+2021-04-19T19:46:54.264+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55103488 Idle 32768
+2021-04-19T19:47:04.023+00:00 [Info] connected with 1 indexers
+2021-04-19T19:47:04.023+00:00 [Info] client load stats {}
+2021-04-19T19:47:04.137+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":55070720,"memory_used_queue":0,"memory_used_storage":61440,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"71 12095200 2776148560000","uptime":"1m0.1881065s"}
+2021-04-19T19:47:04.260+00:00 [Info] memstats {"Alloc":49069984, "TotalAlloc":49903448, "Sys":56576248, "Lookups":23, "Mallocs":13793,"Frees":6769, "HeapAlloc":49069984, "HeapSys":50462720, "HeapIdle":352256, "HeapInuse":50110464,"HeapReleased":319488, "HeapObjects":7024,"GCSys":1724416, "LastGC":1618861564208913000,"PauseTotalNs":35658300, "PauseNs":[], "NumGC":3}
+2021-04-19T19:47:04.265+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55103488 Idle 32768
+2021-04-19T19:47:04.265+00:00 [Info] Indexer::ReadMemstats Time Taken 375.4Âµs
+2021-04-19T19:47:14.266+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:47:24.267+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:47:34.268+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:47:44.270+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:47:54.271+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:48:04.023+00:00 [Info] connected with 1 indexers
+2021-04-19T19:48:04.023+00:00 [Info] client load stats {}
+2021-04-19T19:48:04.138+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":58023936,"memory_used_queue":0,"memory_used_storage":61440,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"143 24505200 5404019100000","uptime":"2m0.1888814s"}
+2021-04-19T19:48:04.261+00:00 [Info] memstats {"Alloc":52067928, "TotalAlloc":52955008, "Sys":59820280, "Lookups":74, "Mallocs":37922,"Frees":10164, "HeapAlloc":52067928, "HeapSys":53379072, "HeapIdle":425984, "HeapInuse":52953088,"HeapReleased":0, "HeapObjects":27758,"GCSys":1835008, "LastGC":1618861564258904300,"PauseTotalNs":72681900, "PauseNs":[37023600], "NumGC":4}
+2021-04-19T19:48:04.273+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58449920 Idle 425984
+2021-04-19T19:48:04.307+00:00 [Info] Indexer::ReadMemstats Time Taken 34.3906ms
+2021-04-19T19:48:14.274+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60678144 Idle 1032192
+2021-04-19T19:48:24.275+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60678144 Idle 1032192
+2021-04-19T19:48:34.275+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60678144 Idle 1032192
+2021-04-19T19:48:44.276+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60678144 Idle 1032192
+2021-04-19T19:52:28.967+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -vbuckets=1024 -cluster=127.0.0.1:8091 -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=dbb8bee8b38705437e7f5ebc78107bfa -storageMode=memory_optimized]
+2021-04-19T19:52:28.980+00:00 [Info] Indexer::Main Storage Mode Set memory_optimized
+2021-04-19T19:52:29.033+00:00 [Info] Indexer::NewIndexer Status Bootstrap
+2021-04-19T19:52:29.043+00:00 [Info] Setting buffer block size to 16384 bytes
+2021-04-19T19:52:29.043+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:52:29.043+00:00 [Info] Setting log level to Info
+2021-04-19T19:52:29.043+00:00 [Info] 127.0.0.1:8091 starting RESTful services
+2021-04-19T19:52:29.048+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T19:52:29.049+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:52:29.049+00:00 [Info] Setting log level to Info
+2021-04-19T19:52:29.094+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:52:29.094+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T19:52:29.094+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T19:52:29.095+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T19:52:30.095+00:00 [Info] WatchMetadata(): unable to reach indexer at 127.0.0.1:9100. Retry in background.
+2021-04-19T19:52:30.095+00:00 [Info] initialized currmeta 0
+2021-04-19T19:52:30.095+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
+2021-04-19T19:52:30.107+00:00 [Info] [Queryport ":9101"] started ...
+2021-04-19T19:52:30.107+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
+2021-04-19T19:52:30.135+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T19:52:30.178+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+[FDB INFO] Forestdb blockcache size 1048576 initialized in 141 us
+
+2021-04-19T19:52:30.179+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+[FDB INFO] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
+2021-04-19T19:52:30.209+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
+2021-04-19T19:52:30.218+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:52:30.218+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T19:52:30.218+00:00 [Info] switched currmeta from 0 -> 0
+2021-04-19T19:52:30.218+00:00 [Error] updateIndexerList(): Cannot locate cluster node.
+2021-04-19T19:52:30.226+00:00 [Info] Indexer Id e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:52:30.246+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:52:30.248+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:52:30.248+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:52:30.248+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:52:30.274+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:52:30.274+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:52:30.274+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:52:30.274+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:52:30.274+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
+2021-04-19T19:52:30.274+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
+2021-04-19T19:52:30.274+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
+	Message: MsgUpdateInstMap
+2021-04-19T19:52:30.274+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
+	Message: MsgUpdatePartnMap
+2021-04-19T19:52:30.275+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
+2021-04-19T19:52:30.275+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
+2021-04-19T19:52:30.326+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 50.7861ms
+2021-04-19T19:52:30.326+00:00 [Info] Indexer::ReadMemstats Time Taken 47Âµs
+2021-04-19T19:52:30.326+00:00 [Info] ClustMgr:handleIndexerReady &{52 [] {false false false false}  0}
+2021-04-19T19:52:30.326+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value dbb8bee8b38705437e7f5ebc78107bfa
+2021-04-19T19:52:30.334+00:00 [Info] Indexer::NewIndexer Status Active
+2021-04-19T19:52:30.334+00:00 [Info] Indexer::monitorMemUsage started...
+2021-04-19T19:52:30.334+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55050240 Idle 32768
+2021-04-19T19:52:30.334+00:00 [Info] memstats {"Alloc":49075432, "TotalAlloc":49878088, "Sys":56576248, "Lookups":27, "Mallocs":13472,"Frees":6457, "HeapAlloc":49075432, "HeapSys":50495488, "HeapIdle":417792, "HeapInuse":50077696,"HeapReleased":385024, "HeapObjects":7015,"GCSys":1732608, "LastGC":1618861950324550000,"PauseTotalNs":60076300, "PauseNs":[4165800, 755500, 6127200, 49027800], "NumGC":4}
+2021-04-19T19:52:30.335+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T19:52:30.382+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T19:52:30.383+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T19:52:32.139+00:00 [Info] WatchMetadata(): Successfully connected to indexer at 127.0.0.1:9100 after retry.
+2021-04-19T19:52:32.139+00:00 [Info] Acknowledged that new indexer is registered.  Indexer = 127.0.0.1:9100, id = e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:52:32.139+00:00 [Info] switched currmeta from 0 -> 1
+2021-04-19T19:52:32.139+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T19:52:32.139+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T19:52:32.140+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T19:52:32.141+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:44234" doReceive() ...
+2021-04-19T19:52:35.651+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.compaction_mode":"circular","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T19:52:35.651+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:52:35.651+00:00 [Info] Setting log level to Info
+2021-04-19T19:52:35.652+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T19:52:35.697+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T19:52:35.698+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T19:52:40.336+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55164928 Idle 32768
+2021-04-19T19:52:50.337+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55255040 Idle 32768
+2021-04-19T19:53:00.338+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55255040 Idle 32768
+2021-04-19T19:53:10.339+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55255040 Idle 32768
+2021-04-19T19:53:20.340+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55255040 Idle 32768
+2021-04-19T19:53:30.096+00:00 [Info] connected with 1 indexers
+2021-04-19T19:53:30.096+00:00 [Info] client load stats {}
+2021-04-19T19:53:30.210+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":55222272,"memory_used_queue":0,"memory_used_storage":139264,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"72 10915300 2261079170000","uptime":"1m1.2424405s"}
+2021-04-19T19:53:30.336+00:00 [Info] memstats {"Alloc":49075432, "TotalAlloc":49878088, "Sys":56576248, "Lookups":27, "Mallocs":13472,"Frees":6457, "HeapAlloc":49075432, "HeapSys":50495488, "HeapIdle":417792, "HeapInuse":50077696,"HeapReleased":385024, "HeapObjects":7015,"GCSys":1732608, "LastGC":1618861950324550000,"PauseTotalNs":60076300, "PauseNs":[], "NumGC":4}
+2021-04-19T19:53:30.341+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55255040 Idle 32768
+2021-04-19T19:53:30.342+00:00 [Info] Indexer::ReadMemstats Time Taken 700.3Âµs
+2021-04-19T19:53:40.342+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58748928 Idle 761856
+2021-04-19T19:53:50.343+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58748928 Idle 761856
+2021-04-19T19:54:17.605+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -vbuckets=1024 -cluster=127.0.0.1:8091 -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=dbb8bee8b38705437e7f5ebc78107bfa -storageMode=memory_optimized]
+2021-04-19T19:54:17.628+00:00 [Info] Indexer::Main Storage Mode Set memory_optimized
+2021-04-19T19:54:17.690+00:00 [Info] Indexer::NewIndexer Status Bootstrap
+2021-04-19T19:54:17.699+00:00 [Info] Setting buffer block size to 16384 bytes
+2021-04-19T19:54:17.699+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:54:17.699+00:00 [Info] Setting log level to Info
+2021-04-19T19:54:17.699+00:00 [Info] 127.0.0.1:8091 starting RESTful services
+2021-04-19T19:54:17.708+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.compaction_mode":"circular","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T19:54:17.709+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:54:17.709+00:00 [Info] Setting log level to Info
+2021-04-19T19:54:17.775+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:54:17.776+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T19:54:17.776+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T19:54:17.776+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T19:54:18.776+00:00 [Info] WatchMetadata(): unable to reach indexer at 127.0.0.1:9100. Retry in background.
+2021-04-19T19:54:18.776+00:00 [Info] initialized currmeta 0
+2021-04-19T19:54:18.777+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
+2021-04-19T19:54:18.778+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T19:54:18.827+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
+2021-04-19T19:54:18.831+00:00 [Info] [Queryport ":9101"] started ...
+2021-04-19T19:54:18.835+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T19:54:18.839+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T19:54:18.847+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T19:54:18.847+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T19:54:18.848+00:00 [Info] switched currmeta from 0 -> 0
+2021-04-19T19:54:18.848+00:00 [Error] updateIndexerList(): Cannot locate cluster node.
+[FDB INFO] Forestdb blockcache size 1048576 initialized in 81 us
+
+[FDB INFO] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
+2021-04-19T19:54:18.876+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
+2021-04-19T19:54:18.894+00:00 [Info] Indexer Id e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:54:18.904+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:54:18.905+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:54:18.905+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:54:18.905+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:54:18.943+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:54:18.944+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T19:54:18.944+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T19:54:18.944+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T19:54:18.944+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
+2021-04-19T19:54:18.945+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
+2021-04-19T19:54:18.945+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
+	Message: MsgUpdateInstMap
+2021-04-19T19:54:18.945+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
+	Message: MsgUpdatePartnMap
+2021-04-19T19:54:18.945+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
+2021-04-19T19:54:18.945+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
+2021-04-19T19:54:19.039+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 94.05ms
+2021-04-19T19:54:19.040+00:00 [Info] Indexer::ReadMemstats Time Taken 105.1Âµs
+2021-04-19T19:54:19.040+00:00 [Info] ClustMgr:handleIndexerReady &{52 [] {false false false false}  0}
+2021-04-19T19:54:19.040+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value dbb8bee8b38705437e7f5ebc78107bfa
+2021-04-19T19:54:19.047+00:00 [Info] Indexer::NewIndexer Status Active
+2021-04-19T19:54:19.047+00:00 [Info] Indexer::monitorMemUsage started...
+2021-04-19T19:54:19.047+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T19:54:19.085+00:00 [Info] memstats {"Alloc":49061856, "TotalAlloc":49861720, "Sys":57919736, "Lookups":22, "Mallocs":13313,"Frees":6329, "HeapAlloc":49061856, "HeapSys":51511296, "HeapIdle":1384448, "HeapInuse":50126848,"HeapReleased":1351680, "HeapObjects":6984,"GCSys":1765376, "LastGC":1618862059039455400,"PauseTotalNs":44387800, "PauseNs":[2528700, 957800, 579500, 40321800], "NumGC":4}
+2021-04-19T19:54:19.085+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55169024 Idle 32768
+2021-04-19T19:54:19.086+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T19:54:19.086+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T19:54:20.096+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T19:54:20.097+00:00 [Info] Setting maxcpus = 8
+2021-04-19T19:54:20.097+00:00 [Info] Setting log level to Info
+2021-04-19T19:54:20.097+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T19:54:20.165+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T19:54:20.165+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T19:54:20.831+00:00 [Info] WatchMetadata(): Successfully connected to indexer at 127.0.0.1:9100 after retry.
+2021-04-19T19:54:20.831+00:00 [Info] Acknowledged that new indexer is registered.  Indexer = 127.0.0.1:9100, id = e4:e5:e4:5:67:66:12:b9
+2021-04-19T19:54:20.831+00:00 [Info] switched currmeta from 0 -> 1
+2021-04-19T19:54:20.831+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T19:54:20.831+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T19:54:20.832+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T19:54:20.834+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:44556" doReceive() ...
+2021-04-19T19:54:29.087+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55336960 Idle 32768
+2021-04-19T19:54:39.088+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55369728 Idle 32768
+2021-04-19T19:54:49.088+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55369728 Idle 32768
+2021-04-19T19:54:59.090+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55369728 Idle 32768
+2021-04-19T19:55:09.091+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55369728 Idle 32768
+2021-04-19T19:55:18.778+00:00 [Info] connected with 1 indexers
+2021-04-19T19:55:18.778+00:00 [Info] client load stats {}
+2021-04-19T19:55:18.877+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":55336960,"memory_used_queue":0,"memory_used_storage":176128,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"72 11368400 2278134440000","uptime":"1m1.271631s"}
+2021-04-19T19:55:19.087+00:00 [Info] memstats {"Alloc":49061856, "TotalAlloc":49861720, "Sys":57919736, "Lookups":22, "Mallocs":13313,"Frees":6329, "HeapAlloc":49061856, "HeapSys":51511296, "HeapIdle":1384448, "HeapInuse":50126848,"HeapReleased":1351680, "HeapObjects":6984,"GCSys":1765376, "LastGC":1618862059039455400,"PauseTotalNs":44387800, "PauseNs":[], "NumGC":4}
+2021-04-19T19:55:19.092+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55369728 Idle 32768
+2021-04-19T19:55:19.093+00:00 [Info] Indexer::ReadMemstats Time Taken 615.4Âµs
+2021-04-19T19:55:29.093+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58662912 Idle 360448
+2021-04-19T19:55:39.094+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58667008 Idle 360448
+2021-04-19T19:55:49.095+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58667008 Idle 360448
+2021-04-19T19:55:59.096+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58667008 Idle 360448
+2021-04-19T19:56:09.097+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58667008 Idle 360448
+2021-04-19T19:56:18.778+00:00 [Info] connected with 1 indexers
+2021-04-19T19:56:18.779+00:00 [Info] client load stats {}
+2021-04-19T19:56:18.877+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":58306560,"memory_used_queue":0,"memory_used_storage":176128,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"144 23163100 4711368010000","uptime":"2m1.2721948s"}
+2021-04-19T19:56:19.088+00:00 [Info] memstats {"Alloc":52115416, "TotalAlloc":53018792, "Sys":60082424, "Lookups":77, "Mallocs":37731,"Frees":9754, "HeapAlloc":52115416, "HeapSys":53379072, "HeapIdle":360448, "HeapInuse":53018624,"HeapReleased":0, "HeapObjects":27977,"GCSys":1839104, "LastGC":1618862060164913300,"PauseTotalNs":150065200, "PauseNs":[38037800, 67639600], "NumGC":6}
+2021-04-19T19:56:19.098+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58667008 Idle 360448
+2021-04-19T19:56:19.099+00:00 [Info] Indexer::ReadMemstats Time Taken 372Âµs
+2021-04-19T19:56:29.099+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60862464 Idle 1007616
+2021-04-19T19:56:39.101+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60862464 Idle 1007616
+2021-04-19T19:56:49.101+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1007616
+2021-04-19T19:56:59.102+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1007616
+2021-04-19T19:57:09.103+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1007616
+2021-04-19T19:57:18.779+00:00 [Info] connected with 1 indexers
+2021-04-19T19:57:18.779+00:00 [Info] client load stats {}
+2021-04-19T19:57:18.878+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":59883520,"memory_used_queue":0,"memory_used_storage":176128,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"216 34397400 6843317180000","uptime":"3m1.2726947s"}
+2021-04-19T19:57:19.088+00:00 [Info] memstats {"Alloc":53640224, "TotalAlloc":54543600, "Sys":62249208, "Lookups":125, "Mallocs":59099,"Frees":12107, "HeapAlloc":53640224, "HeapSys":55476224, "HeapIdle":1007616, "HeapInuse":54468608,"HeapReleased":0, "HeapObjects":46992,"GCSys":1904640, "LastGC":1618862060164913300,"PauseTotalNs":150065200, "PauseNs":[], "NumGC":6}
+2021-04-19T19:57:19.104+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1007616
+2021-04-19T19:57:19.104+00:00 [Info] Indexer::ReadMemstats Time Taken 282Âµs
+2021-04-19T19:57:29.106+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:57:39.106+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:57:49.107+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:57:59.108+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:58:09.109+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:58:18.778+00:00 [Info] connected with 1 indexers
+2021-04-19T19:58:18.778+00:00 [Info] client load stats {}
+2021-04-19T19:58:18.879+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":58220544,"memory_used_queue":0,"memory_used_storage":176128,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"288 45732500 9230142530000","uptime":"4m1.2733311s"}
+2021-04-19T19:58:19.089+00:00 [Info] memstats {"Alloc":51962984, "TotalAlloc":56087200, "Sys":62249208, "Lookups":174, "Mallocs":80514,"Frees":53920, "HeapAlloc":51962984, "HeapSys":55508992, "HeapIdle":2703360, "HeapInuse":52805632,"HeapReleased":0, "HeapObjects":26594,"GCSys":1904640, "LastGC":1618862180454436300,"PauseTotalNs":150704600, "PauseNs":[639400], "NumGC":7}
+2021-04-19T19:58:19.110+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60923904 Idle 2703360
+2021-04-19T19:58:19.110+00:00 [Info] Indexer::ReadMemstats Time Taken 520.6Âµs
+2021-04-19T19:58:29.112+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1179648
+2021-04-19T19:58:39.112+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 60891136 Idle 1179648
+2021-04-19T20:01:57.267+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -vbuckets=1024 -cluster=127.0.0.1:8091 -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=dbb8bee8b38705437e7f5ebc78107bfa -storageMode=memory_optimized]
+2021-04-19T20:01:57.282+00:00 [Info] Indexer::Main Storage Mode Set memory_optimized
+2021-04-19T20:01:57.338+00:00 [Info] Indexer::NewIndexer Status Bootstrap
+2021-04-19T20:01:57.344+00:00 [Info] Setting buffer block size to 16384 bytes
+2021-04-19T20:01:57.344+00:00 [Info] Setting maxcpus = 8
+2021-04-19T20:01:57.344+00:00 [Info] Setting log level to Info
+2021-04-19T20:01:57.344+00:00 [Info] 127.0.0.1:8091 starting RESTful services
+2021-04-19T20:01:57.354+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T20:01:57.354+00:00 [Info] Setting maxcpus = 8
+2021-04-19T20:01:57.354+00:00 [Info] Setting log level to Info
+2021-04-19T20:01:57.384+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:01:57.385+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:01:57.385+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T20:01:57.386+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T20:01:58.386+00:00 [Info] WatchMetadata(): unable to reach indexer at 127.0.0.1:9100. Retry in background.
+2021-04-19T20:01:58.386+00:00 [Info] initialized currmeta 0
+2021-04-19T20:01:58.386+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
+2021-04-19T20:01:58.424+00:00 [Info] [Queryport ":9101"] started ...
+2021-04-19T20:01:58.424+00:00 [Error] WatcherServer.runOnce() error : dial tcp 127.0.0.1:9100: getsockopt: connection refused
+2021-04-19T20:01:58.448+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
+2021-04-19T20:01:58.452+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T20:01:58.454+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:01:58.471+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:01:58.471+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:01:58.471+00:00 [Info] switched currmeta from 0 -> 0
+2021-04-19T20:01:58.471+00:00 [Error] updateIndexerList(): Cannot locate cluster node.
+[FDB INFO] Forestdb blockcache size 1048576 initialized in 80 us
+
+[FDB INFO] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
+2021-04-19T20:01:58.498+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
+2021-04-19T20:01:58.514+00:00 [Info] Indexer Id e4:e5:e4:5:67:66:12:b9
+2021-04-19T20:01:58.523+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T20:01:58.524+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T20:01:58.524+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T20:01:58.524+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T20:01:58.532+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9
+2021-04-19T20:01:58.533+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_e4:e5:e4:5:67:66:12:b9. Err projector.topicMissing
+2021-04-19T20:01:58.533+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2021-04-19T20:01:58.533+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
+2021-04-19T20:01:58.533+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
+2021-04-19T20:01:58.533+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
+2021-04-19T20:01:58.533+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
+	Message: MsgUpdateInstMap
+2021-04-19T20:01:58.533+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
+	Message: MsgUpdatePartnMap
+2021-04-19T20:01:58.534+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
+2021-04-19T20:01:58.534+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
+2021-04-19T20:01:58.567+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 32.8245ms
+2021-04-19T20:01:58.567+00:00 [Info] Indexer::ReadMemstats Time Taken 57.1Âµs
+2021-04-19T20:01:58.567+00:00 [Info] ClustMgr:handleIndexerReady &{52 [] {false false false false}  0}
+2021-04-19T20:01:58.567+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value dbb8bee8b38705437e7f5ebc78107bfa
+2021-04-19T20:01:58.577+00:00 [Info] Indexer::NewIndexer Status Active
+2021-04-19T20:01:58.577+00:00 [Info] memstats {"Alloc":49062512, "TotalAlloc":49856720, "Sys":56576248, "Lookups":26, "Mallocs":13307,"Frees":6322, "HeapAlloc":49062512, "HeapSys":50528256, "HeapIdle":385024, "HeapInuse":50143232,"HeapReleased":344064, "HeapObjects":6985,"GCSys":1730560, "LastGC":1618862518566829700,"PauseTotalNs":37423800, "PauseNs":[1218600, 3643000, 32562200], "NumGC":3}
+2021-04-19T20:01:58.577+00:00 [Info] Indexer::monitorMemUsage started...
+2021-04-19T20:01:58.577+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T20:01:58.607+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55285760 Idle 40960
+2021-04-19T20:01:58.608+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T20:01:58.608+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T20:02:00.427+00:00 [Info] WatchMetadata(): Successfully connected to indexer at 127.0.0.1:9100 after retry.
+2021-04-19T20:02:00.427+00:00 [Info] Acknowledged that new indexer is registered.  Indexer = 127.0.0.1:9100, id = e4:e5:e4:5:67:66:12:b9
+2021-04-19T20:02:00.427+00:00 [Info] switched currmeta from 0 -> 1
+2021-04-19T20:02:00.427+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T20:02:00.427+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T20:02:00.428+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T20:02:00.429+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:45236" doReceive() ...
+2021-04-19T20:02:01.179+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.compaction_mode":"circular","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":5,"indexer.settings.memory_quota":314572800,"indexer.settings.compaction.abort_exceed_interval":false}
+2021-04-19T20:02:01.180+00:00 [Info] Setting maxcpus = 8
+2021-04-19T20:02:01.180+00:00 [Info] Setting log level to Info
+2021-04-19T20:02:01.181+00:00 [Info] Indexer: Setting GC percent to 100
+2021-04-19T20:02:01.201+00:00 [Info] CompactionManager: Refreshing settings
+2021-04-19T20:02:01.201+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 31457280
+2021-04-19T20:02:08.608+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55351296 Idle 40960
+2021-04-19T20:02:18.609+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55351296 Idle 40960
+2021-04-19T20:02:28.610+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55351296 Idle 40960
+2021-04-19T20:02:38.611+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55351296 Idle 40960
+2021-04-19T20:02:48.613+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55355392 Idle 40960
+2021-04-19T20:02:58.424+00:00 [Info] connected with 1 indexers
+2021-04-19T20:02:58.424+00:00 [Info] client load stats {}
+2021-04-19T20:02:58.499+00:00 [Info] PeriodicStats = {"index_not_found_errcount":0,"indexer_state":"Active","memory_quota":314572800,"memory_used":55314432,"memory_used_queue":0,"memory_used_storage":212992,"needs_restart":false,"num_connections":1,"storage_mode":"memory_optimized","timings/stats_response":"72 10889100 2074409590000","uptime":"1m1.231474s"}
+2021-04-19T20:02:58.578+00:00 [Info] memstats {"Alloc":49062512, "TotalAlloc":49856720, "Sys":56576248, "Lookups":26, "Mallocs":13307,"Frees":6322, "HeapAlloc":49062512, "HeapSys":50528256, "HeapIdle":385024, "HeapInuse":50143232,"HeapReleased":344064, "HeapObjects":6985,"GCSys":1730560, "LastGC":1618862518566829700,"PauseTotalNs":37423800, "PauseNs":[], "NumGC":3}
+2021-04-19T20:02:58.613+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 55355392 Idle 40960
+2021-04-19T20:02:58.614+00:00 [Info] Indexer::ReadMemstats Time Taken 363.1Âµs
+2021-04-19T20:03:08.615+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 58705920 Idle 802816

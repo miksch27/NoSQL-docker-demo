@@ -1,0 +1,1773 @@
+[ns_server:info,2021-04-19T20:03:35.427Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:init_logging:125]Brought up ns_couchdb logging
+[ns_server:debug,2021-04-19T20:03:35.437Z,couchdb_ns_1@127.0.0.1:<0.40.0>:dist_manager:configure_net_kernel:255]Set net_kernel vebosity to 10 -> 0
+[ns_server:info,2021-04-19T20:03:35.441Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:start:51]CouchDB node 'couchdb_ns_1@127.0.0.1' was initialized for 'ns_1@127.0.0.1'. Cookie: ancrskwmnbiqqzrg
+[error_logger:info,2021-04-19T20:03:35.527Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,cb_couch_sup}
+             started: [{pid,<0.98.0>},
+                       {name,cb_auth_info},
+                       {mfargs,{cb_auth_info,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.550Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.104.0>},
+                       {name,alarm_handler},
+                       {mfargs,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.558Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.105.0>},
+                       {name,overload},
+                       {mfargs,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.558Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.103.0>},
+                       {name,sasl_safe_sup},
+                       {mfargs,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.580Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.106.0>},
+                       {name,release_handler},
+                       {mfargs,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.580Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: sasl
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.610Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.112.0>},
+                       {name,ftp_sup},
+                       {mfargs,{ftp_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.677Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_profile_sup}
+             started: [{pid,<0.115.0>},
+                       {name,httpc_manager},
+                       {mfargs,
+                           {httpc_manager,start_link,
+                               [default,only_session_cookies,inets]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.678Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_sup}
+             started: [{pid,<0.114.0>},
+                       {name,httpc_profile_sup},
+                       {mfargs,
+                           {httpc_profile_sup,start_link,
+                               [[{httpc,{default,only_session_cookies}}]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.687Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_sup}
+             started: [{pid,<0.116.0>},
+                       {name,httpc_handler_sup},
+                       {mfargs,{httpc_handler_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.687Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.113.0>},
+                       {name,httpc_sup},
+                       {mfargs,
+                           {httpc_sup,start_link,
+                               [[{httpc,{default,only_session_cookies}}]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.697Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.117.0>},
+                       {name,httpd_sup},
+                       {mfargs,{httpd_sup,start_link,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.710Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.118.0>},
+                       {name,tftp_sup},
+                       {mfargs,{tftp_sup,start_link,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:35.710Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: inets
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.710Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: oauth
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.734Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,lhttpc_sup}
+             started: [{pid,<0.124.0>},
+                       {name,lhttpc_manager},
+                       {mfargs,
+                           {lhttpc_manager,start_link,
+                               [[{name,lhttpc_manager}]]}},
+                       {restart_type,permanent},
+                       {shutdown,10000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.734Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: lhttpc
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.743Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: xmerl
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.768Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: compiler
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.778Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: syntax_tools
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.778Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: mochiweb
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.798Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.133.0>},
+                       {name,disksup},
+                       {mfargs,{disksup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.815Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.134.0>},
+                       {name,memsup},
+                       {mfargs,{memsup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.828Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.136.0>},
+                       {name,cpu_sup},
+                       {mfargs,{cpu_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.829Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: os_mon
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.839Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_view_parser
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.848Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_set_view
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.859Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_index_merger
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.868Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: mapreduce
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:03:35.950Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.143.0>},
+                       {name,couch_config},
+                       {mfargs,
+                           {couch_server_sup,couch_config_start_link_wrapper,
+                               [["/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                <0.143.0>]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.959Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.146.0>},
+                       {name,couch_task_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_task_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.968Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.147.0>},
+                       {name,couch_task_status},
+                       {mfargs,{couch_task_status,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:35.980Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.148.0>},
+                       {name,couch_file_write_guard},
+                       {mfargs,{couch_file_write_guard,sup_start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,10000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.022Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.149.0>},
+                       {name,couch_server},
+                       {mfargs,{couch_server,sup_start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.022Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.150.0>},
+                       {name,couch_db_update_event},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_db_update}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.022Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.151.0>},
+                       {name,couch_replication_event},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_replication}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.029Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.152.0>},
+                       {name,couch_replication_supervisor},
+                       {mfargs,{couch_rep_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.040Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.153.0>},
+                       {name,couch_log},
+                       {mfargs,{couch_log,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.054Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.154.0>},
+                       {name,couch_main_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_main_index_barrier,
+                                "max_parallel_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.055Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.155.0>},
+                       {name,couch_replica_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_replica_index_barrier,
+                                "max_parallel_replica_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.055Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.156.0>},
+                       {name,couch_spatial_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_spatial_index_barrier,
+                                "max_parallel_spatial_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.056Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.145.0>},
+                       {name,couch_primary_services},
+                       {mfargs,{couch_primary_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.073Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.158.0>},
+                       {name,couch_db_update_notifier_sup},
+                       {mfargs,{couch_db_update_notifier_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.152Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.159.0>},
+                       {name,spatial_view_manager_dev},
+                       {mfargs,{couch_set_view,start_link,[dev,spatial_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.152Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.162.0>},
+                       {name,index_merger_pool},
+                       {mfargs,
+                           {lhttpc_manager,start_link,
+                               [[{connection_timeout,90000},
+                                 {pool_size,10000},
+                                 {name,couch_index_merger_connection_pool}]]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.162Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.163.0>},
+                       {name,query_servers},
+                       {mfargs,{couch_query_servers,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.169Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.165.0>},
+                       {name,couch_set_view_ddoc_cache},
+                       {mfargs,{couch_set_view_ddoc_cache,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.194Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.167.0>},
+                       {name,view_manager},
+                       {mfargs,{couch_view,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.229Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.169.0>},
+                       {name,uuids},
+                       {mfargs,{couch_uuids,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.237Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.171.0>},
+                       {name,spatial_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,spatial_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.274Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.173.0>},
+                       {name,httpd},
+                       {mfargs,{couch_httpd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.297Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.190.0>},
+                       {name,set_view_manager_dev},
+                       {mfargs,
+                           {couch_set_view,start_link,[dev,mapreduce_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.454Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.192.0>},
+                       {name,auth_cache},
+                       {mfargs,{couch_auth_cache,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.463Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.203.0>},
+                       {name,set_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,mapreduce_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.463Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.157.0>},
+                       {name,couch_secondary_services},
+                       {mfargs,{couch_secondary_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.465Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,cb_couch_sup}
+             started: [{pid,<0.144.0>},
+                       {name,couch_app},
+                       {mfargs,
+                           {couch_app,start,
+                               [fake,
+                                ["/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.465Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.96.0>},
+                       {name,cb_couch_sup},
+                       {mfargs,{cb_couch_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.487Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.206.0>},
+                       {name,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.497Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.207.0>},
+                       {name,ns_memcached_sockets_pool},
+                       {mfargs,{ns_memcached_sockets_pool,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.502Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.208.0>},
+                       {name,xdcr_dcp_sockets_pool},
+                       {mfargs,{xdcr_dcp_sockets_pool,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.507Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.209.0>},
+                       {name,ns_couchdb_stats_collector},
+                       {mfargs,{ns_couchdb_stats_collector,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.515Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.211.0>},
+                       {name,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.515Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.212.0>},
+                       {name,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.547Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.213.0>},
+                       {name,ns_config},
+                       {mfargs,
+                           {ns_config,start_link,
+                               [{pull_from_node,'ns_1@127.0.0.1'}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.552Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.216.0>},
+                       {name,ns_couchdb_config_rep},
+                       {mfargs,{ns_couchdb_config_rep,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.562Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.217.0>},
+                       {name,cb_config_couch_sync},
+                       {mfargs,{cb_config_couch_sync,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.563Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.210.0>},
+                       {name,ns_couchdb_config_sup},
+                       {mfargs,{ns_couchdb_config_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:03:36.578Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.219.0>},
+                       {name,request_throttler},
+                       {mfargs,{request_throttler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.587Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.220.0>},
+                       {name,vbucket_map_mirror},
+                       {mfargs,{vbucket_map_mirror,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:03:36.591Z,couchdb_ns_1@127.0.0.1:set_view_update_daemon<0.222.0>:set_view_update_daemon:init:50]Set view update daemon, starting with the following settings:
+  update interval:           5000ms
+  minimum number of changes: 5000
+
+[error_logger:info,2021-04-19T20:03:36.594Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.224.0>},
+                       {name,timer2_server},
+                       {mfargs,{timer2,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.595Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.222.0>},
+                       {name,set_view_update_daemon},
+                       {mfargs,{set_view_update_daemon,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:03:36.599Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.216.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@127.0.0.1'
+
+[ns_server:debug,2021-04-19T20:03:36.654Z,couchdb_ns_1@127.0.0.1:<0.225.0>:restartable:start_child:98]Started child process <0.229.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+[error_logger:info,2021-04-19T20:03:36.654Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.225.0>},
+                       {name,ns_capi_ssl_service},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{ns_ssl_services_setup,
+                                    start_link_capi_service,[]},
+                                1000]}},
+                       {restart_type,{permanent,4}},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:03:36.657Z,couchdb_ns_1@127.0.0.1:ns_couchdb_sup<0.95.0>:dir_size:start_link:39]Starting quick version of dir_size with program name: godu
+[error_logger:info,2021-04-19T20:03:36.658Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.246.0>},
+                       {name,dir_size},
+                       {mfargs,{dir_size,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:03:36.659Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: ns_couchdb
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[ns_server:debug,2021-04-19T20:03:36.659Z,couchdb_ns_1@127.0.0.1:<0.2.0>:child_erlang:child_loop:116]143: Entered child_loop
+[error_logger:info,2021-04-19T20:03:37.139Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.248.0>},
+                       {name,timer_server},
+                       {mfargs,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-19T20:03:38.112Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.253.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.359.0>
+[ns_server:debug,2021-04-19T20:03:38.113Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.253.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.360.0>
+[ns_server:debug,2021-04-19T20:03:38.113Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.253.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.357.0>
+[ns_server:debug,2021-04-19T20:03:38.128Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.253.0>:xdc_rdoc_manager:open_or_create_replicator_db:225]Replicator db did not exist, create a new one
+[ns_server:debug,2021-04-19T20:03:38.170Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.253.0>:xdc_rdoc_manager:init:75]Loaded the following docs:
+[]
+[ns_server:debug,2021-04-19T20:03:40.311Z,couchdb_ns_1@127.0.0.1:<0.225.0>:restartable:loop:71]Restarting child <0.229.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+  Shutdown policy: 1000
+  Caller: {<0.264.0>,#Ref<0.0.0.614>}
+[ns_server:debug,2021-04-19T20:03:40.312Z,couchdb_ns_1@127.0.0.1:<0.225.0>:restartable:shutdown_child:120]Successfully terminated process <0.229.0>
+[ns_server:info,2021-04-19T20:03:40.312Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.216.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@127.0.0.1'
+
+[ns_server:debug,2021-04-19T20:03:40.324Z,couchdb_ns_1@127.0.0.1:<0.225.0>:restartable:start_child:98]Started child process <0.268.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+[ns_server:debug,2021-04-19T20:06:25.999Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-miksch1<0.362.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.1885.0>
+[ns_server:debug,2021-04-19T20:06:25.999Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-miksch1<0.362.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.1886.0>
+[error_logger:info,2021-04-19T20:06:26.035Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.376.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-19T20:06:26.036Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.375.0>},
+                       {name,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-19T20:06:26.610Z,couchdb_ns_1@127.0.0.1:<0.372.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "miksch1" is created in memcached
+[ns_server:info,2021-04-19T20:06:38.326Z,couchdb_ns_1@127.0.0.1:<0.401.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:07:08.331Z,couchdb_ns_1@127.0.0.1:<0.449.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:07:38.340Z,couchdb_ns_1@127.0.0.1:<0.496.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:08:08.348Z,couchdb_ns_1@127.0.0.1:<0.543.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:08:38.352Z,couchdb_ns_1@127.0.0.1:<0.590.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:09:08.357Z,couchdb_ns_1@127.0.0.1:<0.692.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:debug,2021-04-19T20:09:24.823Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-Mein1Bucket<0.755.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.4022.0>
+[ns_server:debug,2021-04-19T20:09:24.824Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-Mein1Bucket<0.755.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4861.4023.0>
+[ns_server:debug,2021-04-19T20:09:25.331Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.758.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:09:25.332Z,couchdb_ns_1@127.0.0.1:<0.771.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "Mein1Bucket" is created in memcached
+[ns_server:info,2021-04-19T20:09:38.372Z,couchdb_ns_1@127.0.0.1:<0.837.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:09:38.387Z,couchdb_ns_1@127.0.0.1:<0.840.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:10:08.405Z,couchdb_ns_1@127.0.0.1:<0.1050.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:10:08.418Z,couchdb_ns_1@127.0.0.1:<0.1052.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:10:38.424Z,couchdb_ns_1@127.0.0.1:<0.1264.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:10:38.427Z,couchdb_ns_1@127.0.0.1:<0.1266.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:11:08.433Z,couchdb_ns_1@127.0.0.1:<0.1478.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:11:08.437Z,couchdb_ns_1@127.0.0.1:<0.1480.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:11:38.441Z,couchdb_ns_1@127.0.0.1:<0.1681.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:11:38.445Z,couchdb_ns_1@127.0.0.1:<0.1683.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:12:08.449Z,couchdb_ns_1@127.0.0.1:<0.1883.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:12:08.453Z,couchdb_ns_1@127.0.0.1:<0.1885.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:12:38.457Z,couchdb_ns_1@127.0.0.1:<0.2086.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:12:38.460Z,couchdb_ns_1@127.0.0.1:<0.2088.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:13:08.464Z,couchdb_ns_1@127.0.0.1:<0.2289.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:13:08.468Z,couchdb_ns_1@127.0.0.1:<0.2292.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:13:38.472Z,couchdb_ns_1@127.0.0.1:<0.2492.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:13:38.476Z,couchdb_ns_1@127.0.0.1:<0.2494.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:14:08.480Z,couchdb_ns_1@127.0.0.1:<0.2694.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:14:08.483Z,couchdb_ns_1@127.0.0.1:<0.2696.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:14:38.488Z,couchdb_ns_1@127.0.0.1:<0.2896.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:14:38.494Z,couchdb_ns_1@127.0.0.1:<0.2898.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:15:08.500Z,couchdb_ns_1@127.0.0.1:<0.3098.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:15:08.504Z,couchdb_ns_1@127.0.0.1:<0.3100.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:18:09.331Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:init_logging:125]Brought up ns_couchdb logging
+[ns_server:debug,2021-04-19T20:18:09.340Z,couchdb_ns_1@127.0.0.1:<0.40.0>:dist_manager:configure_net_kernel:255]Set net_kernel vebosity to 10 -> 0
+[ns_server:info,2021-04-19T20:18:09.342Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:start:51]CouchDB node 'couchdb_ns_1@127.0.0.1' was initialized for 'ns_1@127.0.0.1'. Cookie: ddzjtfpqhuduulzj
+[error_logger:info,2021-04-19T20:18:09.407Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,cb_couch_sup}
+             started: [{pid,<0.97.0>},
+                       {name,cb_auth_info},
+                       {mfargs,{cb_auth_info,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.425Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.103.0>},
+                       {name,alarm_handler},
+                       {mfargs,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.431Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.104.0>},
+                       {name,overload},
+                       {mfargs,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.432Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.102.0>},
+                       {name,sasl_safe_sup},
+                       {mfargs,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.447Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.105.0>},
+                       {name,release_handler},
+                       {mfargs,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.447Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: sasl
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.469Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.111.0>},
+                       {name,ftp_sup},
+                       {mfargs,{ftp_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.524Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_profile_sup}
+             started: [{pid,<0.114.0>},
+                       {name,httpc_manager},
+                       {mfargs,
+                           {httpc_manager,start_link,
+                               [default,only_session_cookies,inets]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.524Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_sup}
+             started: [{pid,<0.113.0>},
+                       {name,httpc_profile_sup},
+                       {mfargs,
+                           {httpc_profile_sup,start_link,
+                               [[{httpc,{default,only_session_cookies}}]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.532Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,httpc_sup}
+             started: [{pid,<0.115.0>},
+                       {name,httpc_handler_sup},
+                       {mfargs,{httpc_handler_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.533Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.112.0>},
+                       {name,httpc_sup},
+                       {mfargs,
+                           {httpc_sup,start_link,
+                               [[{httpc,{default,only_session_cookies}}]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.541Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.116.0>},
+                       {name,httpd_sup},
+                       {mfargs,{httpd_sup,start_link,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.552Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inets_sup}
+             started: [{pid,<0.117.0>},
+                       {name,tftp_sup},
+                       {mfargs,{tftp_sup,start_link,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.552Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: inets
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.552Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: oauth
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.571Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,lhttpc_sup}
+             started: [{pid,<0.123.0>},
+                       {name,lhttpc_manager},
+                       {mfargs,
+                           {lhttpc_manager,start_link,
+                               [[{name,lhttpc_manager}]]}},
+                       {restart_type,permanent},
+                       {shutdown,10000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.572Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: lhttpc
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.579Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: xmerl
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.595Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: compiler
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.604Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: syntax_tools
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.604Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: mochiweb
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.622Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.132.0>},
+                       {name,disksup},
+                       {mfargs,{disksup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.632Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.133.0>},
+                       {name,memsup},
+                       {mfargs,{memsup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.647Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,os_mon_sup}
+             started: [{pid,<0.135.0>},
+                       {name,cpu_sup},
+                       {mfargs,{cpu_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.647Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: os_mon
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.657Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_view_parser
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.667Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_set_view
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.678Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_index_merger
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.686Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: mapreduce
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[error_logger:info,2021-04-19T20:18:09.777Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.142.0>},
+                       {name,couch_config},
+                       {mfargs,
+                           {couch_server_sup,couch_config_start_link_wrapper,
+                               [["/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                <0.142.0>]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.796Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.145.0>},
+                       {name,couch_task_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_task_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.810Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.146.0>},
+                       {name,couch_task_status},
+                       {mfargs,{couch_task_status,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.818Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.147.0>},
+                       {name,couch_file_write_guard},
+                       {mfargs,{couch_file_write_guard,sup_start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,10000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.859Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.148.0>},
+                       {name,couch_server},
+                       {mfargs,{couch_server,sup_start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.859Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.149.0>},
+                       {name,couch_db_update_event},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_db_update}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.860Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.150.0>},
+                       {name,couch_replication_event},
+                       {mfargs,
+                           {gen_event,start_link,[{local,couch_replication}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.867Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.151.0>},
+                       {name,couch_replication_supervisor},
+                       {mfargs,{couch_rep_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.879Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.152.0>},
+                       {name,couch_log},
+                       {mfargs,{couch_log,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.891Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.153.0>},
+                       {name,couch_main_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_main_index_barrier,
+                                "max_parallel_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.892Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.154.0>},
+                       {name,couch_replica_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_replica_index_barrier,
+                                "max_parallel_replica_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.892Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_primary_services}
+             started: [{pid,<0.155.0>},
+                       {name,couch_spatial_index_barrier},
+                       {mfargs,
+                           {couch_index_barrier,start_link,
+                               [couch_spatial_index_barrier,
+                                "max_parallel_spatial_indexers"]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.892Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.144.0>},
+                       {name,couch_primary_services},
+                       {mfargs,{couch_primary_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.907Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.157.0>},
+                       {name,couch_db_update_notifier_sup},
+                       {mfargs,{couch_db_update_notifier_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:09.982Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.158.0>},
+                       {name,spatial_view_manager_dev},
+                       {mfargs,{couch_set_view,start_link,[dev,spatial_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.983Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.161.0>},
+                       {name,index_merger_pool},
+                       {mfargs,
+                           {lhttpc_manager,start_link,
+                               [[{connection_timeout,90000},
+                                 {pool_size,10000},
+                                 {name,couch_index_merger_connection_pool}]]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:09.994Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.162.0>},
+                       {name,query_servers},
+                       {mfargs,{couch_query_servers,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.000Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.164.0>},
+                       {name,couch_set_view_ddoc_cache},
+                       {mfargs,{couch_set_view_ddoc_cache,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.026Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.166.0>},
+                       {name,view_manager},
+                       {mfargs,{couch_view,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.062Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.168.0>},
+                       {name,uuids},
+                       {mfargs,{couch_uuids,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.077Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.170.0>},
+                       {name,spatial_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,spatial_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.130Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.172.0>},
+                       {name,httpd},
+                       {mfargs,{couch_httpd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.154Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.189.0>},
+                       {name,set_view_manager_dev},
+                       {mfargs,
+                           {couch_set_view,start_link,[dev,mapreduce_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.294Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.191.0>},
+                       {name,auth_cache},
+                       {mfargs,{couch_auth_cache,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.307Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.200.0>},
+                       {name,set_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,mapreduce_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.308Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_server_sup}
+             started: [{pid,<0.156.0>},
+                       {name,couch_secondary_services},
+                       {mfargs,{couch_secondary_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:10.309Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,cb_couch_sup}
+             started: [{pid,<0.143.0>},
+                       {name,couch_app},
+                       {mfargs,
+                           {couch_app,start,
+                               [fake,
+                                ["/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"]]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:10.310Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.95.0>},
+                       {name,cb_couch_sup},
+                       {mfargs,{cb_couch_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:10.349Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.203.0>},
+                       {name,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.366Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.204.0>},
+                       {name,ns_memcached_sockets_pool},
+                       {mfargs,{ns_memcached_sockets_pool,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.373Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.205.0>},
+                       {name,xdcr_dcp_sockets_pool},
+                       {mfargs,{xdcr_dcp_sockets_pool,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.377Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.206.0>},
+                       {name,ns_couchdb_stats_collector},
+                       {mfargs,{ns_couchdb_stats_collector,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.391Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.208.0>},
+                       {name,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.391Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.209.0>},
+                       {name,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.448Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.210.0>},
+                       {name,ns_config},
+                       {mfargs,
+                           {ns_config,start_link,
+                               [{pull_from_node,'ns_1@127.0.0.1'}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.461Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.213.0>},
+                       {name,ns_couchdb_config_rep},
+                       {mfargs,{ns_couchdb_config_rep,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.477Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_config_sup}
+             started: [{pid,<0.214.0>},
+                       {name,cb_config_couch_sync},
+                       {mfargs,{cb_config_couch_sync,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.478Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.207.0>},
+                       {name,ns_couchdb_config_sup},
+                       {mfargs,{ns_couchdb_config_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-19T20:18:10.497Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.216.0>},
+                       {name,request_throttler},
+                       {mfargs,{request_throttler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.507Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.217.0>},
+                       {name,vbucket_map_mirror},
+                       {mfargs,{vbucket_map_mirror,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:18:10.513Z,couchdb_ns_1@127.0.0.1:set_view_update_daemon<0.219.0>:set_view_update_daemon:init:50]Set view update daemon, starting with the following settings:
+  update interval:           5000ms
+  minimum number of changes: 5000
+
+[error_logger:info,2021-04-19T20:18:10.523Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.221.0>},
+                       {name,timer2_server},
+                       {mfargs,{timer2,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.523Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.219.0>},
+                       {name,set_view_update_daemon},
+                       {mfargs,{set_view_update_daemon,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:18:10.538Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.213.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@127.0.0.1'
+
+[ns_server:debug,2021-04-19T20:18:10.741Z,couchdb_ns_1@127.0.0.1:<0.222.0>:restartable:start_child:98]Started child process <0.226.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+[error_logger:info,2021-04-19T20:18:10.742Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.222.0>},
+                       {name,ns_capi_ssl_service},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{ns_ssl_services_setup,
+                                    start_link_capi_service,[]},
+                                1000]}},
+                       {restart_type,{permanent,4}},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:18:10.747Z,couchdb_ns_1@127.0.0.1:ns_couchdb_sup<0.94.0>:dir_size:start_link:39]Starting quick version of dir_size with program name: godu
+[error_logger:info,2021-04-19T20:18:10.758Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.243.0>},
+                       {name,dir_size},
+                       {mfargs,{dir_size,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-19T20:18:10.758Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: ns_couchdb
+          started_at: 'couchdb_ns_1@127.0.0.1'
+
+[ns_server:debug,2021-04-19T20:18:10.758Z,couchdb_ns_1@127.0.0.1:<0.2.0>:child_erlang:child_loop:116]137: Entered child_loop
+[error_logger:info,2021-04-19T20:18:10.982Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.245.0>},
+                       {name,timer_server},
+                       {mfargs,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-19T20:18:12.908Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.250.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.348.0>
+[ns_server:debug,2021-04-19T20:18:12.908Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.250.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.349.0>
+[ns_server:debug,2021-04-19T20:18:12.908Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.250.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.346.0>
+[ns_server:debug,2021-04-19T20:18:12.983Z,couchdb_ns_1@127.0.0.1:xdc_rdoc_manager<0.250.0>:xdc_rdoc_manager:init:75]Loaded the following docs:
+[]
+[ns_server:debug,2021-04-19T20:18:13.010Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-Mein1Bucket<0.260.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.363.0>
+[ns_server:debug,2021-04-19T20:18:13.010Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-Mein1Bucket<0.260.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.364.0>
+[error_logger:info,2021-04-19T20:18:13.167Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.273.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-19T20:18:13.167Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.272.0>},
+                       {name,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-19T20:18:13.439Z,couchdb_ns_1@127.0.0.1:<0.275.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:18:13.458Z,couchdb_ns_1@127.0.0.1:<0.278.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:debug,2021-04-19T20:18:13.729Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-miksch1<0.288.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.456.0>
+[ns_server:debug,2021-04-19T20:18:13.732Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-miksch1<0.288.0>:ns_couchdb_api:register_doc_manager:312]Register doc manager with <4839.457.0>
+[ns_server:warn,2021-04-19T20:18:15.991Z,couchdb_ns_1@127.0.0.1:<0.270.0>:ns_memcached:connect:1307]Unable to connect: {error,{badmatch,{error,econnrefused}}}, retrying.
+[ns_server:warn,2021-04-19T20:18:15.991Z,couchdb_ns_1@127.0.0.1:<0.291.0>:ns_memcached:connect:1307]Unable to connect: {error,{badmatch,{error,econnrefused}}}, retrying.
+[ns_server:warn,2021-04-19T20:18:16.998Z,couchdb_ns_1@127.0.0.1:<0.270.0>:ns_memcached:connect:1307]Unable to connect: {error,{badmatch,{error,econnrefused}}}, retrying.
+[ns_server:warn,2021-04-19T20:18:16.998Z,couchdb_ns_1@127.0.0.1:<0.291.0>:ns_memcached:connect:1307]Unable to connect: {error,{badmatch,{error,econnrefused}}}, retrying.
+[ns_server:debug,2021-04-19T20:18:18.569Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:18.570Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:19.074Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:19.074Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:19.579Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:19.579Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:20.085Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:20.085Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:20.590Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:20.590Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:21.094Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:21.095Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:21.611Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:21.612Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:22.115Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:22.116Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:22.619Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:22.620Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:23.123Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5000 ms.
+[ns_server:debug,2021-04-19T20:18:23.123Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5000 ms.
+[ns_server:debug,2021-04-19T20:18:23.625Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:23.625Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:24.127Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:24.127Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:24.631Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:24.631Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:25.134Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:25.134Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:25.637Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:25.637Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:26.141Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:26.141Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:26.644Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 8500 ms.
+[ns_server:debug,2021-04-19T20:18:26.644Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 8500 ms.
+[ns_server:debug,2021-04-19T20:18:27.147Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 9000 ms.
+[ns_server:debug,2021-04-19T20:18:27.147Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 9000 ms.
+[ns_server:debug,2021-04-19T20:18:27.650Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 9500 ms.
+[ns_server:debug,2021-04-19T20:18:27.650Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 9500 ms.
+[ns_server:debug,2021-04-19T20:18:28.152Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 10000 ms.
+[ns_server:debug,2021-04-19T20:18:28.152Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 10000 ms.
+[ns_server:error,2021-04-19T20:18:28.153Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.290.0>:capi_set_view_manager:wait_for_bucket_to_start:199]Engine for bucket "miksch1" didn't start in 10000 ms. Exit.
+[ns_server:error,2021-04-19T20:18:28.154Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.268.0>:capi_set_view_manager:wait_for_bucket_to_start:199]Engine for bucket "Mein1Bucket" didn't start in 10000 ms. Exit.
+[ns_server:debug,2021-04-19T20:18:28.657Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:28.657Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:29.160Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:29.160Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:29.662Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:29.662Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:30.165Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:30.165Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:30.667Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:30.667Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:31.169Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:31.170Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:31.671Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:31.673Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:32.173Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:32.175Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:32.675Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:32.677Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:33.177Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5000 ms.
+[ns_server:debug,2021-04-19T20:18:33.180Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5000 ms.
+[ns_server:debug,2021-04-19T20:18:33.679Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:33.682Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:34.181Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:34.184Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:34.684Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:34.687Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:35.186Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:35.189Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:35.688Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:35.691Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:36.191Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:36.194Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:36.693Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 8500 ms.
+[ns_server:debug,2021-04-19T20:18:36.696Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 8500 ms.
+[ns_server:debug,2021-04-19T20:18:37.195Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 9000 ms.
+[ns_server:debug,2021-04-19T20:18:37.198Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 9000 ms.
+[ns_server:debug,2021-04-19T20:18:37.698Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 9500 ms.
+[ns_server:debug,2021-04-19T20:18:37.701Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 9500 ms.
+[ns_server:debug,2021-04-19T20:18:38.200Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 10000 ms.
+[ns_server:error,2021-04-19T20:18:38.201Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.380.0>:capi_set_view_manager:wait_for_bucket_to_start:199]Engine for bucket "miksch1" didn't start in 10000 ms. Exit.
+[ns_server:debug,2021-04-19T20:18:38.203Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 10000 ms.
+[ns_server:error,2021-04-19T20:18:38.206Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.383.0>:capi_set_view_manager:wait_for_bucket_to_start:199]Engine for bucket "Mein1Bucket" didn't start in 10000 ms. Exit.
+[ns_server:debug,2021-04-19T20:18:38.705Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:38.710Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 500 ms.
+[ns_server:debug,2021-04-19T20:18:39.212Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:39.215Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1000 ms.
+[ns_server:debug,2021-04-19T20:18:39.715Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:39.717Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 1500 ms.
+[ns_server:debug,2021-04-19T20:18:40.217Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:40.219Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2000 ms.
+[ns_server:debug,2021-04-19T20:18:40.721Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:40.722Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 2500 ms.
+[ns_server:debug,2021-04-19T20:18:41.223Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:41.224Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3000 ms.
+[ns_server:debug,2021-04-19T20:18:41.725Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:41.726Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 3500 ms.
+[ns_server:debug,2021-04-19T20:18:42.228Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:42.231Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4000 ms.
+[ns_server:debug,2021-04-19T20:18:42.730Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:42.733Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 4500 ms.
+[ns_server:debug,2021-04-19T20:18:43.232Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5000 ms.
+[ns_server:debug,2021-04-19T20:18:43.235Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5000 ms.
+[ns_server:info,2021-04-19T20:18:43.502Z,couchdb_ns_1@127.0.0.1:<0.519.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:18:43.507Z,couchdb_ns_1@127.0.0.1:<0.521.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:debug,2021-04-19T20:18:43.735Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:43.738Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 5500 ms.
+[ns_server:debug,2021-04-19T20:18:44.238Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:44.241Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6000 ms.
+[ns_server:debug,2021-04-19T20:18:44.740Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:44.743Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 6500 ms.
+[ns_server:debug,2021-04-19T20:18:45.243Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:45.245Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7000 ms.
+[ns_server:debug,2021-04-19T20:18:45.745Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:45.747Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 7500 ms.
+[ns_server:debug,2021-04-19T20:18:46.247Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-miksch1<0.468.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "miksch1", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:46.248Z,couchdb_ns_1@127.0.0.1:<0.549.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "miksch1" is created in memcached
+[ns_server:debug,2021-04-19T20:18:46.249Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-Mein1Bucket<0.474.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "Mein1Bucket", Wait time: 8000 ms.
+[ns_server:debug,2021-04-19T20:18:46.249Z,couchdb_ns_1@127.0.0.1:<0.551.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "Mein1Bucket" is created in memcached
+[ns_server:info,2021-04-19T20:19:13.521Z,couchdb_ns_1@127.0.0.1:<0.691.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:19:13.533Z,couchdb_ns_1@127.0.0.1:<0.693.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:19:43.538Z,couchdb_ns_1@127.0.0.1:<0.893.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:19:43.544Z,couchdb_ns_1@127.0.0.1:<0.895.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:20:13.550Z,couchdb_ns_1@127.0.0.1:<0.1108.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:20:13.554Z,couchdb_ns_1@127.0.0.1:<0.1110.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:20:43.561Z,couchdb_ns_1@127.0.0.1:<0.1310.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:20:43.573Z,couchdb_ns_1@127.0.0.1:<0.1312.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:21:13.587Z,couchdb_ns_1@127.0.0.1:<0.1512.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:21:13.591Z,couchdb_ns_1@127.0.0.1:<0.1514.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:21:43.595Z,couchdb_ns_1@127.0.0.1:<0.1720.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:21:43.599Z,couchdb_ns_1@127.0.0.1:<0.1722.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:22:13.606Z,couchdb_ns_1@127.0.0.1:<0.1926.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:22:13.618Z,couchdb_ns_1@127.0.0.1:<0.1928.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:22:43.632Z,couchdb_ns_1@127.0.0.1:<0.2128.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:22:43.646Z,couchdb_ns_1@127.0.0.1:<0.2130.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:23:13.659Z,couchdb_ns_1@127.0.0.1:<0.2330.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:23:13.664Z,couchdb_ns_1@127.0.0.1:<0.2332.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:23:43.670Z,couchdb_ns_1@127.0.0.1:<0.2532.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:23:43.676Z,couchdb_ns_1@127.0.0.1:<0.2534.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:24:13.680Z,couchdb_ns_1@127.0.0.1:<0.2734.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:24:13.686Z,couchdb_ns_1@127.0.0.1:<0.2736.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:24:43.693Z,couchdb_ns_1@127.0.0.1:<0.2937.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:24:43.704Z,couchdb_ns_1@127.0.0.1:<0.2939.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:25:13.717Z,couchdb_ns_1@127.0.0.1:<0.3139.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:25:13.730Z,couchdb_ns_1@127.0.0.1:<0.3141.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:25:43.741Z,couchdb_ns_1@127.0.0.1:<0.3341.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:25:43.745Z,couchdb_ns_1@127.0.0.1:<0.3343.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:26:13.750Z,couchdb_ns_1@127.0.0.1:<0.3543.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:26:13.764Z,couchdb_ns_1@127.0.0.1:<0.3545.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:26:43.779Z,couchdb_ns_1@127.0.0.1:<0.3745.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:26:43.794Z,couchdb_ns_1@127.0.0.1:<0.3747.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:27:13.808Z,couchdb_ns_1@127.0.0.1:<0.3948.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:27:13.821Z,couchdb_ns_1@127.0.0.1:<0.3950.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:27:43.842Z,couchdb_ns_1@127.0.0.1:<0.4153.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:27:43.847Z,couchdb_ns_1@127.0.0.1:<0.4155.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:28:13.853Z,couchdb_ns_1@127.0.0.1:<0.4355.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:28:13.861Z,couchdb_ns_1@127.0.0.1:<0.4357.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:28:43.869Z,couchdb_ns_1@127.0.0.1:<0.4558.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:28:43.874Z,couchdb_ns_1@127.0.0.1:<0.4560.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:29:13.878Z,couchdb_ns_1@127.0.0.1:<0.4759.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:29:13.882Z,couchdb_ns_1@127.0.0.1:<0.4761.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:29:43.886Z,couchdb_ns_1@127.0.0.1:<0.4962.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:29:43.889Z,couchdb_ns_1@127.0.0.1:<0.4964.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:30:13.892Z,couchdb_ns_1@127.0.0.1:<0.5164.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:30:13.896Z,couchdb_ns_1@127.0.0.1:<0.5166.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:30:43.900Z,couchdb_ns_1@127.0.0.1:<0.5368.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:30:43.904Z,couchdb_ns_1@127.0.0.1:<0.5370.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:31:13.908Z,couchdb_ns_1@127.0.0.1:<0.5570.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:31:13.912Z,couchdb_ns_1@127.0.0.1:<0.5572.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:31:43.916Z,couchdb_ns_1@127.0.0.1:<0.5772.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:31:43.919Z,couchdb_ns_1@127.0.0.1:<0.5774.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:32:13.923Z,couchdb_ns_1@127.0.0.1:<0.5974.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:32:13.926Z,couchdb_ns_1@127.0.0.1:<0.5976.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:32:43.930Z,couchdb_ns_1@127.0.0.1:<0.6176.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:32:43.934Z,couchdb_ns_1@127.0.0.1:<0.6178.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:33:13.937Z,couchdb_ns_1@127.0.0.1:<0.6378.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:33:13.941Z,couchdb_ns_1@127.0.0.1:<0.6380.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:33:43.945Z,couchdb_ns_1@127.0.0.1:<0.6582.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:33:43.949Z,couchdb_ns_1@127.0.0.1:<0.6584.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:34:13.954Z,couchdb_ns_1@127.0.0.1:<0.6784.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:34:13.959Z,couchdb_ns_1@127.0.0.1:<0.6786.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:34:43.963Z,couchdb_ns_1@127.0.0.1:<0.6986.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:34:43.967Z,couchdb_ns_1@127.0.0.1:<0.6988.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:35:13.970Z,couchdb_ns_1@127.0.0.1:<0.7188.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:35:13.975Z,couchdb_ns_1@127.0.0.1:<0.7190.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:35:43.982Z,couchdb_ns_1@127.0.0.1:<0.7390.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:35:43.986Z,couchdb_ns_1@127.0.0.1:<0.7392.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:36:13.991Z,couchdb_ns_1@127.0.0.1:<0.7592.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:36:13.995Z,couchdb_ns_1@127.0.0.1:<0.7594.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:36:44.001Z,couchdb_ns_1@127.0.0.1:<0.7795.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:36:44.008Z,couchdb_ns_1@127.0.0.1:<0.7797.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`
+[ns_server:info,2021-04-19T20:37:13.015Z,couchdb_ns_1@127.0.0.1:<0.7989.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `Mein1Bucket`
+[ns_server:info,2021-04-19T20:37:13.018Z,couchdb_ns_1@127.0.0.1:<0.7991.0>:ns_couchdb_api:handle_rpc:267]Cleaning up indexes for bucket `miksch1`

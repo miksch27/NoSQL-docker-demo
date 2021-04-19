@@ -1,0 +1,24 @@
+_time=2021-04-19T19:46:04.134+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T19:46:04.138+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T19:46:04.138+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T19:46:04.142+00:00 _level=INFO _msg=cbq-engine started version=1.6.0 pipeline-batch=16 request-cap=1024 datastore=http://127.0.0.1:8091 max-concurrency=8 loglevel=INFO servicers=32 plus-servicers=128 pipeline-cap=512 request-size-cap=67108864 timeout=0 
+_time=2021-04-19T19:46:04.150+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T19:46:04.405+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2021-04-19T19:52:29.267+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T19:52:29.281+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T19:52:29.281+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T19:52:29.288+00:00 _level=INFO _msg=cbq-engine started version=1.6.0 datastore=http://127.0.0.1:8091 servicers=32 pipeline-cap=512 pipeline-batch=16 request-cap=1024 timeout=0 max-concurrency=8 loglevel=INFO plus-servicers=128 request-size-cap=67108864 
+_time=2021-04-19T19:52:29.300+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T19:52:29.528+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2021-04-19T19:54:17.779+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T19:54:17.788+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T19:54:17.788+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T19:54:17.796+00:00 _level=INFO _msg=cbq-engine started datastore=http://127.0.0.1:8091 loglevel=INFO pipeline-batch=16 request-cap=1024 version=1.6.0 max-concurrency=8 servicers=32 plus-servicers=128 pipeline-cap=512 request-size-cap=67108864 timeout=0 
+_time=2021-04-19T19:54:17.812+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T19:54:18.215+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2021-04-19T20:01:57.547+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T20:01:57.557+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T20:01:57.557+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T20:01:57.564+00:00 _level=INFO _msg=cbq-engine started servicers=32 pipeline-cap=512 pipeline-batch=16 request-cap=1024 request-size-cap=67108864 version=1.6.0 datastore=http://127.0.0.1:8091 loglevel=INFO timeout=0 max-concurrency=8 plus-servicers=128 
+_time=2021-04-19T20:01:57.576+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T20:01:57.861+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 

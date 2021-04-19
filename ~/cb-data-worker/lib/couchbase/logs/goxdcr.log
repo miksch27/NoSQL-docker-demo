@@ -1,0 +1,131 @@
+ReplicationManager 2021-04-19T19:45:55.806Z [INFO] GOMAXPROCS=4
+AuditService 2021-04-19T19:45:55.842Z [INFO] Created audit service.
+UILogService 2021-04-19T19:45:55.842Z [INFO] Created ui log service.
+ReplicationSpecService 2021-04-19T19:45:55.848Z [INFO] Init cache for ReplicationSpecService...
+ReplicationSpecService 2021-04-19T19:45:55.857Z [INFO] Cache has been initialized for ReplicationSpecService
+InternalSettingsService 2021-04-19T19:45:55.861Z [INFO] Internal settings spec not found. Using default values
+InternalSettingsService 2021-04-19T19:45:55.861Z [INFO] Internal settings for the current XCR process: &{10 30 30 5 180 1 <nil>}
+ReplicationManager 2021-04-19T19:45:55.861Z [INFO] pollEOF: About to start stdin polling
+InternalSettingsService 2021-04-19T19:45:55.868Z [INFO] Internal settings spec not found. Using default values
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] XDCR internal settings: map[MaxTopologyStableCountBeforeRestart:30 MaxWorkersForCheckpointing:5 TimeoutCheckpointBeforeStop:180 CapiDataChanSizeMultiplier:1 TopologyChangeCheckInterval:10 MaxTopologyChangeCountBeforeRestart:30]
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
+PipelineManager 2021-04-19T19:45:55.868Z [INFO] Pipeline Manager is constucted
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] Replication manager is initialized
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Starting supervisor PipelineMasterSupervisor.
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Started supervisor PipelineMasterSupervisor.
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] Master supervisor has started
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Starting supervisor ReplicationManagerSupervisor.
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Started supervisor ReplicationManagerSupervisor.
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] globalSettingChangeListener successfully started
+ReplicationSpecChangeListener 2021-04-19T19:45:55.868Z [INFO] Started MetakvChangeListener ReplicationSpecChangeListener
+RemoteClusterChangeListener 2021-04-19T19:45:55.868Z [INFO] Started MetakvChangeListener RemoteClusterChangeListener
+GlobalSettingChangeListener 2021-04-19T19:45:55.868Z [INFO] Started MetakvChangeListener GlobalSettingChangeListener
+InternalSettingChangeListener 2021-04-19T19:45:55.868Z [INFO] Started MetakvChangeListener InternalSettingsChangeListener
+BucketSettingsChangeListener 2021-04-19T19:45:55.868Z [INFO] Started MetakvChangeListener BucketSettingsChangeListener
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] initPausedReplications succeeded
+AdminPort 2021-04-19T19:45:55.868Z [INFO] Constructed adminport
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] Admin port has been launched
+GenericSupervisor 2021-04-19T19:45:55.868Z [INFO] Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+ReplicationManager 2021-04-19T19:45:55.868Z [INFO] ReplicationManager is running
+HttpServer 2021-04-19T19:45:55.868Z [INFO] [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+AdminPort 2021-04-19T19:45:55.869Z [INFO] http server started 127.0.0.1:9998 !
+HttpServer 2021-04-19T19:45:55.869Z [INFO] [xdcr:127.0.0.1:9998] starting ...
+ReplicationManager 2021-04-19T19:47:55.871Z [INFO] Mem stats = {"Alloc":1277320,"TotalAlloc":1277320,"Sys":6064376,"Lookups":65,"Mallocs":13566,"Frees":0,"HeapAlloc":1277320,"HeapSys":2523136,"HeapIdle":491520,"HeapInuse":2031616,"HeapReleased":0,"HeapObjects":13566,"StackInuse":622592,"StackSys":622592,"MSpanInuse":26096,"MSpanSys":32768,"MCacheInuse":4832,"MCacheSys":16384,"BuckHashSys":1443442,"GCSys":98304,"OtherSys":1327750,"NextGC":4194304,"LastGC":0,"PauseTotalNs":0,"PauseNs":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"PauseEnd":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"NumGC":0,"GCCPUFraction":0,"EnableGC":true,"DebugGC":false,"BySize":[{"Size":0,"Mallocs":0,"Frees":0},{"Size":8,"Mallocs":189,"Frees":0},{"Size":16,"Mallocs":5576,"Frees":0},{"Size":32,"Mallocs":2176,"Frees":0},{"Size":48,"Mallocs":2100,"Frees":0},{"Size":64,"Mallocs":827,"Frees":0},{"Size":80,"Mallocs":261,"Frees":0},{"Size":96,"Mallocs":762,"Frees":0},{"Size":112,"Mallocs":120,"Frees":0},{"Size":128,"Mallocs":119,"Frees":0},{"Size":144,"Mallocs":65,"Frees":0},{"Size":160,"Mallocs":34,"Frees":0},{"Size":176,"Mallocs":292,"Frees":0},{"Size":192,"Mallocs":4,"Frees":0},{"Size":208,"Mallocs":316,"Frees":0},{"Size":224,"Mallocs":122,"Frees":0},{"Size":240,"Mallocs":8,"Frees":0},{"Size":256,"Mallocs":7,"Frees":0},{"Size":288,"Mallocs":31,"Frees":0},{"Size":320,"Mallocs":8,"Frees":0},{"Size":352,"Mallocs":271,"Frees":0},{"Size":384,"Mallocs":85,"Frees":0},{"Size":416,"Mallocs":32,"Frees":0},{"Size":448,"Mallocs":0,"Frees":0},{"Size":480,"Mallocs":4,"Frees":0},{"Size":512,"Mallocs":10,"Frees":0},{"Size":576,"Mallocs":17,"Frees":0},{"Size":640,"Mallocs":6,"Frees":0},{"Size":704,"Mallocs":10,"Frees":0},{"Size":768,"Mallocs":0,"Frees":0},{"Size":896,"Mallocs":16,"Frees":0},{"Size":1024,"Mallocs":3,"Frees":0},{"Size":1152,"Mallocs":16,"Frees":0},{"Size":1280,"Mallocs":2,"Frees":0},{"Size":1408,"Mallocs":3,"Frees":0},{"Size":1536,"Mallocs":1,"Frees":0},{"Size":1664,"Mallocs":8,"Frees":0},{"Size":2048,"Mallocs":4,"Frees":0},{"Size":2304,"Mallocs":3,"Frees":0},{"Size":2560,"Mallocs":2,"Frees":0},{"Size":2816,"Mallocs":1,"Frees":0},{"Size":3072,"Mallocs":0,"Frees":0},{"Size":3328,"Mallocs":4,"Frees":0},{"Size":4096,"Mallocs":29,"Frees":0},{"Size":4608,"Mallocs":0,"Frees":0},{"Size":5376,"Mallocs":10,"Frees":0},{"Size":6144,"Mallocs":5,"Frees":0},{"Size":6400,"Mallocs":0,"Frees":0},{"Size":6656,"Mallocs":1,"Frees":0},{"Size":6912,"Mallocs":0,"Frees":0},{"Size":8192,"Mallocs":2,"Frees":0},{"Size":8448,"Mallocs":0,"Frees":0},{"Size":8704,"Mallocs":0,"Frees":0},{"Size":9472,"Mallocs":0,"Frees":0},{"Size":10496,"Mallocs":0,"Frees":0},{"Size":12288,"Mallocs":1,"Frees":0},{"Size":13568,"Mallocs":0,"Frees":0},{"Size":14080,"Mallocs":0,"Frees":0},{"Size":16384,"Mallocs":0,"Frees":0},{"Size":16640,"Mallocs":0,"Frees":0},{"Size":17664,"Mallocs":0,"Frees":0}]}
+ReplicationManager 2021-04-19T19:52:29.315Z [INFO] GOMAXPROCS=4
+AuditService 2021-04-19T19:52:29.327Z [INFO] Created audit service.
+UILogService 2021-04-19T19:52:29.327Z [INFO] Created ui log service.
+ReplicationSpecService 2021-04-19T19:52:29.330Z [INFO] Init cache for ReplicationSpecService...
+ReplicationSpecService 2021-04-19T19:52:29.333Z [INFO] Cache has been initialized for ReplicationSpecService
+InternalSettingsService 2021-04-19T19:52:29.336Z [INFO] Internal settings spec not found. Using default values
+InternalSettingsService 2021-04-19T19:52:29.336Z [INFO] Internal settings for the current XCR process: &{10 30 30 5 180 1 <nil>}
+ReplicationManager 2021-04-19T19:52:29.337Z [INFO] pollEOF: About to start stdin polling
+InternalSettingsService 2021-04-19T19:52:29.341Z [INFO] Internal settings spec not found. Using default values
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] XDCR internal settings: map[MaxTopologyChangeCountBeforeRestart:30 MaxTopologyStableCountBeforeRestart:30 MaxWorkersForCheckpointing:5 TimeoutCheckpointBeforeStop:180 CapiDataChanSizeMultiplier:1 TopologyChangeCheckInterval:10]
+GenericSupervisor 2021-04-19T19:52:29.342Z [INFO] Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
+PipelineManager 2021-04-19T19:52:29.342Z [INFO] Pipeline Manager is constucted
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] Replication manager is initialized
+GenericSupervisor 2021-04-19T19:52:29.342Z [INFO] Starting supervisor PipelineMasterSupervisor.
+GenericSupervisor 2021-04-19T19:52:29.342Z [INFO] Started supervisor PipelineMasterSupervisor.
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] Master supervisor has started
+GenericSupervisor 2021-04-19T19:52:29.342Z [INFO] Starting supervisor ReplicationManagerSupervisor.
+GenericSupervisor 2021-04-19T19:52:29.342Z [INFO] Started supervisor ReplicationManagerSupervisor.
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] globalSettingChangeListener successfully started
+RemoteClusterChangeListener 2021-04-19T19:52:29.342Z [INFO] Started MetakvChangeListener RemoteClusterChangeListener
+GlobalSettingChangeListener 2021-04-19T19:52:29.342Z [INFO] Started MetakvChangeListener GlobalSettingChangeListener
+InternalSettingChangeListener 2021-04-19T19:52:29.342Z [INFO] Started MetakvChangeListener InternalSettingsChangeListener
+BucketSettingsChangeListener 2021-04-19T19:52:29.342Z [INFO] Started MetakvChangeListener BucketSettingsChangeListener
+ReplicationSpecChangeListener 2021-04-19T19:52:29.342Z [INFO] Started MetakvChangeListener ReplicationSpecChangeListener
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] initPausedReplications succeeded
+AdminPort 2021-04-19T19:52:29.342Z [INFO] Constructed adminport
+ReplicationManager 2021-04-19T19:52:29.342Z [INFO] Admin port has been launched
+GenericSupervisor 2021-04-19T19:52:29.343Z [INFO] Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+ReplicationManager 2021-04-19T19:52:29.343Z [INFO] ReplicationManager is running
+HttpServer 2021-04-19T19:52:29.343Z [INFO] [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+AdminPort 2021-04-19T19:52:29.343Z [INFO] http server started 127.0.0.1:9998 !
+HttpServer 2021-04-19T19:52:29.343Z [INFO] [xdcr:127.0.0.1:9998] starting ...
+ReplicationManager 2021-04-19T19:54:17.890Z [INFO] GOMAXPROCS=4
+AuditService 2021-04-19T19:54:17.903Z [INFO] Created audit service.
+UILogService 2021-04-19T19:54:17.903Z [INFO] Created ui log service.
+ReplicationSpecService 2021-04-19T19:54:17.913Z [INFO] Init cache for ReplicationSpecService...
+ReplicationSpecService 2021-04-19T19:54:17.921Z [INFO] Cache has been initialized for ReplicationSpecService
+InternalSettingsService 2021-04-19T19:54:17.925Z [INFO] Internal settings spec not found. Using default values
+InternalSettingsService 2021-04-19T19:54:17.926Z [INFO] Internal settings for the current XCR process: &{10 30 30 5 180 1 <nil>}
+ReplicationManager 2021-04-19T19:54:17.926Z [INFO] pollEOF: About to start stdin polling
+InternalSettingsService 2021-04-19T19:54:17.934Z [INFO] Internal settings spec not found. Using default values
+ReplicationManager 2021-04-19T19:54:17.934Z [INFO] XDCR internal settings: map[TopologyChangeCheckInterval:10 MaxTopologyChangeCountBeforeRestart:30 MaxTopologyStableCountBeforeRestart:30 MaxWorkersForCheckpointing:5 TimeoutCheckpointBeforeStop:180 CapiDataChanSizeMultiplier:1]
+GenericSupervisor 2021-04-19T19:54:17.934Z [INFO] Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
+PipelineManager 2021-04-19T19:54:17.934Z [INFO] Pipeline Manager is constucted
+ReplicationManager 2021-04-19T19:54:17.934Z [INFO] Replication manager is initialized
+GenericSupervisor 2021-04-19T19:54:17.934Z [INFO] Starting supervisor PipelineMasterSupervisor.
+GenericSupervisor 2021-04-19T19:54:17.934Z [INFO] Started supervisor PipelineMasterSupervisor.
+ReplicationManager 2021-04-19T19:54:17.934Z [INFO] Master supervisor has started
+GenericSupervisor 2021-04-19T19:54:17.934Z [INFO] Starting supervisor ReplicationManagerSupervisor.
+GenericSupervisor 2021-04-19T19:54:17.935Z [INFO] Started supervisor ReplicationManagerSupervisor.
+ReplicationManager 2021-04-19T19:54:17.935Z [INFO] globalSettingChangeListener successfully started
+ReplicationSpecChangeListener 2021-04-19T19:54:17.935Z [INFO] Started MetakvChangeListener ReplicationSpecChangeListener
+RemoteClusterChangeListener 2021-04-19T19:54:17.935Z [INFO] Started MetakvChangeListener RemoteClusterChangeListener
+GlobalSettingChangeListener 2021-04-19T19:54:17.935Z [INFO] Started MetakvChangeListener GlobalSettingChangeListener
+InternalSettingChangeListener 2021-04-19T19:54:17.935Z [INFO] Started MetakvChangeListener InternalSettingsChangeListener
+BucketSettingsChangeListener 2021-04-19T19:54:17.935Z [INFO] Started MetakvChangeListener BucketSettingsChangeListener
+ReplicationManager 2021-04-19T19:54:17.935Z [INFO] initPausedReplications succeeded
+AdminPort 2021-04-19T19:54:17.935Z [INFO] Constructed adminport
+ReplicationManager 2021-04-19T19:54:17.935Z [INFO] Admin port has been launched
+GenericSupervisor 2021-04-19T19:54:17.935Z [INFO] Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+ReplicationManager 2021-04-19T19:54:17.935Z [INFO] ReplicationManager is running
+HttpServer 2021-04-19T19:54:17.935Z [INFO] [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+AdminPort 2021-04-19T19:54:17.935Z [INFO] http server started 127.0.0.1:9998 !
+HttpServer 2021-04-19T19:54:17.935Z [INFO] [xdcr:127.0.0.1:9998] starting ...
+ReplicationManager 2021-04-19T19:56:17.938Z [INFO] Mem stats = {"Alloc":1280760,"TotalAlloc":1280760,"Sys":6064376,"Lookups":65,"Mallocs":13517,"Frees":0,"HeapAlloc":1280760,"HeapSys":2457600,"HeapIdle":393216,"HeapInuse":2064384,"HeapReleased":0,"HeapObjects":13517,"StackInuse":688128,"StackSys":688128,"MSpanInuse":26656,"MSpanSys":32768,"MCacheInuse":4832,"MCacheSys":16384,"BuckHashSys":1443682,"GCSys":98304,"OtherSys":1327510,"NextGC":4194304,"LastGC":0,"PauseTotalNs":0,"PauseNs":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"PauseEnd":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"NumGC":0,"GCCPUFraction":0,"EnableGC":true,"DebugGC":false,"BySize":[{"Size":0,"Mallocs":0,"Frees":0},{"Size":8,"Mallocs":185,"Frees":0},{"Size":16,"Mallocs":5533,"Frees":0},{"Size":32,"Mallocs":2141,"Frees":0},{"Size":48,"Mallocs":2090,"Frees":0},{"Size":64,"Mallocs":861,"Frees":0},{"Size":80,"Mallocs":259,"Frees":0},{"Size":96,"Mallocs":768,"Frees":0},{"Size":112,"Mallocs":120,"Frees":0},{"Size":128,"Mallocs":118,"Frees":0},{"Size":144,"Mallocs":66,"Frees":0},{"Size":160,"Mallocs":33,"Frees":0},{"Size":176,"Mallocs":298,"Frees":0},{"Size":192,"Mallocs":5,"Frees":0},{"Size":208,"Mallocs":315,"Frees":0},{"Size":224,"Mallocs":122,"Frees":0},{"Size":240,"Mallocs":4,"Frees":0},{"Size":256,"Mallocs":5,"Frees":0},{"Size":288,"Mallocs":32,"Frees":0},{"Size":320,"Mallocs":6,"Frees":0},{"Size":352,"Mallocs":271,"Frees":0},{"Size":384,"Mallocs":91,"Frees":0},{"Size":416,"Mallocs":33,"Frees":0},{"Size":448,"Mallocs":0,"Frees":0},{"Size":480,"Mallocs":3,"Frees":0},{"Size":512,"Mallocs":10,"Frees":0},{"Size":576,"Mallocs":17,"Frees":0},{"Size":640,"Mallocs":6,"Frees":0},{"Size":704,"Mallocs":9,"Frees":0},{"Size":768,"Mallocs":0,"Frees":0},{"Size":896,"Mallocs":16,"Frees":0},{"Size":1024,"Mallocs":3,"Frees":0},{"Size":1152,"Mallocs":17,"Frees":0},{"Size":1280,"Mallocs":2,"Frees":0},{"Size":1408,"Mallocs":4,"Frees":0},{"Size":1536,"Mallocs":1,"Frees":0},{"Size":1664,"Mallocs":8,"Frees":0},{"Size":2048,"Mallocs":4,"Frees":0},{"Size":2304,"Mallocs":3,"Frees":0},{"Size":2560,"Mallocs":2,"Frees":0},{"Size":2816,"Mallocs":1,"Frees":0},{"Size":3072,"Mallocs":0,"Frees":0},{"Size":3328,"Mallocs":4,"Frees":0},{"Size":4096,"Mallocs":29,"Frees":0},{"Size":4608,"Mallocs":0,"Frees":0},{"Size":5376,"Mallocs":10,"Frees":0},{"Size":6144,"Mallocs":5,"Frees":0},{"Size":6400,"Mallocs":0,"Frees":0},{"Size":6656,"Mallocs":1,"Frees":0},{"Size":6912,"Mallocs":0,"Frees":0},{"Size":8192,"Mallocs":2,"Frees":0},{"Size":8448,"Mallocs":0,"Frees":0},{"Size":8704,"Mallocs":0,"Frees":0},{"Size":9472,"Mallocs":0,"Frees":0},{"Size":10496,"Mallocs":0,"Frees":0},{"Size":12288,"Mallocs":1,"Frees":0},{"Size":13568,"Mallocs":0,"Frees":0},{"Size":14080,"Mallocs":0,"Frees":0},{"Size":16384,"Mallocs":0,"Frees":0},{"Size":16640,"Mallocs":0,"Frees":0},{"Size":17664,"Mallocs":0,"Frees":0}]}
+ReplicationManager 2021-04-19T19:58:17.939Z [INFO] Mem stats = {"Alloc":1802288,"TotalAlloc":1802288,"Sys":7145720,"Lookups":113,"Mallocs":23417,"Frees":0,"HeapAlloc":1802288,"HeapSys":3506176,"HeapIdle":942080,"HeapInuse":2564096,"HeapReleased":0,"HeapObjects":23417,"StackInuse":688128,"StackSys":688128,"MSpanInuse":33152,"MSpanSys":49152,"MCacheInuse":4832,"MCacheSys":16384,"BuckHashSys":1443850,"GCSys":131072,"OtherSys":1310958,"NextGC":4194304,"LastGC":0,"PauseTotalNs":0,"PauseNs":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"PauseEnd":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"NumGC":0,"GCCPUFraction":0,"EnableGC":true,"DebugGC":false,"BySize":[{"Size":0,"Mallocs":0,"Frees":0},{"Size":8,"Mallocs":322,"Frees":0},{"Size":16,"Mallocs":10125,"Frees":0},{"Size":32,"Mallocs":3842,"Frees":0},{"Size":48,"Mallocs":3651,"Frees":0},{"Size":64,"Mallocs":1312,"Frees":0},{"Size":80,"Mallocs":288,"Frees":0},{"Size":96,"Mallocs":1335,"Frees":0},{"Size":112,"Mallocs":146,"Frees":0},{"Size":128,"Mallocs":190,"Frees":0},{"Size":144,"Mallocs":67,"Frees":0},{"Size":160,"Mallocs":35,"Frees":0},{"Size":176,"Mallocs":467,"Frees":0},{"Size":192,"Mallocs":5,"Frees":0},{"Size":208,"Mallocs":558,"Frees":0},{"Size":224,"Mallocs":218,"Frees":0},{"Size":240,"Mallocs":4,"Frees":0},{"Size":256,"Mallocs":6,"Frees":0},{"Size":288,"Mallocs":33,"Frees":0},{"Size":320,"Mallocs":6,"Frees":0},{"Size":352,"Mallocs":487,"Frees":0},{"Size":384,"Mallocs":111,"Frees":0},{"Size":416,"Mallocs":35,"Frees":0},{"Size":448,"Mallocs":0,"Frees":0},{"Size":480,"Mallocs":3,"Frees":0},{"Size":512,"Mallocs":10,"Frees":0},{"Size":576,"Mallocs":18,"Frees":0},{"Size":640,"Mallocs":6,"Frees":0},{"Size":704,"Mallocs":10,"Frees":0},{"Size":768,"Mallocs":0,"Frees":0},{"Size":896,"Mallocs":18,"Frees":0},{"Size":1024,"Mallocs":3,"Frees":0},{"Size":1152,"Mallocs":18,"Frees":0},{"Size":1280,"Mallocs":2,"Frees":0},{"Size":1408,"Mallocs":4,"Frees":0},{"Size":1536,"Mallocs":1,"Frees":0},{"Size":1664,"Mallocs":9,"Frees":0},{"Size":2048,"Mallocs":4,"Frees":0},{"Size":2304,"Mallocs":4,"Frees":0},{"Size":2560,"Mallocs":2,"Frees":0},{"Size":2816,"Mallocs":1,"Frees":0},{"Size":3072,"Mallocs":0,"Frees":0},{"Size":3328,"Mallocs":5,"Frees":0},{"Size":4096,"Mallocs":33,"Frees":0},{"Size":4608,"Mallocs":1,"Frees":0},{"Size":5376,"Mallocs":10,"Frees":0},{"Size":6144,"Mallocs":5,"Frees":0},{"Size":6400,"Mallocs":0,"Frees":0},{"Size":6656,"Mallocs":1,"Frees":0},{"Size":6912,"Mallocs":0,"Frees":0},{"Size":8192,"Mallocs":2,"Frees":0},{"Size":8448,"Mallocs":0,"Frees":0},{"Size":8704,"Mallocs":0,"Frees":0},{"Size":9472,"Mallocs":0,"Frees":0},{"Size":10496,"Mallocs":0,"Frees":0},{"Size":12288,"Mallocs":1,"Frees":0},{"Size":13568,"Mallocs":0,"Frees":0},{"Size":14080,"Mallocs":0,"Frees":0},{"Size":16384,"Mallocs":0,"Frees":0},{"Size":16640,"Mallocs":0,"Frees":0},{"Size":17664,"Mallocs":0,"Frees":0}]}
+ReplicationManager 2021-04-19T20:01:57.762Z [INFO] GOMAXPROCS=4
+AuditService 2021-04-19T20:01:57.769Z [INFO] Created audit service.
+UILogService 2021-04-19T20:01:57.769Z [INFO] Created ui log service.
+ReplicationSpecService 2021-04-19T20:01:57.775Z [INFO] Init cache for ReplicationSpecService...
+ReplicationSpecService 2021-04-19T20:01:57.783Z [INFO] Cache has been initialized for ReplicationSpecService
+InternalSettingsService 2021-04-19T20:01:57.788Z [INFO] Internal settings spec not found. Using default values
+InternalSettingsService 2021-04-19T20:01:57.788Z [INFO] Internal settings for the current XCR process: &{10 30 30 5 180 1 <nil>}
+ReplicationManager 2021-04-19T20:01:57.788Z [INFO] pollEOF: About to start stdin polling
+InternalSettingsService 2021-04-19T20:01:57.795Z [INFO] Internal settings spec not found. Using default values
+ReplicationManager 2021-04-19T20:01:57.795Z [INFO] XDCR internal settings: map[TopologyChangeCheckInterval:10 MaxTopologyChangeCountBeforeRestart:30 MaxTopologyStableCountBeforeRestart:30 MaxWorkersForCheckpointing:5 TimeoutCheckpointBeforeStop:180 CapiDataChanSizeMultiplier:1]
+GenericSupervisor 2021-04-19T20:01:57.795Z [INFO] Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
+PipelineManager 2021-04-19T20:01:57.795Z [INFO] Pipeline Manager is constucted
+ReplicationManager 2021-04-19T20:01:57.795Z [INFO] Replication manager is initialized
+GenericSupervisor 2021-04-19T20:01:57.795Z [INFO] Starting supervisor PipelineMasterSupervisor.
+GenericSupervisor 2021-04-19T20:01:57.795Z [INFO] Started supervisor PipelineMasterSupervisor.
+ReplicationManager 2021-04-19T20:01:57.795Z [INFO] Master supervisor has started
+GenericSupervisor 2021-04-19T20:01:57.795Z [INFO] Starting supervisor ReplicationManagerSupervisor.
+GenericSupervisor 2021-04-19T20:01:57.795Z [INFO] Started supervisor ReplicationManagerSupervisor.
+ReplicationManager 2021-04-19T20:01:57.796Z [INFO] globalSettingChangeListener successfully started
+ReplicationSpecChangeListener 2021-04-19T20:01:57.796Z [INFO] Started MetakvChangeListener ReplicationSpecChangeListener
+RemoteClusterChangeListener 2021-04-19T20:01:57.796Z [INFO] Started MetakvChangeListener RemoteClusterChangeListener
+GlobalSettingChangeListener 2021-04-19T20:01:57.796Z [INFO] Started MetakvChangeListener GlobalSettingChangeListener
+InternalSettingChangeListener 2021-04-19T20:01:57.796Z [INFO] Started MetakvChangeListener InternalSettingsChangeListener
+BucketSettingsChangeListener 2021-04-19T20:01:57.796Z [INFO] Started MetakvChangeListener BucketSettingsChangeListener
+ReplicationManager 2021-04-19T20:01:57.796Z [INFO] initPausedReplications succeeded
+AdminPort 2021-04-19T20:01:57.796Z [INFO] Constructed adminport
+ReplicationManager 2021-04-19T20:01:57.796Z [INFO] Admin port has been launched
+GenericSupervisor 2021-04-19T20:01:57.796Z [INFO] Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+ReplicationManager 2021-04-19T20:01:57.796Z [INFO] ReplicationManager is running
+HttpServer 2021-04-19T20:01:57.796Z [INFO] [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+AdminPort 2021-04-19T20:01:57.796Z [INFO] http server started 127.0.0.1:9998 !
+HttpServer 2021-04-19T20:01:57.796Z [INFO] [xdcr:127.0.0.1:9998] starting ...

@@ -1,0 +1,28 @@
+[metakv:debug,2021-04-19T20:03:42.718Z,ns_1@127.0.0.1:simple_store_xdcr_ckpt_data<0.300.0>:simple_store:init:114]Creating Table: xdcr_ckpt_data
+[metakv:debug,2021-04-19T20:03:44.990Z,ns_1@127.0.0.1:<0.454.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = false
+[metakv:debug,2021-04-19T20:03:44.999Z,ns_1@127.0.0.1:<0.454.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = false
+[metakv:debug,2021-04-19T20:03:45.005Z,ns_1@127.0.0.1:<0.454.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /replicationSpec/. Continuous = false
+[metakv:debug,2021-04-19T20:03:45.028Z,ns_1@127.0.0.1:<0.329.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /GlobalConfiguration/. Continuous = true
+[metakv:debug,2021-04-19T20:03:45.029Z,ns_1@127.0.0.1:<0.331.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /replicationSpec/. Continuous = true
+[metakv:debug,2021-04-19T20:03:45.029Z,ns_1@127.0.0.1:<0.330.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = true
+[metakv:debug,2021-04-19T20:03:45.029Z,ns_1@127.0.0.1:<0.328.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /bucketSettings/. Continuous = true
+[metakv:debug,2021-04-19T20:03:45.031Z,ns_1@127.0.0.1:<0.327.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /InternalSettings/. Continuous = true
+[metakv:debug,2021-04-19T20:03:46.621Z,ns_1@127.0.0.1:<0.324.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /indexing/settings/. Continuous = true
+[metakv:debug,2021-04-19T20:03:46.622Z,ns_1@127.0.0.1:<0.324.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBG4FACBe8tkOag==
+[metakv:debug,2021-04-19T20:03:46.831Z,ns_1@127.0.0.1:<0.485.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /. Continuous = true
+[metakv:debug,2021-04-19T20:03:46.831Z,ns_1@127.0.0.1:<0.485.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBG4FACBe8tkOag==
+[metakv:debug,2021-04-19T20:18:13.059Z,ns_1@127.0.0.1:simple_store_xdcr_ckpt_data<0.284.0>:simple_store:init:114]Creating Table: xdcr_ckpt_data
+[metakv:debug,2021-04-19T20:18:17.142Z,ns_1@127.0.0.1:<0.312.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /indexing/settings/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.150Z,ns_1@127.0.0.1:<0.312.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBG4FACBe8tkOag==
+[metakv:debug,2021-04-19T20:18:17.368Z,ns_1@127.0.0.1:<0.435.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = false
+[metakv:debug,2021-04-19T20:18:17.385Z,ns_1@127.0.0.1:<0.435.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = false
+[metakv:debug,2021-04-19T20:18:17.417Z,ns_1@127.0.0.1:<0.435.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /replicationSpec/. Continuous = false
+[metakv:debug,2021-04-19T20:18:17.482Z,ns_1@127.0.0.1:<0.302.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /remoteCluster/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.482Z,ns_1@127.0.0.1:<0.301.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /replicationSpec/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.482Z,ns_1@127.0.0.1:<0.300.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /bucketSettings/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.483Z,ns_1@127.0.0.1:<0.304.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /GlobalConfiguration/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.483Z,ns_1@127.0.0.1:<0.303.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /InternalSettings/. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.736Z,ns_1@127.0.0.1:<0.306.0>:menelaus_metakv:handle_iterate:132]Starting iteration of /. Continuous = true
+[metakv:debug,2021-04-19T20:18:17.737Z,ns_1@127.0.0.1:<0.306.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBG4FACBe8tkOag==
+[metakv:debug,2021-04-19T20:18:20.364Z,ns_1@127.0.0.1:<0.312.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBW4FAIxh8tkOag==
+[metakv:debug,2021-04-19T20:18:20.364Z,ns_1@127.0.0.1:<0.306.0>:menelaus_metakv:output_kv:165]Sent /indexing/settings/config rev: g2wAAAABaAJtAAAAIGVkMzU2OTM5NWVkZWQ2ZWRjZGM4YzYzOTNlNzc2MWU4aAJhBW4FAIxh8tkOag==

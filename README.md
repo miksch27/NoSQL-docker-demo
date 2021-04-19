@@ -21,6 +21,12 @@ Couchbase works inside a swarm setup, too:
 
 > docker swarm init
 
+either with my docker-compose.yml file:
+
+> docker stack deploy -c .\docker-compose.yml c
+
+or via these commands:
+
 > docker service create --name cb-worker --replicas 1 -p 8091:8091 --network couchbase -e TYPE=WORKER -e COUCHBASE=cb-master.couchbase -e AUTO_REBALANCE=false arungupta/couchbase
 
 > docker service create --name cb-worker --replicas 1 --network couchbase -e TYPE=WORKER -e COUCHBASE=cb-master.couchbase -e AUTO_REBALANCE=false arungupta/couchbase
@@ -39,6 +45,10 @@ Command to maintain and remove
 
 > docker network list
 > docker network ..
+
+or
+
+> docker stack rm cb
 
 Commandos for retrieving the IP addresses:
 

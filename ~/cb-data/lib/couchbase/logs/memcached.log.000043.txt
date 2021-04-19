@@ -1,0 +1,6 @@
+2021-04-19T19:43:25.775040Z WARNING Restarting file logging
+2021-04-19T19:43:25.772265Z NOTICE Couchbase version 4.6.0-3573 starting.
+2021-04-19T19:43:25.772828Z NOTICE NUMA: Set memory allocation policy to 'interleave'.
+2021-04-19T19:43:25.802445Z NOTICE Create bucket with engine: Disconnect engine v1.0.
+2021-04-19T19:43:25.806199Z WARNING Couchbase::Crypto::decrypt: EVP_DecryptFinal_ex failed
+2021-04-19T19:43:25.806248Z FATAL Failed to initialize SASL server

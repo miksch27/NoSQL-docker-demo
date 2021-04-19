@@ -1,0 +1,306 @@
+_time=2021-04-19T20:03:50.611+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T20:03:50.621+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T20:03:50.621+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T20:03:50.627+00:00 _level=INFO _msg=cbq-engine started version=1.6.0 servicers=32 pipeline-cap=512 request-cap=1024 pipeline-batch=16 request-size-cap=67108864 timeout=0 datastore=http://127.0.0.1:8091 max-concurrency=8 loglevel=INFO plus-servicers=128 
+_time=2021-04-19T20:03:50.635+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T20:03:50.910+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2021-04-19T20:08:44.880+00:00 _level=INFO _msg=Created New Bucket miksch1 
+2021-04-19T20:08:44.903+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:08:44.903+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:08:44.903+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T20:08:44.909+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2021-04-19T20:08:44.909+00:00 [Info] initialized currmeta 1
+2021-04-19T20:08:44.909+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T20:08:44.909+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T20:08:44.911+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T20:08:44.911+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40cbq-engine-cbauth@127.0.0.1:8091, default
+2021-04-19T20:08:44.913+00:00 [Info] GSIC[default/miksch1-1618862924882197500] started ...
+_time=2021-04-19T20:08:44.914+00:00 _level=INFO _msg= Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/miksch1 
+2021-04-19T20:08:44.914+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T20:08:44.916+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+_time=2021-04-19T20:08:44.923+00:00 _level=INFO _msg=Got new configuration for bucket miksch1 
+2021-04-19T20:08:44.931+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:08:44.931+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:08:44.931+00:00 [Info] switched currmeta from 1 -> 1
+2021-04-19T20:08:44.951+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:08:44.952+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:08:44.952+00:00 [Info] switched currmeta from 1 -> 1
+_time=2021-04-19T20:08:51.835+00:00 _level=INFO _msg= keyspace Mein1Bucket not found No bucket named Mein1Bucket 
+_time=2021-04-19T20:08:51.852+00:00 _level=INFO _msg= Retrying bucket Mein1Bucket 
+2021-04-19T20:09:24.867+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:09:24.896+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:09:24.896+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:09:24.896+00:00 [Info] switched currmeta from 1 -> 1
+2021-04-19T20:09:25.904+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:09:25.929+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:09:25.929+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:09:25.929+00:00 [Info] switched currmeta from 1 -> 1
+2021-04-19T20:09:27.914+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:09:27.936+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:09:27.936+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:09:27.936+00:00 [Info] switched currmeta from 1 -> 1
+2021-04-19T20:09:44.909+00:00 [Info] connected with 1 indexers
+2021-04-19T20:09:44.909+00:00 [Info] client load stats {}
+_time=2021-04-19T20:09:47.423+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.424+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:47.465+00:00 _level=INFO _msg=Created New Bucket Mein1Bucket 
+2021-04-19T20:09:47.470+00:00 [Info] GSIC[default/Mein1Bucket-1618862987467371900] started ...
+_time=2021-04-19T20:09:47.470+00:00 _level=INFO _msg= Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/Mein1Bucket 
+_time=2021-04-19T20:09:47.488+00:00 _level=INFO _msg=Got new configuration for bucket Mein1Bucket 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.493+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.494+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.494+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.494+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.494+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.605+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.606+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.607+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.607+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:09:57.608+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:04.740+00:00 _level=INFO _msg= keyspace Miksch1 not found No bucket named Miksch1 
+_time=2021-04-19T20:10:04.771+00:00 _level=INFO _msg= Retrying bucket Miksch1 
+_time=2021-04-19T20:10:14.968+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.969+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.969+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.970+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.970+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.970+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.971+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:14.971+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+2021-04-19T20:10:44.909+00:00 [Info] connected with 1 indexers
+2021-04-19T20:10:44.909+00:00 [Info] client load stats {}
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.223+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.224+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.224+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.224+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.226+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.227+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.227+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.227+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.308+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.308+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.308+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.308+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.309+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.309+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:10:53.309+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+2021-04-19T20:11:37.524+00:00 [Info] CreateIndex 14888631267025668192 miksch1/#primary using:GSI exprType:N1QL partnExpr: whereExpr: secExprs:[] isPrimary:true with: - elapsed(1.8029388s) err(<nil>)
+2021-04-19T20:11:37.525+00:00 [Info] metadata provider version changed 1 -> 6
+2021-04-19T20:11:37.525+00:00 [Info] metadata provider version changed 1 -> 6
+2021-04-19T20:11:37.525+00:00 [Info] switched currmeta from 1 -> 6
+2021-04-19T20:11:40.878+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:11:40.902+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:11:40.902+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:11:40.902+00:00 [Info] switched currmeta from 6 -> 6
+2021-04-19T20:11:44.909+00:00 [Info] connected with 1 indexers
+2021-04-19T20:11:44.909+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:11:44.909+00:00 [Info] client load stats {}
+2021-04-19T20:11:45.910+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:11:45.940+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:11:45.940+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:11:45.940+00:00 [Info] switched currmeta from 6 -> 6
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:11:48.891+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+2021-04-19T20:12:44.910+00:00 [Info] connected with 1 indexers
+2021-04-19T20:12:44.910+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:12:44.910+00:00 [Info] client load stats {"14888631267025668192": 696125}
+2021-04-19T20:12:44.914+00:00 [Info] GSIC[default/miksch1-1618862924882197500] logstats "miksch1" {"gsi_scan_count":4,"gsi_scan_duration":3643100,"gsi_throttle_duration":0,"gsi_prime_duration":3295500,"gsi_blocked_duration":0,"gsi_totalbackfills":0}
+2021-04-19T20:13:44.910+00:00 [Info] connected with 1 indexers
+2021-04-19T20:13:44.910+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:13:44.910+00:00 [Info] client load stats {"14888631267025668192": 696125}
+2021-04-19T20:14:44.909+00:00 [Info] connected with 1 indexers
+2021-04-19T20:14:44.909+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:14:44.909+00:00 [Info] client load stats {"14888631267025668192": 696125}
+_time=2021-04-19T20:18:17.523+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2021-04-19T20:18:17.556+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2021-04-19T20:18:17.556+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2021-04-19T20:18:17.601+00:00 _level=INFO _msg=cbq-engine started loglevel=INFO servicers=32 pipeline-cap=512 request-cap=1024 timeout=0 request-size-cap=67108864 version=1.6.0 datastore=http://127.0.0.1:8091 max-concurrency=8 plus-servicers=128 pipeline-batch=16 
+_time=2021-04-19T20:18:17.605+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2021-04-19T20:18:17.968+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2021-04-19T20:18:38.798+00:00 _level=INFO _msg=Created New Bucket Mein1Bucket 
+_time=2021-04-19T20:18:38.799+00:00 _level=WARN _msg=Error loading indexes for keyspace Mein1Bucket, Error Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+2021-04-19T20:18:38.865+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:38.865+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:38.865+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2021-04-19T20:18:38.870+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2021-04-19T20:18:38.871+00:00 [Info] initialized currmeta 3
+2021-04-19T20:18:38.871+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started ...
+2021-04-19T20:18:38.871+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2021-04-19T20:18:38.872+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2021-04-19T20:18:38.874+00:00 [Info] GSIC[default/Mein1Bucket-1618863518799407600] started ...
+_time=2021-04-19T20:18:38.874+00:00 _level=INFO _msg= Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/Mein1Bucket 
+_time=2021-04-19T20:18:38.874+00:00 _level=ERROR _msg=PrimaryScan.newIndexConnection  error=System datastore error  - cause: Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+2021-04-19T20:18:38.880+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40cbq-engine-cbauth@127.0.0.1:8091, default
+_time=2021-04-19T20:18:38.890+00:00 _level=INFO _msg=Got new configuration for bucket Mein1Bucket 
+2021-04-19T20:18:38.891+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2021-04-19T20:18:38.892+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+_time=2021-04-19T20:18:38.926+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:38.942+00:00 _level=INFO _msg=Created New Bucket miksch1 
+_time=2021-04-19T20:18:38.943+00:00 _level=WARN _msg=Error loading indexes for keyspace miksch1, Error Failed to load indexes Keyspace miksch1 - cause: All nodes failed to respond or no healthy nodes for bucket found 
+2021-04-19T20:18:38.945+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:38.945+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:38.945+00:00 [Info] switched currmeta from 3 -> 3
+2021-04-19T20:18:38.947+00:00 [Info] GSIC[default/miksch1-1618863518943136200] started ...
+_time=2021-04-19T20:18:38.947+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace miksch1 - cause: Failed to load indexes Keyspace miksch1 - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:38.947+00:00 _level=INFO _msg= Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/miksch1 
+_time=2021-04-19T20:18:38.962+00:00 _level=INFO _msg=Got new configuration for bucket miksch1 
+2021-04-19T20:18:39.008+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:39.008+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:39.008+00:00 [Info] switched currmeta from 3 -> 3
+_time=2021-04-19T20:18:39.025+00:00 _level=ERROR _msg=PrimaryScan.newIndexConnection  error=System datastore error  - cause: Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:39.054+00:00 _level=ERROR _msg=PrimaryScan.newIndexConnection  error=System datastore error  - cause: Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:39.082+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.082+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.082+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.082+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.084+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.084+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:18:39.108+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:39.108+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace miksch1 - cause: Failed to load indexes Keyspace miksch1 - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:39.130+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace Mein1Bucket - cause: Failed to load indexes Keyspace Mein1Bucket - cause: All nodes failed to respond or no healthy nodes for bucket found 
+_time=2021-04-19T20:18:39.130+00:00 _level=ERROR _msg=Refreshing indexes failed Failed to load indexes for keyspace miksch1 - cause: Failed to load indexes Keyspace miksch1 - cause: All nodes failed to respond or no healthy nodes for bucket found 
+2021-04-19T20:18:41.866+00:00 [Error] [GsiScanClient:"127.0.0.1:9101"] ScanAll(e8777929-271e-4ff6-8bbe-27d6bfccf049) response failed `Indexer In Bootstrap State. Please retry the request later.`
+2021-04-19T20:18:41.866+00:00 [Warn] Scan failed with error for index 14888631267025668192.  Trying scan again with replica, reqId:e8777929-271e-4ff6-8bbe-27d6bfccf049 : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:41.866+00:00 [Warn] Trying scan again for index 0 (false true), reqId:e8777929-271e-4ff6-8bbe-27d6bfccf049 : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:41.878+00:00 [Error] [GsiScanClient:"127.0.0.1:9101"] ScanAll(e8777929-271e-4ff6-8bbe-27d6bfccf049) response failed `Indexer In Bootstrap State. Please retry the request later.`
+2021-04-19T20:18:41.878+00:00 [Warn] Scan failed with error for index 14888631267025668192.  Trying scan again with replica, reqId:e8777929-271e-4ff6-8bbe-27d6bfccf049 : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:43.737+00:00 [Error] [GsiScanClient:"127.0.0.1:9101"] ScanAll(35277ef5-e32d-498d-9609-57523b3964fc) response failed `Indexer In Bootstrap State. Please retry the request later.`
+2021-04-19T20:18:43.737+00:00 [Warn] Scan failed with error for index 14888631267025668192.  Trying scan again with replica, reqId:35277ef5-e32d-498d-9609-57523b3964fc : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:43.737+00:00 [Warn] Trying scan again for index 0 (false true), reqId:35277ef5-e32d-498d-9609-57523b3964fc : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:43.748+00:00 [Error] [GsiScanClient:"127.0.0.1:9101"] ScanAll(35277ef5-e32d-498d-9609-57523b3964fc) response failed `Indexer In Bootstrap State. Please retry the request later.`
+2021-04-19T20:18:43.748+00:00 [Warn] Scan failed with error for index 14888631267025668192.  Trying scan again with replica, reqId:35277ef5-e32d-498d-9609-57523b3964fc : Indexer In Bootstrap State. Please retry the request later. ...
+2021-04-19T20:18:46.142+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:18:46.182+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:46.182+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:46.182+00:00 [Info] switched currmeta from 3 -> 3
+_time=2021-04-19T20:18:48.570+00:00 _level=INFO _msg=Got new configuration for bucket miksch1 
+_time=2021-04-19T20:18:48.571+00:00 _level=INFO _msg=Got new configuration for bucket Mein1Bucket 
+2021-04-19T20:18:48.572+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:18:48.616+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:48.617+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:48.617+00:00 [Info] switched currmeta from 3 -> 3
+2021-04-19T20:18:52.188+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2021-04-19T20:18:52.253+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:52.253+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:52.253+00:00 [Info] switched currmeta from 3 -> 3
+2021-04-19T20:18:57.198+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+_time=2021-04-19T20:18:57.199+00:00 _level=INFO _msg=Got new configuration for bucket Mein1Bucket 
+_time=2021-04-19T20:18:57.199+00:00 _level=INFO _msg=Got new configuration for bucket miksch1 
+2021-04-19T20:18:57.231+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2021-04-19T20:18:57.231+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2021-04-19T20:18:57.231+00:00 [Info] switched currmeta from 3 -> 3
+_time=2021-04-19T20:19:09.824+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.824+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.824+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.825+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.826+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.827+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:19:09.827+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+2021-04-19T20:19:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:19:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:19:38.872+00:00 [Info] client load stats {"14888631267025668192": 511800}
+2021-04-19T20:19:38.948+00:00 [Info] GSIC[default/miksch1-1618863518943136200] logstats "miksch1" {"gsi_scan_count":3,"gsi_scan_duration":25263400,"gsi_throttle_duration":0,"gsi_prime_duration":493800,"gsi_blocked_duration":0,"gsi_totalbackfills":0}
+_time=2021-04-19T20:20:12.281+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:12.282+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:12.283+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:12.283+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.952+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.953+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.954+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.955+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.959+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.962+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.962+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.963+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.963+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.963+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.963+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+_time=2021-04-19T20:20:36.963+00:00 _level=WARN _msg=Finalizing a bucket with active connections. 
+2021-04-19T20:20:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:20:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:20:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:20:38.948+00:00 [Info] GSIC[default/miksch1-1618863518943136200] logstats "miksch1" {"gsi_scan_count":9,"gsi_scan_duration":29574800,"gsi_throttle_duration":0,"gsi_prime_duration":4322100,"gsi_blocked_duration":0,"gsi_totalbackfills":0}
+2021-04-19T20:21:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:21:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:21:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:22:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:22:38.872+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:22:38.872+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:23:38.872+00:00 [Info] connected with 1 indexers
+2021-04-19T20:23:38.872+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:23:38.872+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:24:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:24:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:24:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:25:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:25:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:25:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:26:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:26:38.872+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:26:38.872+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:27:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:27:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:27:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:28:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:28:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:28:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:29:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:29:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:29:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:30:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:30:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:30:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:31:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:31:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:31:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:32:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:32:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:32:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:33:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:33:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:33:38.872+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:34:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:34:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:34:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:35:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:35:38.871+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:35:38.871+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
+2021-04-19T20:36:38.871+00:00 [Info] connected with 1 indexers
+2021-04-19T20:36:38.872+00:00 [Info] index 14888631267025668192 has 1 replicas
+2021-04-19T20:36:38.872+00:00 [Info] client load stats {"14888631267025668192": 565984.375}
