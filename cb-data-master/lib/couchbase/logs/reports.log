@@ -18930,3 +18930,1928 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
+[error_logger:info,2021-04-22T05:57:44.436Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.168.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-22T05:57:44.436Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.167.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.460Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.172.0>},
+                       {id,ssl_pem_cache_dist},
+                       {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.460Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.173.0>},
+                       {id,ssl_dist_manager},
+                       {mfargs,{ssl_manager,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.460Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.171.0>},
+                       {id,ssl_dist_admin_sup},
+                       {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.465Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.174.0>},
+                       {id,ssl_tls_dist_proxy},
+                       {mfargs,{ssl_tls_dist_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.469Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.176.0>},
+                       {id,dist_tls_connection},
+                       {mfargs,{tls_connection_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.469Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.177.0>},
+                       {id,dist_tls_socket},
+                       {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.469Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.175.0>},
+                       {id,ssl_dist_connection_sup},
+                       {mfargs,{ssl_dist_connection_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.469Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.170.0>},
+                       {id,ssl_dist_sup},
+                       {mfargs,{ssl_dist_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.472Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.178.0>},
+                       {id,cb_dist},
+                       {mfargs,{cb_dist,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.473Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.179.0>},
+                       {id,cb_epmd},
+                       {mfargs,{cb_epmd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.475Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.180.0>},
+                       {id,auth},
+                       {mfargs,{auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.481Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.181.0>},
+                       {id,net_kernel},
+                       {mfargs,
+                           {net_kernel,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.481Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_sup}
+             started: [{pid,<0.169.0>},
+                       {id,net_sup_dynamic},
+                       {mfargs,
+                           {erl_distribution,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:44.511Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2021-04-22T05:57:44.554Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,root_sup}
+             started: [{pid,<0.166.0>},
+                       {id,dist_manager},
+                       {mfargs,{dist_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.572Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.188.0>},
+                       {id,local_tasks},
+                       {mfargs,{local_tasks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.601Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.189.0>},
+                       {id,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.604Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.190.0>},
+                       {id,ns_cookie_manager},
+                       {mfargs,{ns_cookie_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.607Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.191.0>},
+                       {id,ns_cluster},
+                       {mfargs,{ns_cluster,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.610Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.193.0>},
+                       {id,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:44.610Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.194.0>},
+                       {id,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:57:44.688Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_config:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {noproc,
+                        {gen_server,call,
+                            [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                             {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                             infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 214)
+      in call from ns_config_default:'-decrypt/1-fun-0-'/1 (src/ns_config_default.erl, line 527)
+      in call from misc:'-rewrite/2-fun-0-'/2 (src/misc.erl, line 657)
+      in call from generic:'-maybe_transform/2-fun-0-'/3 (src/generic.erl, line 100)
+      in call from generic:maybe_transform/3 (src/generic.erl, line 88)
+      in call from generic:'-gmap/3-fun-0-'/3 (src/generic.erl, line 162)
+      in call from lists:foldl/3 (lists.erl, line 1263)
+      in call from generic:'-gmap/3-fun-1-'/4 (src/generic.erl, line 160)
+    ancestors: [ns_config_sup,ns_server_cluster_sup,root_sup,<0.118.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 25648
+  neighbours:
+
+[error_logger:error,2021-04-22T05:57:44.689Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_config_sup}
+     Context:    start_error
+     Reason:     {noproc,
+                     {gen_server,call,
+                         [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                          {decrypt,
+                              <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                56,136,97,11,145,58,194,246,130,201,184,30,83,
+                                90,55,109,181,1,5>>},
+                          infinity]}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config},
+                  {mfargs,{ns_config,start_link,
+                                     ["/opt/couchbase/etc/couchbase/config",
+                                      ns_config_default]}},
+                  {restart_type,permanent},
+                  {shutdown,1000},
+                  {child_type,worker}]
+
+
+[error_logger:error,2021-04-22T05:57:44.689Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_server_cluster_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                     {failed_to_start_child,ns_config,
+                         {noproc,
+                             {gen_server,call,
+                                 [{encryption_service,
+                                      'babysitter_of_ns_1@cb.local'},
+                                  {decrypt,
+                                      <<0,91,138,62,227,156,123,169,152,209,
+                                        245,234,56,136,97,11,145,58,194,246,
+                                        130,201,184,30,83,90,55,109,181,1,5>>},
+                                  infinity]}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config_sup},
+                  {mfargs,{ns_config_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:44.689Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,root_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                  {failed_to_start_child,ns_config_sup,
+                   {shutdown,
+                    {failed_to_start_child,ns_config,
+                     {noproc,
+                      {gen_server,call,
+                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                        {decrypt,
+                         <<0,91,138,62,227,156,123,169,152,209,245,234,56,136,
+                           97,11,145,58,194,246,130,201,184,30,83,90,55,109,
+                           181,1,5>>},
+                        infinity]}}}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_server_cluster_sup},
+                  {mfargs,{ns_server_cluster_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:44.690Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.117.0>
+    registered_name: []
+    exception exit: {{shutdown,
+                      {failed_to_start_child,ns_server_cluster_sup,
+                       {shutdown,
+                        {failed_to_start_child,ns_config_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config,
+                           {noproc,
+                            {gen_server,call,
+                             [{encryption_service,
+                               'babysitter_of_ns_1@cb.local'},
+                              {decrypt,
+                               <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                 56,136,97,11,145,58,194,246,130,201,184,30,
+                                 ...>>},
+                              infinity]}}}}}}}},
+                     {ns_server,start,[normal,[]]}}
+      in function  application_master:init/4 (application_master.erl, line 134)
+    ancestors: [<0.116.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.118.0>,normal}]
+    links: [<0.116.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 274
+  neighbours:
+
+[error_logger:info,2021-04-22T05:57:44.691Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+         application: ns_server
+              exited: {{shutdown,
+                        {failed_to_start_child,ns_server_cluster_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config_sup,
+                           {shutdown,
+                            {failed_to_start_child,ns_config,
+                             {noproc,
+                              {gen_server,call,
+                               [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                                {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                                infinity]}}}}}}}},
+                       {ns_server,start,[normal,[]]}}
+                type: permanent
+
+[error_logger:info,2021-04-22T05:57:49.221Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.168.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-22T05:57:49.221Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.167.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.253Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.172.0>},
+                       {id,ssl_pem_cache_dist},
+                       {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.253Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.173.0>},
+                       {id,ssl_dist_manager},
+                       {mfargs,{ssl_manager,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.253Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.171.0>},
+                       {id,ssl_dist_admin_sup},
+                       {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.259Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.174.0>},
+                       {id,ssl_tls_dist_proxy},
+                       {mfargs,{ssl_tls_dist_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.264Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.176.0>},
+                       {id,dist_tls_connection},
+                       {mfargs,{tls_connection_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.265Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.177.0>},
+                       {id,dist_tls_socket},
+                       {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.265Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.175.0>},
+                       {id,ssl_dist_connection_sup},
+                       {mfargs,{ssl_dist_connection_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.265Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.170.0>},
+                       {id,ssl_dist_sup},
+                       {mfargs,{ssl_dist_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.268Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.178.0>},
+                       {id,cb_dist},
+                       {mfargs,{cb_dist,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.269Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.179.0>},
+                       {id,cb_epmd},
+                       {mfargs,{cb_epmd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.271Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.180.0>},
+                       {id,auth},
+                       {mfargs,{auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.278Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.181.0>},
+                       {id,net_kernel},
+                       {mfargs,
+                           {net_kernel,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.278Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_sup}
+             started: [{pid,<0.169.0>},
+                       {id,net_sup_dynamic},
+                       {mfargs,
+                           {erl_distribution,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:49.302Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2021-04-22T05:57:49.321Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,root_sup}
+             started: [{pid,<0.166.0>},
+                       {id,dist_manager},
+                       {mfargs,{dist_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.332Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.188.0>},
+                       {id,local_tasks},
+                       {mfargs,{local_tasks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.348Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.189.0>},
+                       {id,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.350Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.190.0>},
+                       {id,ns_cookie_manager},
+                       {mfargs,{ns_cookie_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.352Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.191.0>},
+                       {id,ns_cluster},
+                       {mfargs,{ns_cluster,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.353Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.193.0>},
+                       {id,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:49.353Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.194.0>},
+                       {id,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:57:49.433Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_config:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {noproc,
+                        {gen_server,call,
+                            [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                             {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                             infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 214)
+      in call from ns_config_default:'-decrypt/1-fun-0-'/1 (src/ns_config_default.erl, line 527)
+      in call from misc:'-rewrite/2-fun-0-'/2 (src/misc.erl, line 657)
+      in call from generic:'-maybe_transform/2-fun-0-'/3 (src/generic.erl, line 100)
+      in call from generic:maybe_transform/3 (src/generic.erl, line 88)
+      in call from generic:'-gmap/3-fun-0-'/3 (src/generic.erl, line 162)
+      in call from lists:foldl/3 (lists.erl, line 1263)
+      in call from generic:'-gmap/3-fun-1-'/4 (src/generic.erl, line 160)
+    ancestors: [ns_config_sup,ns_server_cluster_sup,root_sup,<0.118.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 25648
+  neighbours:
+
+[error_logger:error,2021-04-22T05:57:49.433Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_config_sup}
+     Context:    start_error
+     Reason:     {noproc,
+                     {gen_server,call,
+                         [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                          {decrypt,
+                              <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                56,136,97,11,145,58,194,246,130,201,184,30,83,
+                                90,55,109,181,1,5>>},
+                          infinity]}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config},
+                  {mfargs,{ns_config,start_link,
+                                     ["/opt/couchbase/etc/couchbase/config",
+                                      ns_config_default]}},
+                  {restart_type,permanent},
+                  {shutdown,1000},
+                  {child_type,worker}]
+
+
+[error_logger:error,2021-04-22T05:57:49.434Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_server_cluster_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                     {failed_to_start_child,ns_config,
+                         {noproc,
+                             {gen_server,call,
+                                 [{encryption_service,
+                                      'babysitter_of_ns_1@cb.local'},
+                                  {decrypt,
+                                      <<0,91,138,62,227,156,123,169,152,209,
+                                        245,234,56,136,97,11,145,58,194,246,
+                                        130,201,184,30,83,90,55,109,181,1,5>>},
+                                  infinity]}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config_sup},
+                  {mfargs,{ns_config_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:49.434Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,root_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                  {failed_to_start_child,ns_config_sup,
+                   {shutdown,
+                    {failed_to_start_child,ns_config,
+                     {noproc,
+                      {gen_server,call,
+                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                        {decrypt,
+                         <<0,91,138,62,227,156,123,169,152,209,245,234,56,136,
+                           97,11,145,58,194,246,130,201,184,30,83,90,55,109,
+                           181,1,5>>},
+                        infinity]}}}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_server_cluster_sup},
+                  {mfargs,{ns_server_cluster_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:49.435Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.117.0>
+    registered_name: []
+    exception exit: {{shutdown,
+                      {failed_to_start_child,ns_server_cluster_sup,
+                       {shutdown,
+                        {failed_to_start_child,ns_config_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config,
+                           {noproc,
+                            {gen_server,call,
+                             [{encryption_service,
+                               'babysitter_of_ns_1@cb.local'},
+                              {decrypt,
+                               <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                 56,136,97,11,145,58,194,246,130,201,184,30,
+                                 ...>>},
+                              infinity]}}}}}}}},
+                     {ns_server,start,[normal,[]]}}
+      in function  application_master:init/4 (application_master.erl, line 134)
+    ancestors: [<0.116.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.118.0>,normal}]
+    links: [<0.116.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 274
+  neighbours:
+
+[error_logger:info,2021-04-22T05:57:49.435Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+         application: ns_server
+              exited: {{shutdown,
+                        {failed_to_start_child,ns_server_cluster_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config_sup,
+                           {shutdown,
+                            {failed_to_start_child,ns_config,
+                             {noproc,
+                              {gen_server,call,
+                               [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                                {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                                infinity]}}}}}}}},
+                       {ns_server,start,[normal,[]]}}
+                type: permanent
+
+[error_logger:info,2021-04-22T05:57:59.139Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.168.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-22T05:57:59.139Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.167.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.173Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.172.0>},
+                       {id,ssl_pem_cache_dist},
+                       {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.174Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.173.0>},
+                       {id,ssl_dist_manager},
+                       {mfargs,{ssl_manager,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.174Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.171.0>},
+                       {id,ssl_dist_admin_sup},
+                       {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.179Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.174.0>},
+                       {id,ssl_tls_dist_proxy},
+                       {mfargs,{ssl_tls_dist_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.184Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.176.0>},
+                       {id,dist_tls_connection},
+                       {mfargs,{tls_connection_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.185Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.177.0>},
+                       {id,dist_tls_socket},
+                       {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.185Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.175.0>},
+                       {id,ssl_dist_connection_sup},
+                       {mfargs,{ssl_dist_connection_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.185Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.170.0>},
+                       {id,ssl_dist_sup},
+                       {mfargs,{ssl_dist_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.189Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.178.0>},
+                       {id,cb_dist},
+                       {mfargs,{cb_dist,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.190Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.179.0>},
+                       {id,cb_epmd},
+                       {mfargs,{cb_epmd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.192Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.180.0>},
+                       {id,auth},
+                       {mfargs,{auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.199Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.181.0>},
+                       {id,net_kernel},
+                       {mfargs,
+                           {net_kernel,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.199Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_sup}
+             started: [{pid,<0.169.0>},
+                       {id,net_sup_dynamic},
+                       {mfargs,
+                           {erl_distribution,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:59.218Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2021-04-22T05:57:59.237Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,root_sup}
+             started: [{pid,<0.166.0>},
+                       {id,dist_manager},
+                       {mfargs,{dist_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.248Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.188.0>},
+                       {id,local_tasks},
+                       {mfargs,{local_tasks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.265Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.189.0>},
+                       {id,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.266Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.190.0>},
+                       {id,ns_cookie_manager},
+                       {mfargs,{ns_cookie_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.267Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.191.0>},
+                       {id,ns_cluster},
+                       {mfargs,{ns_cluster,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.269Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.193.0>},
+                       {id,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:59.269Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.194.0>},
+                       {id,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:57:59.347Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_config:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {noproc,
+                        {gen_server,call,
+                            [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                             {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                             infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 214)
+      in call from ns_config_default:'-decrypt/1-fun-0-'/1 (src/ns_config_default.erl, line 527)
+      in call from misc:'-rewrite/2-fun-0-'/2 (src/misc.erl, line 657)
+      in call from generic:'-maybe_transform/2-fun-0-'/3 (src/generic.erl, line 100)
+      in call from generic:maybe_transform/3 (src/generic.erl, line 88)
+      in call from generic:'-gmap/3-fun-0-'/3 (src/generic.erl, line 162)
+      in call from lists:foldl/3 (lists.erl, line 1263)
+      in call from generic:'-gmap/3-fun-1-'/4 (src/generic.erl, line 160)
+    ancestors: [ns_config_sup,ns_server_cluster_sup,root_sup,<0.118.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 25648
+  neighbours:
+
+[error_logger:error,2021-04-22T05:57:59.347Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_config_sup}
+     Context:    start_error
+     Reason:     {noproc,
+                     {gen_server,call,
+                         [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                          {decrypt,
+                              <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                56,136,97,11,145,58,194,246,130,201,184,30,83,
+                                90,55,109,181,1,5>>},
+                          infinity]}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config},
+                  {mfargs,{ns_config,start_link,
+                                     ["/opt/couchbase/etc/couchbase/config",
+                                      ns_config_default]}},
+                  {restart_type,permanent},
+                  {shutdown,1000},
+                  {child_type,worker}]
+
+
+[error_logger:error,2021-04-22T05:57:59.347Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_server_cluster_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                     {failed_to_start_child,ns_config,
+                         {noproc,
+                             {gen_server,call,
+                                 [{encryption_service,
+                                      'babysitter_of_ns_1@cb.local'},
+                                  {decrypt,
+                                      <<0,91,138,62,227,156,123,169,152,209,
+                                        245,234,56,136,97,11,145,58,194,246,
+                                        130,201,184,30,83,90,55,109,181,1,5>>},
+                                  infinity]}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config_sup},
+                  {mfargs,{ns_config_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:59.348Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,root_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                  {failed_to_start_child,ns_config_sup,
+                   {shutdown,
+                    {failed_to_start_child,ns_config,
+                     {noproc,
+                      {gen_server,call,
+                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                        {decrypt,
+                         <<0,91,138,62,227,156,123,169,152,209,245,234,56,136,
+                           97,11,145,58,194,246,130,201,184,30,83,90,55,109,
+                           181,1,5>>},
+                        infinity]}}}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_server_cluster_sup},
+                  {mfargs,{ns_server_cluster_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:57:59.348Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.117.0>
+    registered_name: []
+    exception exit: {{shutdown,
+                      {failed_to_start_child,ns_server_cluster_sup,
+                       {shutdown,
+                        {failed_to_start_child,ns_config_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config,
+                           {noproc,
+                            {gen_server,call,
+                             [{encryption_service,
+                               'babysitter_of_ns_1@cb.local'},
+                              {decrypt,
+                               <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                 56,136,97,11,145,58,194,246,130,201,184,30,
+                                 ...>>},
+                              infinity]}}}}}}}},
+                     {ns_server,start,[normal,[]]}}
+      in function  application_master:init/4 (application_master.erl, line 134)
+    ancestors: [<0.116.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.118.0>,normal}]
+    links: [<0.116.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 274
+  neighbours:
+
+[error_logger:info,2021-04-22T05:57:59.349Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+         application: ns_server
+              exited: {{shutdown,
+                        {failed_to_start_child,ns_server_cluster_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config_sup,
+                           {shutdown,
+                            {failed_to_start_child,ns_config,
+                             {noproc,
+                              {gen_server,call,
+                               [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                                {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                                infinity]}}}}}}}},
+                       {ns_server,start,[normal,[]]}}
+                type: permanent
+
+[error_logger:info,2021-04-22T05:58:09.210Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.168.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-22T05:58:09.210Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.167.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.245Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.172.0>},
+                       {id,ssl_pem_cache_dist},
+                       {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.246Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.173.0>},
+                       {id,ssl_dist_manager},
+                       {mfargs,{ssl_manager,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.246Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.171.0>},
+                       {id,ssl_dist_admin_sup},
+                       {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.253Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.174.0>},
+                       {id,ssl_tls_dist_proxy},
+                       {mfargs,{ssl_tls_dist_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.259Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.176.0>},
+                       {id,dist_tls_connection},
+                       {mfargs,{tls_connection_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.259Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.177.0>},
+                       {id,dist_tls_socket},
+                       {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.259Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.175.0>},
+                       {id,ssl_dist_connection_sup},
+                       {mfargs,{ssl_dist_connection_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.259Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.170.0>},
+                       {id,ssl_dist_sup},
+                       {mfargs,{ssl_dist_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.263Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.178.0>},
+                       {id,cb_dist},
+                       {mfargs,{cb_dist,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.265Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.179.0>},
+                       {id,cb_epmd},
+                       {mfargs,{cb_epmd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.267Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.180.0>},
+                       {id,auth},
+                       {mfargs,{auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.273Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.181.0>},
+                       {id,net_kernel},
+                       {mfargs,
+                           {net_kernel,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.274Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_sup}
+             started: [{pid,<0.169.0>},
+                       {id,net_sup_dynamic},
+                       {mfargs,
+                           {erl_distribution,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:09.297Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2021-04-22T05:58:09.316Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,root_sup}
+             started: [{pid,<0.166.0>},
+                       {id,dist_manager},
+                       {mfargs,{dist_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.327Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.188.0>},
+                       {id,local_tasks},
+                       {mfargs,{local_tasks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.345Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.189.0>},
+                       {id,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.347Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.190.0>},
+                       {id,ns_cookie_manager},
+                       {mfargs,{ns_cookie_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.348Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.191.0>},
+                       {id,ns_cluster},
+                       {mfargs,{ns_cluster,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.350Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.193.0>},
+                       {id,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:09.350Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.194.0>},
+                       {id,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:58:09.417Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_config_sup}
+     Context:    start_error
+     Reason:     {noproc,
+                     {gen_server,call,
+                         [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                          {decrypt,
+                              <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                56,136,97,11,145,58,194,246,130,201,184,30,83,
+                                90,55,109,181,1,5>>},
+                          infinity]}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config},
+                  {mfargs,{ns_config,start_link,
+                                     ["/opt/couchbase/etc/couchbase/config",
+                                      ns_config_default]}},
+                  {restart_type,permanent},
+                  {shutdown,1000},
+                  {child_type,worker}]
+
+
+[error_logger:error,2021-04-22T05:58:09.420Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_config:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {noproc,
+                        {gen_server,call,
+                            [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                             {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                             infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 214)
+      in call from ns_config_default:'-decrypt/1-fun-0-'/1 (src/ns_config_default.erl, line 527)
+      in call from misc:'-rewrite/2-fun-0-'/2 (src/misc.erl, line 657)
+      in call from generic:'-maybe_transform/2-fun-0-'/3 (src/generic.erl, line 100)
+      in call from generic:maybe_transform/3 (src/generic.erl, line 88)
+      in call from generic:'-gmap/3-fun-0-'/3 (src/generic.erl, line 162)
+      in call from lists:foldl/3 (lists.erl, line 1263)
+      in call from generic:'-gmap/3-fun-1-'/4 (src/generic.erl, line 160)
+    ancestors: [ns_config_sup,ns_server_cluster_sup,root_sup,<0.118.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 25646
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:09.421Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_server_cluster_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                     {failed_to_start_child,ns_config,
+                         {noproc,
+                             {gen_server,call,
+                                 [{encryption_service,
+                                      'babysitter_of_ns_1@cb.local'},
+                                  {decrypt,
+                                      <<0,91,138,62,227,156,123,169,152,209,
+                                        245,234,56,136,97,11,145,58,194,246,
+                                        130,201,184,30,83,90,55,109,181,1,5>>},
+                                  infinity]}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config_sup},
+                  {mfargs,{ns_config_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:58:09.421Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,root_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                  {failed_to_start_child,ns_config_sup,
+                   {shutdown,
+                    {failed_to_start_child,ns_config,
+                     {noproc,
+                      {gen_server,call,
+                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                        {decrypt,
+                         <<0,91,138,62,227,156,123,169,152,209,245,234,56,136,
+                           97,11,145,58,194,246,130,201,184,30,83,90,55,109,
+                           181,1,5>>},
+                        infinity]}}}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_server_cluster_sup},
+                  {mfargs,{ns_server_cluster_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:58:09.422Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.117.0>
+    registered_name: []
+    exception exit: {{shutdown,
+                      {failed_to_start_child,ns_server_cluster_sup,
+                       {shutdown,
+                        {failed_to_start_child,ns_config_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config,
+                           {noproc,
+                            {gen_server,call,
+                             [{encryption_service,
+                               'babysitter_of_ns_1@cb.local'},
+                              {decrypt,
+                               <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                 56,136,97,11,145,58,194,246,130,201,184,30,
+                                 ...>>},
+                              infinity]}}}}}}}},
+                     {ns_server,start,[normal,[]]}}
+      in function  application_master:init/4 (application_master.erl, line 134)
+    ancestors: [<0.116.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.118.0>,normal}]
+    links: [<0.116.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 274
+  neighbours:
+
+[error_logger:info,2021-04-22T05:58:09.422Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+         application: ns_server
+              exited: {{shutdown,
+                        {failed_to_start_child,ns_server_cluster_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config_sup,
+                           {shutdown,
+                            {failed_to_start_child,ns_config,
+                             {noproc,
+                              {gen_server,call,
+                               [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                                {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                                infinity]}}}}}}}},
+                       {ns_server,start,[normal,[]]}}
+                type: permanent
+
+[error_logger:info,2021-04-22T05:58:14.097Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.168.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2021-04-22T05:58:14.098Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.167.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.134Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.172.0>},
+                       {id,ssl_pem_cache_dist},
+                       {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.135Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_admin_sup}
+             started: [{pid,<0.173.0>},
+                       {id,ssl_dist_manager},
+                       {mfargs,{ssl_manager,start_link_dist,[[]]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.135Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.171.0>},
+                       {id,ssl_dist_admin_sup},
+                       {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.142Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.174.0>},
+                       {id,ssl_tls_dist_proxy},
+                       {mfargs,{ssl_tls_dist_proxy,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.148Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.176.0>},
+                       {id,dist_tls_connection},
+                       {mfargs,{tls_connection_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.148Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_connection_sup}
+             started: [{pid,<0.177.0>},
+                       {id,dist_tls_socket},
+                       {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.148Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ssl_dist_sup}
+             started: [{pid,<0.175.0>},
+                       {id,ssl_dist_connection_sup},
+                       {mfargs,{ssl_dist_connection_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,4000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.148Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.170.0>},
+                       {id,ssl_dist_sup},
+                       {mfargs,{ssl_dist_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.152Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.178.0>},
+                       {id,cb_dist},
+                       {mfargs,{cb_dist,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.154Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.179.0>},
+                       {id,cb_epmd},
+                       {mfargs,{cb_epmd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.156Z,nonode@nohost:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.180.0>},
+                       {id,auth},
+                       {mfargs,{auth,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.165Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,net_sup}
+             started: [{pid,<0.181.0>},
+                       {id,net_kernel},
+                       {mfargs,
+                           {net_kernel,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.165Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_sup}
+             started: [{pid,<0.169.0>},
+                       {id,net_sup_dynamic},
+                       {mfargs,
+                           {erl_distribution,start_link,
+                               [['ns_1@127.0.0.1',longnames],false]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:58:14.188Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2021-04-22T05:58:14.210Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,root_sup}
+             started: [{pid,<0.166.0>},
+                       {id,dist_manager},
+                       {mfargs,{dist_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.221Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.188.0>},
+                       {id,local_tasks},
+                       {mfargs,{local_tasks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.240Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.189.0>},
+                       {id,timeout_diag_logger},
+                       {mfargs,{timeout_diag_logger,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.242Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.190.0>},
+                       {id,ns_cookie_manager},
+                       {mfargs,{ns_cookie_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.243Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_server_cluster_sup}
+             started: [{pid,<0.191.0>},
+                       {id,ns_cluster},
+                       {mfargs,{ns_cluster,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.245Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.193.0>},
+                       {id,ns_config_events},
+                       {mfargs,
+                           {gen_event,start_link,[{local,ns_config_events}]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:58:14.245Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_config_sup}
+             started: [{pid,<0.194.0>},
+                       {id,ns_config_events_local},
+                       {mfargs,
+                           {gen_event,start_link,
+                               [{local,ns_config_events_local}]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:58:14.330Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_config_sup}
+     Context:    start_error
+     Reason:     {noproc,
+                     {gen_server,call,
+                         [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                          {decrypt,
+                              <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                56,136,97,11,145,58,194,246,130,201,184,30,83,
+                                90,55,109,181,1,5>>},
+                          infinity]}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config},
+                  {mfargs,{ns_config,start_link,
+                                     ["/opt/couchbase/etc/couchbase/config",
+                                      ns_config_default]}},
+                  {restart_type,permanent},
+                  {shutdown,1000},
+                  {child_type,worker}]
+
+
+[error_logger:error,2021-04-22T05:58:14.336Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_config:init/1
+    pid: <0.195.0>
+    registered_name: []
+    exception exit: {noproc,
+                        {gen_server,call,
+                            [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                             {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                             infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 214)
+      in call from ns_config_default:'-decrypt/1-fun-0-'/1 (src/ns_config_default.erl, line 527)
+      in call from misc:'-rewrite/2-fun-0-'/2 (src/misc.erl, line 657)
+      in call from generic:'-maybe_transform/2-fun-0-'/3 (src/generic.erl, line 100)
+      in call from generic:maybe_transform/3 (src/generic.erl, line 88)
+      in call from generic:'-gmap/3-fun-0-'/3 (src/generic.erl, line 162)
+      in call from lists:foldl/3 (lists.erl, line 1263)
+      in call from generic:'-gmap/3-fun-1-'/4 (src/generic.erl, line 160)
+    ancestors: [ns_config_sup,ns_server_cluster_sup,root_sup,<0.118.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 25648
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:14.336Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,ns_server_cluster_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                     {failed_to_start_child,ns_config,
+                         {noproc,
+                             {gen_server,call,
+                                 [{encryption_service,
+                                      'babysitter_of_ns_1@cb.local'},
+                                  {decrypt,
+                                      <<0,91,138,62,227,156,123,169,152,209,
+                                        245,234,56,136,97,11,145,58,194,246,
+                                        130,201,184,30,83,90,55,109,181,1,5>>},
+                                  infinity]}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_config_sup},
+                  {mfargs,{ns_config_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:58:14.337Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,root_sup}
+     Context:    start_error
+     Reason:     {shutdown,
+                  {failed_to_start_child,ns_config_sup,
+                   {shutdown,
+                    {failed_to_start_child,ns_config,
+                     {noproc,
+                      {gen_server,call,
+                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+                        {decrypt,
+                         <<0,91,138,62,227,156,123,169,152,209,245,234,56,136,
+                           97,11,145,58,194,246,130,201,184,30,83,90,55,109,
+                           181,1,5>>},
+                        infinity]}}}}}}
+     Offender:   [{pid,undefined},
+                  {id,ns_server_cluster_sup},
+                  {mfargs,{ns_server_cluster_sup,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,supervisor}]
+
+
+[error_logger:error,2021-04-22T05:58:14.338Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.117.0>
+    registered_name: []
+    exception exit: {{shutdown,
+                      {failed_to_start_child,ns_server_cluster_sup,
+                       {shutdown,
+                        {failed_to_start_child,ns_config_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config,
+                           {noproc,
+                            {gen_server,call,
+                             [{encryption_service,
+                               'babysitter_of_ns_1@cb.local'},
+                              {decrypt,
+                               <<0,91,138,62,227,156,123,169,152,209,245,234,
+                                 56,136,97,11,145,58,194,246,130,201,184,30,
+                                 ...>>},
+                              infinity]}}}}}}}},
+                     {ns_server,start,[normal,[]]}}
+      in function  application_master:init/4 (application_master.erl, line 134)
+    ancestors: [<0.116.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.118.0>,normal}]
+    links: [<0.116.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 274
+  neighbours:
+
+[error_logger:info,2021-04-22T05:58:14.338Z,ns_1@127.0.0.1:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+         application: ns_server
+              exited: {{shutdown,
+                        {failed_to_start_child,ns_server_cluster_sup,
+                         {shutdown,
+                          {failed_to_start_child,ns_config_sup,
+                           {shutdown,
+                            {failed_to_start_child,ns_config,
+                             {noproc,
+                              {gen_server,call,
+                               [{encryption_service,
+                                 'babysitter_of_ns_1@cb.local'},
+                                {decrypt,
+                                 <<0,91,138,62,227,156,123,169,152,209,245,
+                                   234,56,136,97,11,145,58,194,246,130,201,
+                                   184,30,83,90,55,109,181,1,5>>},
+                                infinity]}}}}}}}},
+                       {ns_server,start,[normal,[]]}}
+                type: permanent
+

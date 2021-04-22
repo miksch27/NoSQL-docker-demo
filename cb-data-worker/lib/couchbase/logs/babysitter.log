@@ -15987,3 +15987,1538 @@ ns_server<0.421.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
     reductions: 2220
   neighbours:
 
+[ns_server:info,2021-04-22T05:57:36.152Z,babysitter_of_ns_1@cb.local:<0.92.0>:ns_babysitter:init_logging:136]Brought up babysitter logging
+[ns_server:info,2021-04-22T05:57:36.184Z,babysitter_of_ns_1@cb.local:<0.92.0>:ns_babysitter:log_pending:101]Static config terms:
+[{error_logger_mf_dir,"/opt/couchbase/var/lib/couchbase/logs"},
+ {path_config_bindir,"/opt/couchbase/bin"},
+ {path_config_etcdir,"/opt/couchbase/etc/couchbase"},
+ {path_config_libdir,"/opt/couchbase/lib"},
+ {path_config_datadir,"/opt/couchbase/var/lib/couchbase"},
+ {path_config_tmpdir,"/opt/couchbase/var/lib/couchbase/tmp"},
+ {path_config_secdir,"/opt/couchbase/etc/security"},
+ {nodefile,"/opt/couchbase/var/lib/couchbase/couchbase-server.node"},
+ {loglevel_default,debug},
+ {loglevel_couchdb,info},
+ {loglevel_ns_server,debug},
+ {loglevel_error_logger,debug},
+ {loglevel_user,debug},
+ {loglevel_menelaus,debug},
+ {loglevel_ns_doctor,debug},
+ {loglevel_stats,debug},
+ {loglevel_rebalance,debug},
+ {loglevel_cluster,debug},
+ {loglevel_views,debug},
+ {loglevel_mapreduce_errors,debug},
+ {loglevel_xdcr,debug},
+ {loglevel_access,info},
+ {loglevel_cbas,debug},
+ {disk_sink_opts,[{rotation,[{compress,true},
+                             {size,41943040},
+                             {num_files,10},
+                             {buffer_size_max,52428800}]}]},
+ {disk_sink_opts_json_rpc,[{rotation,[{compress,true},
+                                      {size,41943040},
+                                      {num_files,2},
+                                      {buffer_size_max,52428800}]}]},
+ {net_kernel_verbosity,10}]
+[ns_server:debug,2021-04-22T05:57:36.188Z,babysitter_of_ns_1@cb.local:<0.92.0>:dist_manager:configure_net_kernel:293]Set net_kernel vebosity to 10 -> 0
+[ns_server:info,2021-04-22T05:57:36.225Z,babysitter_of_ns_1@cb.local:<0.92.0>:ns_babysitter:start:62]babysitter cookie: {sanitized,<<"Y+MrqfnD0Y1w/UUQrp/ZXXjsWOeg1a8oPFtbSJAkThE=">>}
+
+[ns_server:info,2021-04-22T05:57:36.239Z,babysitter_of_ns_1@cb.local:<0.92.0>:ns_babysitter:do_write_file:94]Saved babysitter cookie to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie
+[ns_server:info,2021-04-22T05:57:36.251Z,babysitter_of_ns_1@cb.local:<0.92.0>:ns_babysitter:do_write_file:94]Saved babysitter node name to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node
+[ns_server:info,2021-04-22T05:57:36.258Z,babysitter_of_ns_1@cb.local:ns_crash_log<0.102.0>:ns_crash_log:init:57]crash_log path: /opt/couchbase/var/lib/couchbase/logs/crash_log_v2.bin
+[error_logger:info,2021-04-22T05:57:36.260Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_babysitter_sup}
+             started: [{pid,<0.102.0>},
+                       {id,ns_crash_log},
+                       {mfargs,{ns_crash_log,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:57:36.336Z,babysitter_of_ns_1@cb.local:<0.105.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2021-04-22T05:57:36.341Z,babysitter_of_ns_1@cb.local:<0.104.0>:restartable:start_child:98]Started child process <0.105.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2021-04-22T05:57:36.342Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.104.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[error_logger:info,2021-04-22T05:57:36.343Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_babysitter_sup}
+             started: [{pid,<0.103.0>},
+                       {id,child_ns_server_sup},
+                       {mfargs,{child_ns_server_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:36.343Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_babysitter_sup}
+             started: [{pid,<0.107.0>},
+                       {id,ns_child_ports_sup},
+                       {mfargs,{ns_child_ports_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+[error_logger:info,2021-04-22T05:57:36.345Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_babysitter_sup}
+             started: [{pid,<0.108.0>},
+                       {id,ns_ports_manager},
+                       {mfargs,{ns_ports_manager,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:info,2021-04-22T05:57:36.345Z,babysitter_of_ns_1@cb.local:<0.5.0>:ns_babysitter_bootstrap:start:26]42: babysitter has started
+[error_logger:info,2021-04-22T05:57:36.345Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: ns_babysitter
+          started_at: 'babysitter_of_ns_1@cb.local'
+
+[ns_server:debug,2021-04-22T05:57:39.395Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Accepted new connection from <0.58.0>: {con,
+                                                 #Ref<0.3231365761.2520514561.245171>,
+                                                 inet_tcp_dist,undefined,
+                                                 undefined}
+[ns_server:debug,2021-04-22T05:57:39.395Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:754]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2021-04-22T05:57:39.395Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Updated connection: {con,#Ref<0.3231365761.2520514561.245171>,
+                                  inet_tcp_dist,<0.109.0>,
+                                  #Ref<0.3231365761.2520514561.245174>}
+[error_logger:info,2021-04-22T05:57:39.521Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.111.0>},
+                       {id,timer2_server},
+                       {mfargs,{timer2,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:57:39.540Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Connection down: {con,#Ref<0.3231365761.2520514561.245171>,
+                               inet_tcp_dist,<0.109.0>,
+                               #Ref<0.3231365761.2520514561.245174>}
+[error_logger:info,2021-04-22T05:57:39.540Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{'EXIT',<0.109.0>,connection_closed}}
+[ns_server:info,2021-04-22T05:57:39.722Z,babysitter_of_ns_1@cb.local:<0.106.0>:ns_port_server:log:224]ns_server<0.106.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
+ns_server<0.106.0>: [os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+
+[ns_server:info,2021-04-22T05:57:40.220Z,babysitter_of_ns_1@cb.local:<0.106.0>:ns_port_server:log:224]ns_server<0.106.0>: Crap error:{badmatch,
+ns_server<0.106.0>:             {error,
+ns_server<0.106.0>:              {{shutdown,
+ns_server<0.106.0>:                {failed_to_start_child,ns_server_cluster_sup,
+ns_server<0.106.0>:                 {shutdown,
+ns_server<0.106.0>:                  {failed_to_start_child,ns_config_sup,
+ns_server<0.106.0>:                   {shutdown,
+ns_server<0.106.0>:                    {failed_to_start_child,ns_config,
+ns_server<0.106.0>:                     {noproc,
+ns_server<0.106.0>:                      {gen_server,call,
+ns_server<0.106.0>:                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+ns_server<0.106.0>:                        {decrypt,
+ns_server<0.106.0>:                         <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,
+ns_server<0.106.0>:                           166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,
+ns_server<0.106.0>:                           72>>},
+ns_server<0.106.0>:                        infinity]}}}}}}}},
+ns_server<0.106.0>:               {ns_server,start,[normal,[]]}}}}
+ns_server<0.106.0>: [{ns_bootstrap,start,0,[{file,"src/ns_bootstrap.erl"},{line,36}]},
+ns_server<0.106.0>:  {child_erlang,do_child_start,1,[{file,"src/child_erlang.erl"},{line,112}]},
+ns_server<0.106.0>:  {child_erlang,child_start,1,[{file,"src/child_erlang.erl"},{line,90}]},
+ns_server<0.106.0>:  {init,start_em,1,[]},
+ns_server<0.106.0>:  {init,do_boot,3,[]}]
+
+[error_logger:error,2021-04-22T05:57:41.029Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.106.0> terminating 
+** Last message in was {#Port<0.3889>,{exit_status,3}}
+** When Server state == {state,#Port<0.3889>,
+                            {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                                ["+A","16","-smp","enable","+sbt","u","+P",
+                                 "327680","+K","true","+swt","low","+sbwt",
+                                 "none","+MMmcs","30","+e102400","-setcookie",
+                                 "nocookie","-kernel","error_logger","false",
+                                 "-sasl","sasl_error_logger","false","-user",
+                                 "user_io","-run","child_erlang",
+                                 "child_start","ns_bootstrap","--","-smp",
+                                 "enable","-kernel","error_logger","false",
+                                 "inetrc",
+                                 "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                 "dist_config_file",
+                                 "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                 "-proto_dist","cb","-epmd_module","cb_epmd",
+                                 "-ssl_dist_optfile",
+                                 "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                 "-kernel","global_enable_tracing","false",
+                                 "-couch_ini",
+                                 "/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                [{env,
+                                     [{"NS_SERVER_BABYSITTER_PID","42"},
+                                      {"CHILD_ERLANG_ENV_ARGS",
+                                       "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                      {"ERL_CRASH_DUMP",
+                                       "erl_crash.dump.1619071052.42.ns_server"}]},
+                                 exit_status,use_stdio,stream,eof]},
+                            {ringbuffer,1044,1024,
+                                {[{<<" {init,do_boot,3,[]}]">>,21},
+                                  {<<" {init,start_em,1,[]},">>,22},
+                                  {<<" {child_erlang,child_start,1,[{file,\"src/child_erlang.erl\"},{line,90}]},">>,
+                                   72},
+                                  {<<" {child_erlang,do_child_start,1,[{file,\"src/child_erlang.erl\"},{line,112}]},">>,
+                                   76},
+                                  {<<"[{ns_bootstrap,start,0,[{file,\"src/ns_bootstrap.erl\"},{line,36}]},">>,
+                                   66},
+                                  {<<"              {ns_server,start,[normal,[]]}}}}">>,
+                                   46},
+                                  {<<"                       infinity]}}}}}}}},">>,
+                                   41},
+                                  {<<"                          72>>},">>,32},
+                                  {<<"                          166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,">>,
+                                   78},
+                                  {<<"                        <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,">>,
+                                   77},
+                                  {<<"                       {decrypt,">>,32},
+                                  {<<"                      [{encryption_service,'babysitter_of_ns_1@cb.local'},">>,
+                                   74}],
+                                 [{<<"[os_mon] cpu supervisor port (cpu_sup): Erlang has closed">>,
+                                   57},
+                                  {<<"Crap error:{badmatch,">>,21},
+                                  {<<"            {error,">>,19},
+                                  {<<"             {{shutdown,">>,24},
+                                  {<<"               {failed_to_start_child,ns_server_cluster_sup,">>,
+                                   60},
+                                  {<<"                {shutdown,">>,26},
+                                  {<<"                 {failed_to_start_child,ns_config_sup,">>,
+                                   54},
+                                  {<<"                  {shutdown,">>,28},
+                                  {<<"                   {failed_to_start_child,ns_config,">>,
+                                   52},
+                                  {<<"                    {noproc,">>,28},
+                                  {<<"                     {gen_server,call,">>,
+                                   38}]}},
+                            undefined,undefined,[],0}
+** Reason for termination == 
+** {abnormal,3}
+
+[ns_server:info,2021-04-22T05:57:41.033Z,babysitter_of_ns_1@cb.local:<0.105.0>:supervisor_cushion:handle_info:60]Cushion managed supervisor for ns_server failed:  {abnormal,3}
+[ns_server:info,2021-04-22T05:57:41.033Z,babysitter_of_ns_1@cb.local:<0.105.0>:supervisor_cushion:die_slowly:82]Service ns_server exited on node 'babysitter_of_ns_1@cb.local' in 4.70s
+
+[error_logger:error,2021-04-22T05:57:41.036Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_port_server:init/1
+    pid: <0.106.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.105.0>,<0.104.0>,child_ns_server_sup,ns_babysitter_sup,
+                  <0.92.0>]
+    message_queue_len: 1
+    messages: [{#Port<0.3889>,eof}]
+    links: [<0.105.0>,#Port<0.3889>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 4879
+  neighbours:
+
+[error_logger:info,2021-04-22T05:57:41.036Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.112.0>},
+                       {id,timer_server},
+                       {mfargs,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:error,2021-04-22T05:57:46.037Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.105.0> terminating 
+** Last message in was {die,{abnormal,3}}
+** When Server state == {state,ns_server,5000,-576460749939638500,undefined,
+                               infinity}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:57:46.038Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: supervisor_cushion:init/1
+    pid: <0.105.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.104.0>,child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.104.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 10958
+    stack_size: 27
+    reductions: 5286
+  neighbours:
+
+[ns_server:debug,2021-04-22T05:57:46.039Z,babysitter_of_ns_1@cb.local:<0.114.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:error,2021-04-22T05:57:46.041Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: erlang:apply/2
+    pid: <0.104.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  restartable:loop/4 (src/restartable.erl, line 69)
+    ancestors: [child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.103.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 2701
+  neighbours:
+
+[ns_server:debug,2021-04-22T05:57:46.042Z,babysitter_of_ns_1@cb.local:<0.113.0>:restartable:start_child:98]Started child process <0.114.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:error,2021-04-22T05:57:46.041Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,child_ns_server_sup}
+     Context:    child_terminated
+     Reason:     {abnormal,3}
+     Offender:   [{pid,<0.104.0>},
+                  {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                          ["+A","16","-smp","enable","+sbt","u","+P","327680",
+                           "+K","true","+swt","low","+sbwt","none","+MMmcs",
+                           "30","+e102400","-setcookie","nocookie","-kernel",
+                           "error_logger","false","-sasl","sasl_error_logger",
+                           "false","-user","user_io","-run","child_erlang",
+                           "child_start","ns_bootstrap","--","-smp","enable",
+                           "-kernel","error_logger","false","inetrc",
+                           "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                           "dist_config_file",
+                           "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                           "-proto_dist","cb","-epmd_module","cb_epmd",
+                           "-ssl_dist_optfile",
+                           "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                           "-kernel","global_enable_tracing","false",
+                           "-couch_ini",
+                           "/opt/couchbase/etc/couchdb/default.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                           "/opt/couchbase/etc/couchdb/local.ini"],
+                          [{env,
+                               [{"NS_SERVER_BABYSITTER_PID","42"},
+                                {"CHILD_ERLANG_ENV_ARGS",
+                                 "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                {"ERL_CRASH_DUMP",
+                                 "erl_crash.dump.1619071052.42.ns_server"}]},
+                           exit_status,use_stdio,stream,eof]}},
+                  {mfargs,
+                      {restartable,start_link,
+                          [{supervisor_cushion,start_link,
+                               [ns_server,5000,infinity,ns_port_server,
+                                start_link,
+                                [#Fun<ns_child_ports_sup.4.69815219>]]},
+                           86400000]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,worker}]
+
+
+[error_logger:info,2021-04-22T05:57:46.045Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.113.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:57:49.195Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Accepted new connection from <0.58.0>: {con,
+                                                 #Ref<0.3231365761.2520514561.245207>,
+                                                 inet_tcp_dist,undefined,
+                                                 undefined}
+[ns_server:debug,2021-04-22T05:57:49.195Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:754]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2021-04-22T05:57:49.195Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Updated connection: {con,#Ref<0.3231365761.2520514561.245207>,
+                                  inet_tcp_dist,<0.116.0>,
+                                  #Ref<0.3231365761.2520514561.245209>}
+[ns_server:debug,2021-04-22T05:57:49.332Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Connection down: {con,#Ref<0.3231365761.2520514561.245207>,
+                               inet_tcp_dist,<0.116.0>,
+                               #Ref<0.3231365761.2520514561.245209>}
+[error_logger:info,2021-04-22T05:57:49.333Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{'EXIT',<0.116.0>,connection_closed}}
+[ns_server:info,2021-04-22T05:57:49.513Z,babysitter_of_ns_1@cb.local:<0.115.0>:ns_port_server:log:224]ns_server<0.115.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
+ns_server<0.115.0>: [os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+
+[ns_server:info,2021-04-22T05:57:50.017Z,babysitter_of_ns_1@cb.local:<0.115.0>:ns_port_server:log:224]ns_server<0.115.0>: Crap error:{badmatch,
+ns_server<0.115.0>:             {error,
+ns_server<0.115.0>:              {{shutdown,
+ns_server<0.115.0>:                {failed_to_start_child,ns_server_cluster_sup,
+ns_server<0.115.0>:                 {shutdown,
+ns_server<0.115.0>:                  {failed_to_start_child,ns_config_sup,
+ns_server<0.115.0>:                   {shutdown,
+ns_server<0.115.0>:                    {failed_to_start_child,ns_config,
+ns_server<0.115.0>:                     {noproc,
+ns_server<0.115.0>:                      {gen_server,call,
+ns_server<0.115.0>:                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+ns_server<0.115.0>:                        {decrypt,
+ns_server<0.115.0>:                         <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,
+ns_server<0.115.0>:                           166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,
+ns_server<0.115.0>:                           72>>},
+ns_server<0.115.0>:                        infinity]}}}}}}}},
+ns_server<0.115.0>:               {ns_server,start,[normal,[]]}}}}
+ns_server<0.115.0>: [{ns_bootstrap,start,0,[{file,"src/ns_bootstrap.erl"},{line,36}]},
+ns_server<0.115.0>:  {child_erlang,do_child_start,1,[{file,"src/child_erlang.erl"},{line,112}]},
+ns_server<0.115.0>:  {child_erlang,child_start,1,[{file,"src/child_erlang.erl"},{line,90}]},
+ns_server<0.115.0>:  {init,start_em,1,[]},
+ns_server<0.115.0>:  {init,do_boot,3,[]}]
+
+[ns_server:info,2021-04-22T05:57:50.826Z,babysitter_of_ns_1@cb.local:<0.114.0>:supervisor_cushion:handle_info:60]Cushion managed supervisor for ns_server failed:  {abnormal,3}
+[ns_server:info,2021-04-22T05:57:50.827Z,babysitter_of_ns_1@cb.local:<0.114.0>:supervisor_cushion:die_slowly:82]Service ns_server exited on node 'babysitter_of_ns_1@cb.local' in 4.79s
+
+[error_logger:error,2021-04-22T05:57:50.827Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.115.0> terminating 
+** Last message in was {#Port<0.3915>,{exit_status,3}}
+** When Server state == {state,#Port<0.3915>,
+                            {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                                ["+A","16","-smp","enable","+sbt","u","+P",
+                                 "327680","+K","true","+swt","low","+sbwt",
+                                 "none","+MMmcs","30","+e102400","-setcookie",
+                                 "nocookie","-kernel","error_logger","false",
+                                 "-sasl","sasl_error_logger","false","-user",
+                                 "user_io","-run","child_erlang",
+                                 "child_start","ns_bootstrap","--","-smp",
+                                 "enable","-kernel","error_logger","false",
+                                 "inetrc",
+                                 "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                 "dist_config_file",
+                                 "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                 "-proto_dist","cb","-epmd_module","cb_epmd",
+                                 "-ssl_dist_optfile",
+                                 "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                 "-kernel","global_enable_tracing","false",
+                                 "-couch_ini",
+                                 "/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                [{env,
+                                     [{"NS_SERVER_BABYSITTER_PID","42"},
+                                      {"CHILD_ERLANG_ENV_ARGS",
+                                       "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                      {"ERL_CRASH_DUMP",
+                                       "erl_crash.dump.1619071052.42.ns_server"}]},
+                                 exit_status,use_stdio,stream,eof]},
+                            {ringbuffer,1044,1024,
+                                {[{<<" {init,do_boot,3,[]}]">>,21},
+                                  {<<" {init,start_em,1,[]},">>,22},
+                                  {<<" {child_erlang,child_start,1,[{file,\"src/child_erlang.erl\"},{line,90}]},">>,
+                                   72},
+                                  {<<" {child_erlang,do_child_start,1,[{file,\"src/child_erlang.erl\"},{line,112}]},">>,
+                                   76},
+                                  {<<"[{ns_bootstrap,start,0,[{file,\"src/ns_bootstrap.erl\"},{line,36}]},">>,
+                                   66},
+                                  {<<"              {ns_server,start,[normal,[]]}}}}">>,
+                                   46},
+                                  {<<"                       infinity]}}}}}}}},">>,
+                                   41},
+                                  {<<"                          72>>},">>,32},
+                                  {<<"                          166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,">>,
+                                   78},
+                                  {<<"                        <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,">>,
+                                   77},
+                                  {<<"                       {decrypt,">>,32},
+                                  {<<"                      [{encryption_service,'babysitter_of_ns_1@cb.local'},">>,
+                                   74}],
+                                 [{<<"[os_mon] cpu supervisor port (cpu_sup): Erlang has closed">>,
+                                   57},
+                                  {<<"Crap error:{badmatch,">>,21},
+                                  {<<"            {error,">>,19},
+                                  {<<"             {{shutdown,">>,24},
+                                  {<<"               {failed_to_start_child,ns_server_cluster_sup,">>,
+                                   60},
+                                  {<<"                {shutdown,">>,26},
+                                  {<<"                 {failed_to_start_child,ns_config_sup,">>,
+                                   54},
+                                  {<<"                  {shutdown,">>,28},
+                                  {<<"                   {failed_to_start_child,ns_config,">>,
+                                   52},
+                                  {<<"                    {noproc,">>,28},
+                                  {<<"                     {gen_server,call,">>,
+                                   38}]}},
+                            undefined,undefined,[],0}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:57:50.832Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_port_server:init/1
+    pid: <0.115.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.114.0>,<0.113.0>,child_ns_server_sup,ns_babysitter_sup,
+                  <0.92.0>]
+    message_queue_len: 1
+    messages: [{#Port<0.3915>,eof}]
+    links: [<0.114.0>,#Port<0.3915>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 4829
+  neighbours:
+
+[error_logger:error,2021-04-22T05:57:55.829Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.114.0> terminating 
+** Last message in was {die,{abnormal,3}}
+** When Server state == {state,ns_server,5000,-576460740237074300,undefined,
+                               infinity}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:57:55.831Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: supervisor_cushion:init/1
+    pid: <0.114.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.113.0>,child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.113.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 10958
+    stack_size: 27
+    reductions: 5263
+  neighbours:
+
+[ns_server:debug,2021-04-22T05:57:55.831Z,babysitter_of_ns_1@cb.local:<0.119.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:error,2021-04-22T05:57:55.832Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: erlang:apply/2
+    pid: <0.113.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  restartable:loop/4 (src/restartable.erl, line 69)
+    ancestors: [child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.103.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 2691
+  neighbours:
+
+[ns_server:debug,2021-04-22T05:57:55.833Z,babysitter_of_ns_1@cb.local:<0.118.0>:restartable:start_child:98]Started child process <0.119.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:error,2021-04-22T05:57:55.833Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,child_ns_server_sup}
+     Context:    child_terminated
+     Reason:     {abnormal,3}
+     Offender:   [{pid,<0.113.0>},
+                  {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                          ["+A","16","-smp","enable","+sbt","u","+P","327680",
+                           "+K","true","+swt","low","+sbwt","none","+MMmcs",
+                           "30","+e102400","-setcookie","nocookie","-kernel",
+                           "error_logger","false","-sasl","sasl_error_logger",
+                           "false","-user","user_io","-run","child_erlang",
+                           "child_start","ns_bootstrap","--","-smp","enable",
+                           "-kernel","error_logger","false","inetrc",
+                           "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                           "dist_config_file",
+                           "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                           "-proto_dist","cb","-epmd_module","cb_epmd",
+                           "-ssl_dist_optfile",
+                           "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                           "-kernel","global_enable_tracing","false",
+                           "-couch_ini",
+                           "/opt/couchbase/etc/couchdb/default.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                           "/opt/couchbase/etc/couchdb/local.ini"],
+                          [{env,
+                               [{"NS_SERVER_BABYSITTER_PID","42"},
+                                {"CHILD_ERLANG_ENV_ARGS",
+                                 "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                {"ERL_CRASH_DUMP",
+                                 "erl_crash.dump.1619071052.42.ns_server"}]},
+                           exit_status,use_stdio,stream,eof]}},
+                  {mfargs,
+                      {restartable,start_link,
+                          [{supervisor_cushion,start_link,
+                               [ns_server,5000,infinity,ns_port_server,
+                                start_link,
+                                [#Fun<ns_child_ports_sup.4.69815219>]]},
+                           86400000]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,worker}]
+
+
+[error_logger:info,2021-04-22T05:57:55.836Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.118.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:57:59.165Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Accepted new connection from <0.58.0>: {con,
+                                                 #Ref<0.3231365761.2520514561.245226>,
+                                                 inet_tcp_dist,undefined,
+                                                 undefined}
+[ns_server:debug,2021-04-22T05:57:59.165Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:754]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2021-04-22T05:57:59.165Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Updated connection: {con,#Ref<0.3231365761.2520514561.245226>,
+                                  inet_tcp_dist,<0.121.0>,
+                                  #Ref<0.3231365761.2520514561.245229>}
+[ns_server:debug,2021-04-22T05:57:59.321Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Connection down: {con,#Ref<0.3231365761.2520514561.245226>,
+                               inet_tcp_dist,<0.121.0>,
+                               #Ref<0.3231365761.2520514561.245229>}
+[error_logger:info,2021-04-22T05:57:59.322Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{'EXIT',<0.121.0>,connection_closed}}
+[ns_server:info,2021-04-22T05:57:59.501Z,babysitter_of_ns_1@cb.local:<0.120.0>:ns_port_server:log:224]ns_server<0.120.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
+ns_server<0.120.0>: [os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+
+[ns_server:info,2021-04-22T05:58:00.003Z,babysitter_of_ns_1@cb.local:<0.120.0>:ns_port_server:log:224]ns_server<0.120.0>: Crap error:{badmatch,
+ns_server<0.120.0>:             {error,
+ns_server<0.120.0>:              {{shutdown,
+ns_server<0.120.0>:                {failed_to_start_child,ns_server_cluster_sup,
+ns_server<0.120.0>:                 {shutdown,
+ns_server<0.120.0>:                  {failed_to_start_child,ns_config_sup,
+ns_server<0.120.0>:                   {shutdown,
+ns_server<0.120.0>:                    {failed_to_start_child,ns_config,
+ns_server<0.120.0>:                     {noproc,
+ns_server<0.120.0>:                      {gen_server,call,
+ns_server<0.120.0>:                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+ns_server<0.120.0>:                        {decrypt,
+ns_server<0.120.0>:                         <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,
+ns_server<0.120.0>:                           166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,
+ns_server<0.120.0>:                           72>>},
+ns_server<0.120.0>:                        infinity]}}}}}}}},
+ns_server<0.120.0>:               {ns_server,start,[normal,[]]}}}}
+ns_server<0.120.0>: [{ns_bootstrap,start,0,[{file,"src/ns_bootstrap.erl"},{line,36}]},
+ns_server<0.120.0>:  {child_erlang,do_child_start,1,[{file,"src/child_erlang.erl"},{line,112}]},
+ns_server<0.120.0>:  {child_erlang,child_start,1,[{file,"src/child_erlang.erl"},{line,90}]},
+ns_server<0.120.0>:  {init,start_em,1,[]},
+ns_server<0.120.0>:  {init,do_boot,3,[]}]
+
+[ns_server:info,2021-04-22T05:58:00.812Z,babysitter_of_ns_1@cb.local:<0.119.0>:supervisor_cushion:handle_info:60]Cushion managed supervisor for ns_server failed:  {abnormal,3}
+[ns_server:info,2021-04-22T05:58:00.812Z,babysitter_of_ns_1@cb.local:<0.119.0>:supervisor_cushion:die_slowly:82]Service ns_server exited on node 'babysitter_of_ns_1@cb.local' in 4.98s
+
+[error_logger:error,2021-04-22T05:58:00.813Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.120.0> terminating 
+** Last message in was {#Port<0.3919>,{exit_status,3}}
+** When Server state == {state,#Port<0.3919>,
+                            {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                                ["+A","16","-smp","enable","+sbt","u","+P",
+                                 "327680","+K","true","+swt","low","+sbwt",
+                                 "none","+MMmcs","30","+e102400","-setcookie",
+                                 "nocookie","-kernel","error_logger","false",
+                                 "-sasl","sasl_error_logger","false","-user",
+                                 "user_io","-run","child_erlang",
+                                 "child_start","ns_bootstrap","--","-smp",
+                                 "enable","-kernel","error_logger","false",
+                                 "inetrc",
+                                 "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                 "dist_config_file",
+                                 "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                 "-proto_dist","cb","-epmd_module","cb_epmd",
+                                 "-ssl_dist_optfile",
+                                 "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                 "-kernel","global_enable_tracing","false",
+                                 "-couch_ini",
+                                 "/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                [{env,
+                                     [{"NS_SERVER_BABYSITTER_PID","42"},
+                                      {"CHILD_ERLANG_ENV_ARGS",
+                                       "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                      {"ERL_CRASH_DUMP",
+                                       "erl_crash.dump.1619071052.42.ns_server"}]},
+                                 exit_status,use_stdio,stream,eof]},
+                            {ringbuffer,1044,1024,
+                                {[{<<" {init,do_boot,3,[]}]">>,21},
+                                  {<<" {init,start_em,1,[]},">>,22},
+                                  {<<" {child_erlang,child_start,1,[{file,\"src/child_erlang.erl\"},{line,90}]},">>,
+                                   72},
+                                  {<<" {child_erlang,do_child_start,1,[{file,\"src/child_erlang.erl\"},{line,112}]},">>,
+                                   76},
+                                  {<<"[{ns_bootstrap,start,0,[{file,\"src/ns_bootstrap.erl\"},{line,36}]},">>,
+                                   66},
+                                  {<<"              {ns_server,start,[normal,[]]}}}}">>,
+                                   46},
+                                  {<<"                       infinity]}}}}}}}},">>,
+                                   41},
+                                  {<<"                          72>>},">>,32},
+                                  {<<"                          166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,">>,
+                                   78},
+                                  {<<"                        <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,">>,
+                                   77},
+                                  {<<"                       {decrypt,">>,32},
+                                  {<<"                      [{encryption_service,'babysitter_of_ns_1@cb.local'},">>,
+                                   74}],
+                                 [{<<"[os_mon] cpu supervisor port (cpu_sup): Erlang has closed">>,
+                                   57},
+                                  {<<"Crap error:{badmatch,">>,21},
+                                  {<<"            {error,">>,19},
+                                  {<<"             {{shutdown,">>,24},
+                                  {<<"               {failed_to_start_child,ns_server_cluster_sup,">>,
+                                   60},
+                                  {<<"                {shutdown,">>,26},
+                                  {<<"                 {failed_to_start_child,ns_config_sup,">>,
+                                   54},
+                                  {<<"                  {shutdown,">>,28},
+                                  {<<"                   {failed_to_start_child,ns_config,">>,
+                                   52},
+                                  {<<"                    {noproc,">>,28},
+                                  {<<"                     {gen_server,call,">>,
+                                   38}]}},
+                            undefined,undefined,[],0}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:58:00.819Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_port_server:init/1
+    pid: <0.120.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.119.0>,<0.118.0>,child_ns_server_sup,ns_babysitter_sup,
+                  <0.92.0>]
+    message_queue_len: 1
+    messages: [{#Port<0.3919>,eof}]
+    links: [<0.119.0>,#Port<0.3919>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 4827
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:05.815Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.119.0> terminating 
+** Last message in was {die,{abnormal,3}}
+** When Server state == {state,ns_server,5000,-576460730444854800,undefined,
+                               infinity}
+** Reason for termination == 
+** {abnormal,3}
+
+[ns_server:debug,2021-04-22T05:58:05.815Z,babysitter_of_ns_1@cb.local:<0.124.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:error,2021-04-22T05:58:05.816Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: supervisor_cushion:init/1
+    pid: <0.119.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.118.0>,child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.118.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 10958
+    stack_size: 27
+    reductions: 5262
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:05.817Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: erlang:apply/2
+    pid: <0.118.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  restartable:loop/4 (src/restartable.erl, line 69)
+    ancestors: [child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.103.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 2692
+  neighbours:
+
+[ns_server:debug,2021-04-22T05:58:05.817Z,babysitter_of_ns_1@cb.local:<0.123.0>:restartable:start_child:98]Started child process <0.124.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:error,2021-04-22T05:58:05.818Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,child_ns_server_sup}
+     Context:    child_terminated
+     Reason:     {abnormal,3}
+     Offender:   [{pid,<0.118.0>},
+                  {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                          ["+A","16","-smp","enable","+sbt","u","+P","327680",
+                           "+K","true","+swt","low","+sbwt","none","+MMmcs",
+                           "30","+e102400","-setcookie","nocookie","-kernel",
+                           "error_logger","false","-sasl","sasl_error_logger",
+                           "false","-user","user_io","-run","child_erlang",
+                           "child_start","ns_bootstrap","--","-smp","enable",
+                           "-kernel","error_logger","false","inetrc",
+                           "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                           "dist_config_file",
+                           "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                           "-proto_dist","cb","-epmd_module","cb_epmd",
+                           "-ssl_dist_optfile",
+                           "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                           "-kernel","global_enable_tracing","false",
+                           "-couch_ini",
+                           "/opt/couchbase/etc/couchdb/default.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                           "/opt/couchbase/etc/couchdb/local.ini"],
+                          [{env,
+                               [{"NS_SERVER_BABYSITTER_PID","42"},
+                                {"CHILD_ERLANG_ENV_ARGS",
+                                 "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                {"ERL_CRASH_DUMP",
+                                 "erl_crash.dump.1619071052.42.ns_server"}]},
+                           exit_status,use_stdio,stream,eof]}},
+                  {mfargs,
+                      {restartable,start_link,
+                          [{supervisor_cushion,start_link,
+                               [ns_server,5000,infinity,ns_port_server,
+                                start_link,
+                                [#Fun<ns_child_ports_sup.4.69815219>]]},
+                           86400000]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,worker}]
+
+
+[error_logger:info,2021-04-22T05:58:05.821Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.123.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:58:09.184Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Accepted new connection from <0.58.0>: {con,
+                                                 #Ref<0.3231365761.2520514561.245240>,
+                                                 inet_tcp_dist,undefined,
+                                                 undefined}
+[ns_server:debug,2021-04-22T05:58:09.184Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:754]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2021-04-22T05:58:09.184Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Updated connection: {con,#Ref<0.3231365761.2520514561.245240>,
+                                  inet_tcp_dist,<0.126.0>,
+                                  #Ref<0.3231365761.2520514561.245243>}
+[ns_server:debug,2021-04-22T05:58:09.330Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Connection down: {con,#Ref<0.3231365761.2520514561.245240>,
+                               inet_tcp_dist,<0.126.0>,
+                               #Ref<0.3231365761.2520514561.245243>}
+[error_logger:info,2021-04-22T05:58:09.330Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{'EXIT',<0.126.0>,connection_closed}}
+[ns_server:info,2021-04-22T05:58:09.511Z,babysitter_of_ns_1@cb.local:<0.125.0>:ns_port_server:log:224]ns_server<0.125.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
+ns_server<0.125.0>: [os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+
+[ns_server:info,2021-04-22T05:58:10.012Z,babysitter_of_ns_1@cb.local:<0.125.0>:ns_port_server:log:224]ns_server<0.125.0>: Crap error:{badmatch,
+ns_server<0.125.0>:             {error,
+ns_server<0.125.0>:              {{shutdown,
+ns_server<0.125.0>:                {failed_to_start_child,ns_server_cluster_sup,
+ns_server<0.125.0>:                 {shutdown,
+ns_server<0.125.0>:                  {failed_to_start_child,ns_config_sup,
+ns_server<0.125.0>:                   {shutdown,
+ns_server<0.125.0>:                    {failed_to_start_child,ns_config,
+ns_server<0.125.0>:                     {noproc,
+ns_server<0.125.0>:                      {gen_server,call,
+ns_server<0.125.0>:                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+ns_server<0.125.0>:                        {decrypt,
+ns_server<0.125.0>:                         <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,
+ns_server<0.125.0>:                           166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,
+ns_server<0.125.0>:                           72>>},
+ns_server<0.125.0>:                        infinity]}}}}}}}},
+ns_server<0.125.0>:               {ns_server,start,[normal,[]]}}}}
+ns_server<0.125.0>: [{ns_bootstrap,start,0,[{file,"src/ns_bootstrap.erl"},{line,36}]},
+ns_server<0.125.0>:  {child_erlang,do_child_start,1,[{file,"src/child_erlang.erl"},{line,112}]},
+ns_server<0.125.0>:  {child_erlang,child_start,1,[{file,"src/child_erlang.erl"},{line,90}]},
+ns_server<0.125.0>:  {init,start_em,1,[]},
+ns_server<0.125.0>:  {init,do_boot,3,[]}]
+
+[ns_server:info,2021-04-22T05:58:10.822Z,babysitter_of_ns_1@cb.local:<0.124.0>:supervisor_cushion:handle_info:60]Cushion managed supervisor for ns_server failed:  {abnormal,3}
+[ns_server:debug,2021-04-22T05:58:10.824Z,babysitter_of_ns_1@cb.local:<0.129.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2021-04-22T05:58:10.827Z,babysitter_of_ns_1@cb.local:<0.128.0>:restartable:start_child:98]Started child process <0.129.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:error,2021-04-22T05:58:10.824Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.125.0> terminating 
+** Last message in was {#Port<0.3923>,{exit_status,3}}
+** When Server state == {state,#Port<0.3923>,
+                            {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                                ["+A","16","-smp","enable","+sbt","u","+P",
+                                 "327680","+K","true","+swt","low","+sbwt",
+                                 "none","+MMmcs","30","+e102400","-setcookie",
+                                 "nocookie","-kernel","error_logger","false",
+                                 "-sasl","sasl_error_logger","false","-user",
+                                 "user_io","-run","child_erlang",
+                                 "child_start","ns_bootstrap","--","-smp",
+                                 "enable","-kernel","error_logger","false",
+                                 "inetrc",
+                                 "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                 "dist_config_file",
+                                 "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                 "-proto_dist","cb","-epmd_module","cb_epmd",
+                                 "-ssl_dist_optfile",
+                                 "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                 "-kernel","global_enable_tracing","false",
+                                 "-couch_ini",
+                                 "/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                [{env,
+                                     [{"NS_SERVER_BABYSITTER_PID","42"},
+                                      {"CHILD_ERLANG_ENV_ARGS",
+                                       "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                      {"ERL_CRASH_DUMP",
+                                       "erl_crash.dump.1619071052.42.ns_server"}]},
+                                 exit_status,use_stdio,stream,eof]},
+                            {ringbuffer,1044,1024,
+                                {[{<<" {init,do_boot,3,[]}]">>,21},
+                                  {<<" {init,start_em,1,[]},">>,22},
+                                  {<<" {child_erlang,child_start,1,[{file,\"src/child_erlang.erl\"},{line,90}]},">>,
+                                   72},
+                                  {<<" {child_erlang,do_child_start,1,[{file,\"src/child_erlang.erl\"},{line,112}]},">>,
+                                   76},
+                                  {<<"[{ns_bootstrap,start,0,[{file,\"src/ns_bootstrap.erl\"},{line,36}]},">>,
+                                   66},
+                                  {<<"              {ns_server,start,[normal,[]]}}}}">>,
+                                   46},
+                                  {<<"                       infinity]}}}}}}}},">>,
+                                   41},
+                                  {<<"                          72>>},">>,32},
+                                  {<<"                          166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,">>,
+                                   78},
+                                  {<<"                        <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,">>,
+                                   77},
+                                  {<<"                       {decrypt,">>,32},
+                                  {<<"                      [{encryption_service,'babysitter_of_ns_1@cb.local'},">>,
+                                   74}],
+                                 [{<<"[os_mon] cpu supervisor port (cpu_sup): Erlang has closed">>,
+                                   57},
+                                  {<<"Crap error:{badmatch,">>,21},
+                                  {<<"            {error,">>,19},
+                                  {<<"             {{shutdown,">>,24},
+                                  {<<"               {failed_to_start_child,ns_server_cluster_sup,">>,
+                                   60},
+                                  {<<"                {shutdown,">>,26},
+                                  {<<"                 {failed_to_start_child,ns_config_sup,">>,
+                                   54},
+                                  {<<"                  {shutdown,">>,28},
+                                  {<<"                   {failed_to_start_child,ns_config,">>,
+                                   52},
+                                  {<<"                    {noproc,">>,28},
+                                  {<<"                     {gen_server,call,">>,
+                                   38}]}},
+                            undefined,undefined,[],0}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:58:10.836Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_port_server:init/1
+    pid: <0.125.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.124.0>,<0.123.0>,child_ns_server_sup,ns_babysitter_sup,
+                  <0.92.0>]
+    message_queue_len: 1
+    messages: [{#Port<0.3923>,eof}]
+    links: [<0.124.0>,#Port<0.3923>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 4828
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:10.837Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.124.0> terminating 
+** Last message in was {die,{abnormal,3}}
+** When Server state == {state,ns_server,5000,-576460720460545800,undefined,
+                               infinity}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:58:10.839Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: supervisor_cushion:init/1
+    pid: <0.124.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.123.0>,child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.123.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 10958
+    stack_size: 27
+    reductions: 3648
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:10.840Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: erlang:apply/2
+    pid: <0.123.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  restartable:loop/4 (src/restartable.erl, line 69)
+    ancestors: [child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.103.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 2691
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:10.841Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,child_ns_server_sup}
+     Context:    child_terminated
+     Reason:     {abnormal,3}
+     Offender:   [{pid,<0.123.0>},
+                  {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                          ["+A","16","-smp","enable","+sbt","u","+P","327680",
+                           "+K","true","+swt","low","+sbwt","none","+MMmcs",
+                           "30","+e102400","-setcookie","nocookie","-kernel",
+                           "error_logger","false","-sasl","sasl_error_logger",
+                           "false","-user","user_io","-run","child_erlang",
+                           "child_start","ns_bootstrap","--","-smp","enable",
+                           "-kernel","error_logger","false","inetrc",
+                           "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                           "dist_config_file",
+                           "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                           "-proto_dist","cb","-epmd_module","cb_epmd",
+                           "-ssl_dist_optfile",
+                           "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                           "-kernel","global_enable_tracing","false",
+                           "-couch_ini",
+                           "/opt/couchbase/etc/couchdb/default.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                           "/opt/couchbase/etc/couchdb/local.ini"],
+                          [{env,
+                               [{"NS_SERVER_BABYSITTER_PID","42"},
+                                {"CHILD_ERLANG_ENV_ARGS",
+                                 "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                {"ERL_CRASH_DUMP",
+                                 "erl_crash.dump.1619071052.42.ns_server"}]},
+                           exit_status,use_stdio,stream,eof]}},
+                  {mfargs,
+                      {restartable,start_link,
+                          [{supervisor_cushion,start_link,
+                               [ns_server,5000,infinity,ns_port_server,
+                                start_link,
+                                [#Fun<ns_child_ports_sup.4.69815219>]]},
+                           86400000]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,worker}]
+
+
+[error_logger:info,2021-04-22T05:58:10.845Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.128.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:debug,2021-04-22T05:58:14.200Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Accepted new connection from <0.58.0>: {con,
+                                                 #Ref<0.3231365761.2520514561.245250>,
+                                                 inet_tcp_dist,undefined,
+                                                 undefined}
+[ns_server:debug,2021-04-22T05:58:14.201Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:754]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2021-04-22T05:58:14.201Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Updated connection: {con,#Ref<0.3231365761.2520514561.245250>,
+                                  inet_tcp_dist,<0.131.0>,
+                                  #Ref<0.3231365761.2520514561.245252>}
+[ns_server:debug,2021-04-22T05:58:14.379Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:754]cb_dist: Connection down: {con,#Ref<0.3231365761.2520514561.245250>,
+                               inet_tcp_dist,<0.131.0>,
+                               #Ref<0.3231365761.2520514561.245252>}
+[error_logger:info,2021-04-22T05:58:14.379Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{'EXIT',<0.131.0>,connection_closed}}
+[ns_server:info,2021-04-22T05:58:14.554Z,babysitter_of_ns_1@cb.local:<0.130.0>:ns_port_server:log:224]ns_server<0.130.0>: [os_mon] memory supervisor port (memsup): Erlang has closed
+ns_server<0.130.0>: [os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+
+[ns_server:info,2021-04-22T05:58:15.054Z,babysitter_of_ns_1@cb.local:<0.130.0>:ns_port_server:log:224]ns_server<0.130.0>: Crap error:{badmatch,
+ns_server<0.130.0>:             {error,
+ns_server<0.130.0>:              {{shutdown,
+ns_server<0.130.0>:                {failed_to_start_child,ns_server_cluster_sup,
+ns_server<0.130.0>:                 {shutdown,
+ns_server<0.130.0>:                  {failed_to_start_child,ns_config_sup,
+ns_server<0.130.0>:                   {shutdown,
+ns_server<0.130.0>:                    {failed_to_start_child,ns_config,
+ns_server<0.130.0>:                     {noproc,
+ns_server<0.130.0>:                      {gen_server,call,
+ns_server<0.130.0>:                       [{encryption_service,'babysitter_of_ns_1@cb.local'},
+ns_server<0.130.0>:                        {decrypt,
+ns_server<0.130.0>:                         <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,
+ns_server<0.130.0>:                           166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,
+ns_server<0.130.0>:                           72>>},
+ns_server<0.130.0>:                        infinity]}}}}}}}},
+ns_server<0.130.0>:               {ns_server,start,[normal,[]]}}}}
+ns_server<0.130.0>: [{ns_bootstrap,start,0,[{file,"src/ns_bootstrap.erl"},{line,36}]},
+ns_server<0.130.0>:  {child_erlang,do_child_start,1,[{file,"src/child_erlang.erl"},{line,112}]},
+ns_server<0.130.0>:  {child_erlang,child_start,1,[{file,"src/child_erlang.erl"},{line,90}]},
+ns_server<0.130.0>:  {init,start_em,1,[]},
+ns_server<0.130.0>:  {init,do_boot,3,[]}]
+
+[ns_server:info,2021-04-22T05:58:15.856Z,babysitter_of_ns_1@cb.local:<0.129.0>:supervisor_cushion:handle_info:60]Cushion managed supervisor for ns_server failed:  {abnormal,3}
+[ns_server:debug,2021-04-22T05:58:15.856Z,babysitter_of_ns_1@cb.local:<0.134.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2021-04-22T05:58:15.857Z,babysitter_of_ns_1@cb.local:<0.133.0>:restartable:start_child:98]Started child process <0.134.0>
+  MFA: {supervisor_cushion,start_link,
+                           [ns_server,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:error,2021-04-22T05:58:15.856Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.130.0> terminating 
+** Last message in was {#Port<0.3926>,{exit_status,3}}
+** When Server state == {state,#Port<0.3926>,
+                            {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                                ["+A","16","-smp","enable","+sbt","u","+P",
+                                 "327680","+K","true","+swt","low","+sbwt",
+                                 "none","+MMmcs","30","+e102400","-setcookie",
+                                 "nocookie","-kernel","error_logger","false",
+                                 "-sasl","sasl_error_logger","false","-user",
+                                 "user_io","-run","child_erlang",
+                                 "child_start","ns_bootstrap","--","-smp",
+                                 "enable","-kernel","error_logger","false",
+                                 "inetrc",
+                                 "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                 "dist_config_file",
+                                 "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                 "-proto_dist","cb","-epmd_module","cb_epmd",
+                                 "-ssl_dist_optfile",
+                                 "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                 "-kernel","global_enable_tracing","false",
+                                 "-couch_ini",
+                                 "/opt/couchbase/etc/couchdb/default.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                 "/opt/couchbase/etc/couchdb/local.ini"],
+                                [{env,
+                                     [{"NS_SERVER_BABYSITTER_PID","42"},
+                                      {"CHILD_ERLANG_ENV_ARGS",
+                                       "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                      {"ERL_CRASH_DUMP",
+                                       "erl_crash.dump.1619071052.42.ns_server"}]},
+                                 exit_status,use_stdio,stream,eof]},
+                            {ringbuffer,1044,1024,
+                                {[{<<" {init,do_boot,3,[]}]">>,21},
+                                  {<<" {init,start_em,1,[]},">>,22},
+                                  {<<" {child_erlang,child_start,1,[{file,\"src/child_erlang.erl\"},{line,90}]},">>,
+                                   72},
+                                  {<<" {child_erlang,do_child_start,1,[{file,\"src/child_erlang.erl\"},{line,112}]},">>,
+                                   76},
+                                  {<<"[{ns_bootstrap,start,0,[{file,\"src/ns_bootstrap.erl\"},{line,36}]},">>,
+                                   66},
+                                  {<<"              {ns_server,start,[normal,[]]}}}}">>,
+                                   46},
+                                  {<<"                       infinity]}}}}}}}},">>,
+                                   41},
+                                  {<<"                          72>>},">>,32},
+                                  {<<"                          166,39,115,248,23,49,49,78,76,127,178,55,22,240,234,">>,
+                                   78},
+                                  {<<"                        <<0,243,234,114,50,205,42,90,46,85,254,101,129,44,32,">>,
+                                   77},
+                                  {<<"                       {decrypt,">>,32},
+                                  {<<"                      [{encryption_service,'babysitter_of_ns_1@cb.local'},">>,
+                                   74}],
+                                 [{<<"[os_mon] cpu supervisor port (cpu_sup): Erlang has closed">>,
+                                   57},
+                                  {<<"Crap error:{badmatch,">>,21},
+                                  {<<"            {error,">>,19},
+                                  {<<"             {{shutdown,">>,24},
+                                  {<<"               {failed_to_start_child,ns_server_cluster_sup,">>,
+                                   60},
+                                  {<<"                {shutdown,">>,26},
+                                  {<<"                 {failed_to_start_child,ns_config_sup,">>,
+                                   54},
+                                  {<<"                  {shutdown,">>,28},
+                                  {<<"                   {failed_to_start_child,ns_config,">>,
+                                   52},
+                                  {<<"                    {noproc,">>,28},
+                                  {<<"                     {gen_server,call,">>,
+                                   38}]}},
+                            undefined,undefined,[],0}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:58:15.858Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_port_server:init/1
+    pid: <0.130.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.129.0>,<0.128.0>,child_ns_server_sup,ns_babysitter_sup,
+                  <0.92.0>]
+    message_queue_len: 1
+    messages: [{#Port<0.3926>,eof}]
+    links: [<0.129.0>,#Port<0.3926>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 4829
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:15.858Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]** Generic server <0.129.0> terminating 
+** Last message in was {die,{abnormal,3}}
+** When Server state == {state,ns_server,5000,-576460715451332700,undefined,
+                               infinity}
+** Reason for termination == 
+** {abnormal,3}
+
+[error_logger:error,2021-04-22T05:58:15.858Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: supervisor_cushion:init/1
+    pid: <0.129.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  gen_server:handle_common_reply/8 (gen_server.erl, line 726)
+    ancestors: [<0.128.0>,child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.128.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 10958
+    stack_size: 27
+    reductions: 3649
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:15.859Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: erlang:apply/2
+    pid: <0.128.0>
+    registered_name: []
+    exception exit: {abnormal,3}
+      in function  restartable:loop/4 (src/restartable.erl, line 69)
+    ancestors: [child_ns_server_sup,ns_babysitter_sup,<0.92.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.103.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 2692
+  neighbours:
+
+[error_logger:error,2021-04-22T05:58:15.859Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,child_ns_server_sup}
+     Context:    child_terminated
+     Reason:     {abnormal,3}
+     Offender:   [{pid,<0.128.0>},
+                  {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                          ["+A","16","-smp","enable","+sbt","u","+P","327680",
+                           "+K","true","+swt","low","+sbwt","none","+MMmcs",
+                           "30","+e102400","-setcookie","nocookie","-kernel",
+                           "error_logger","false","-sasl","sasl_error_logger",
+                           "false","-user","user_io","-run","child_erlang",
+                           "child_start","ns_bootstrap","--","-smp","enable",
+                           "-kernel","error_logger","false","inetrc",
+                           "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                           "dist_config_file",
+                           "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                           "-proto_dist","cb","-epmd_module","cb_epmd",
+                           "-ssl_dist_optfile",
+                           "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                           "-kernel","global_enable_tracing","false",
+                           "-couch_ini",
+                           "/opt/couchbase/etc/couchdb/default.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                           "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                           "/opt/couchbase/etc/couchdb/local.ini"],
+                          [{env,
+                               [{"NS_SERVER_BABYSITTER_PID","42"},
+                                {"CHILD_ERLANG_ENV_ARGS",
+                                 "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                {"ERL_CRASH_DUMP",
+                                 "erl_crash.dump.1619071052.42.ns_server"}]},
+                           exit_status,use_stdio,stream,eof]}},
+                  {mfargs,
+                      {restartable,start_link,
+                          [{supervisor_cushion,start_link,
+                               [ns_server,5000,infinity,ns_port_server,
+                                start_link,
+                                [#Fun<ns_child_ports_sup.4.69815219>]]},
+                           86400000]}},
+                  {restart_type,permanent},
+                  {shutdown,infinity},
+                  {child_type,worker}]
+
+
+[error_logger:info,2021-04-22T05:58:15.860Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,child_ns_server_sup}
+             started: [{pid,<0.133.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+                               ["+A","16","-smp","enable","+sbt","u","+P",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
+                                "-couch_ini",
+                                "/opt/couchbase/etc/couchdb/default.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/capi.ini",
+                                "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
+                                "/opt/couchbase/etc/couchdb/local.ini"],
+                               [{env,
+                                    [{"NS_SERVER_BABYSITTER_PID","42"},
+                                     {"CHILD_ERLANG_ENV_ARGS",
+                                      "[{sasl,\n     [{sasl_error_logger,false},{included_applications,[]},{errlog_type,all}]},\n {ns_babysitter,\n     [{cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"}]},\n {ns_server,\n     [{path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_xdcr,debug},\n      {max_t,10},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {net_kernel_verbosity,10},\n      {loglevel_ns_doctor,debug},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_views,debug},\n      {loglevel_default,debug},\n      {loglevel_menelaus,debug},\n      {loglevel_ns_server,debug},\n      {loglevel_rebalance,debug},\n      {loglevel_user,debug},\n      {loglevel_error_logger,debug},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_cbas,debug},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_couchdb,info},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {loglevel_stats,debug},\n      {loglevel_cluster,debug}]}]"},
+                                     {"ERL_CRASH_DUMP",
+                                      "erl_crash.dump.1619071052.42.ns_server"}]},
+                                exit_status,use_stdio,stream,eof]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [ns_server,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
